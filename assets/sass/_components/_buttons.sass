@@ -1,0 +1,42 @@
+.menu-button
+  @apply box-border
+  .toggle
+    width: 50px
+    height: 20px
+    @apply relative m-0 transition-all duration-300 ease-in-out cursor-pointer box-border flex flex-col justify-center items-center
+    .bar
+      width: 50px
+      height: 2px
+      @apply block my-[5px] mx-auto absolute bg-main-green border-solid transition-all duration-500 ease-in-out box-border 
+      &:nth-of-type(1)
+        width: 40px
+        top: 0px
+        margin-top: 0
+        transition: background-color 0.4s ease-in-out top 0.3s ease 0.3s, transform 0.3s ease-out 0.1s
+        animation: mrotr 2s cubic-bezier(0.5, 0.2, 0.2, 1.01)
+      &:nth-of-type(2)
+        top: 4px
+        transition: background-color 0.4s ease-in-out ease 0.3s 0.3s
+        animation: fade 2s cubic-bezier(0.5, 0.2, 0.2, 1.01)
+      &:nth-of-type(3)
+        width: 40px
+        top: 13px
+        margin-bottom: 0
+        transition: background-color 0.4s ease-in-out top 0.3s ease 0.3s, transform 0.3s ease-out 0.1s
+        animation: mrotl 2s cubic-bezier(0.5, 0.2, 0.2, 1.01)
+
+body.menu-open
+  .menu-button
+    .bar
+      &:nth-of-type(1)
+        top: 9px
+        transform: rotate(45deg)
+        transition: top 0.3s ease 0.1s, transform 0.3s ease-out 0.5s
+      &:nth-of-type(2)
+        @apply opacity-0
+      &:nth-of-type(3)
+        top: 4px
+        transform: rotate(-45deg)
+        transition: top 0.3s ease 0.1s, transform 0.3s ease-out 0.5s
+
+
