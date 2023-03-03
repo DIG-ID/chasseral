@@ -303,7 +303,7 @@ add_action('acf/init', 'my_acf_init');
 /**
  * Wrap the post thumbnail image in a figure element only in the blog posts and project posts.
  */
-function chasseral_wrap_post_thumbnail_in_figure( $html, $post_id, $post_thumbnail_id, $size, $attr ) {
+/*function chasseral_wrap_post_thumbnail_in_figure( $html, $post_id, $post_thumbnail_id, $size, $attr ) {
 	$allowed_sizes = array( 'card-post-thumbnail', 'card-project-thumbnail-portrait', 'card-project-thumbnail-landscape' );
 	if ( ! in_array( $size, $allowed_sizes ) ) :
 		return $html;
@@ -311,7 +311,7 @@ function chasseral_wrap_post_thumbnail_in_figure( $html, $post_id, $post_thumbna
 	return '<a href="' . get_the_permalink() . '"><figure>' . $html . '</figure></a>';
 }
 
-add_filter( 'post_thumbnail_html', 'chasseral_wrap_post_thumbnail_in_figure', 10, 5 );
+add_filter( 'post_thumbnail_html', 'chasseral_wrap_post_thumbnail_in_figure', 10, 5 );*/
 
 // Remove <p> from Contact Form 7
 add_filter( 'wpcf7_autop_or_not', '__return_false' );
@@ -322,6 +322,18 @@ add_filter( 'wpcf7_autop_or_not', '__return_false' );
  */
 function chasseral_theme_acf_op_gc_init() {
 	if ( function_exists( 'acf_add_options_page' ) ) :
+		$theme_option_page = acf_add_options_page(
+			array(
+				'page_title'      => __( 'Chasseral Theme Options', 'chasseral' ),
+				'menu_title'      => __( 'Chasseral Theme', 'chasseral' ),
+				'menu_slug'       => 'chasseral-theme-general-options',
+				'capability'      => 'edit_posts',
+				'icon_url'        => 'dashicons-admin-appearance',
+				'redirect'        => false,
+				'update_button'   => __( 'Update Theme Options', 'chasseral' ),
+				'updated_message' => __( 'Chasseral Theme Options Updated', 'chasseral' ),
+			)
+		);
 		$option_page = acf_add_options_page(
 			array(
 				'page_title' => __( 'Chasseral General Content', 'chasseral' ),

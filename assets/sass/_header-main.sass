@@ -1,0 +1,89 @@
+.header-main
+  .custom-logo-link
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 300px
+    border-right: 1px solid #000
+
+.header-main
+  .wpml-ls-legacy-dropdown
+    width: 75px
+    ul
+      .wpml-ls-current-language
+        .wpml-ls-item-toggle
+          display: flex
+          justify-content: center
+          align-items: center
+          padding: 0
+          margin: 0
+          border: none
+          border-right: 1px solid #000
+          border-left: 1px solid #000
+
+          height: 75px
+          font-family: var( --main-font )
+          font-size: 16px
+          font-weight: bold
+          //position: relative
+          background-color: var(--bg-color)
+          z-index: 200
+          transition: all .35s ease-in-out
+          &::after
+            display: none
+          &:hover
+            background-color: darken($bg-color, 10%)
+        .wpml-ls-sub-menu
+          border-top: 1px solid #000
+          transition: all .35s ease-in-out
+          transform: translateY(-100%)
+          z-index: 190
+          .wpml-ls-item
+            .wpml-ls-link
+              display: flex
+              justify-content: center
+              align-items: center
+              height: 75px
+              padding: 0
+              font-family: var( --main-font )
+              font-size: 16px
+              font-weight: bold
+              border: 1px solid #000
+              border-top: none
+              background-color: var(--bg-color)
+              transition: all .35s ease-in-out
+              &:hover
+                background-color: darken($bg-color, 10%)
+
+      &:hover
+        .wpml-ls-sub-menu
+          transform: translateY(0)
+
+
+.navigation-main-content
+  #menu-main
+    flex-grow: 1
+    display: flex
+    justify-content: center
+    align-items: center
+    .menu-item
+      padding-right: 30px
+      &:last-of-type
+        padding-right: 0
+      a
+        display: block
+        font-family: var(--main-font)
+        font-size: 16px
+        font-weight: bold
+        text-transform: uppercase
+        transition: all .25s ease-in-out
+        color: #000
+        &:hover
+          color: rgba(0, 0, 0, 0.5)
+    .current_page_item
+      a
+        color: rgba(0, 0, 0, 0.5)
+
+.mega-menu-navigation
+  z-index: 180
+  //height: calc( 100vh - 74px )
