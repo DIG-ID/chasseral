@@ -1,6 +1,6 @@
 <header id="header-main" class="header-main header-main--szl sticky box-border bg-bg-color border-b border-black border-solid" itemscope itemtype="http://schema.org/WebSite">
 	<nav class="navigation-main" role="navigation" aria-label="<?php esc_attr_e( 'Main navigation', 'chasseral' ); ?>">
-		<div class="navigation-main-content w-full h-[75px] flex items-stretch justify-items-stretch">
+		<div class="navigation-main-content w-full h-[75px] flex items-stretch justify-between">
 			<div class="w-1/2 border-r border-solid border-black flex">
 				<?php
 				do_action( 'mega_menu_link', 'szl', 'mega-menu-simple' );
