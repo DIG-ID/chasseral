@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     togglerTl.to('.navigation-widget, .menu-top-level', {y:' 100%', opacity: 0, ease: 'back.in'});
     togglerTl.to('.mega-menu-navigation', {height: 'calc( 100vh - 75px )'}, '<0.25');
     togglerTl.from('.mega-menu-title, .mega-menu-description', {y: '-50px', opacity: 0, stagger: 0.25}, '<');
-    togglerTl.from('.col-auto a', {y: '-50px', opacity: 0, stagger: 0.25}, '<0.25');
+    togglerTl.from('.mega-links a', {y: '-50px', opacity: 0, stagger: 0.25}, '<0.25');
 
     togglerTl.paused(true);
 

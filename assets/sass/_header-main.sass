@@ -117,7 +117,62 @@
 
 .mega-menu-navigation
   z-index: 180
-  //height: calc( 100vh - 74px )
+  .mega-menu-content
+    .mega-menu--menus
+      #hotel-mega-menu,
+      #jura-mega-menu,
+      #szl-mega-menu,
+      #main-mega-menu
+        .menu-item
+          padding-bottom: 30px
+          a
+            display: block
+            font-family: var(--main-font)
+            font-size: 30px
+            font-weight: bold
+            text-transform: uppercase
+            transition: all .25s ease-in-out
+            white-space: nowrap
+            opacity: 1
+            &:hover
+              opacity: .5
+    .mega-links > .mega-link
+        margin-bottom: 40px
+    .mega-links-xl
+      .mega-link
+        height: 50%
+        border-bottom: 1px solid #000
+        &--hotel
+          .mega-link-icon
+            background-color: var( --main-red )
+        &--top-of-jura
+          .mega-link-icon
+            background-color: var( --main-blue )
+        &--szl
+          .mega-link-icon
+            background-color: var( --main-green )
+        .mega-link-title-wrapper
+          display: flex
+          justify-content: space-between
+          align-items: stretch
+          height: 75px
+          padding-left: 20px
+          border-bottom: 1px solid #000
+          transition: all .3s ease-in-out
+          h2
+            align-self: center
+            margin: 0
+          .mega-link-icon
+            width: 75px
+            height: 100%
+            display: flex
+            justify-content: center
+            align-items: center
+            border-left: 1px solid #000
+            svg
+              path
+                fill: #fff
+
 
 @media (max-width: 1024px)
   #header-main

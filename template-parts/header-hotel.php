@@ -30,13 +30,14 @@
 
 		<div class="mega-menu-navigation absolute top-75 left-0 h-0 overflow-hidden w-full flex justify-center items-center bg-bg-color border-t border-solid border-black">
 			<div class="mega-menu-content w-full h-full grid grid-cols-1 lg:grid-cols-2">
-				<div class="col-auto flex flex-col justify-center items-center bg-main-red text-white">
+				<div class="mega-menu--menus col-span-1 flex flex-col justify-center border-r border-solid border-black bg-main-red text-white px-5 md:px-10 lg:px-20 xl:px-40">
 					<?php
 					wp_nav_menu(
 						array(
-							'theme_location' => 'hotel-mega',
+							'theme_location' => 'hotel',
 							'container'      => false,
 							'menu_class'     => '',
+							'menu_id'        => 'hotel-mega-menu',
 							'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
 							'fallback_cb'    => '__return_false',
 						),
@@ -46,13 +47,14 @@
 							'theme_location' => 'main',
 							'container'      => false,
 							'menu_class'     => '',
+							'menu_id'        => 'main-mega-menu',
 							'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
 							'fallback_cb'    => '__return_false',
 						),
 					);
 					?>
 				</div>
-				<div class="col-auto flex flex-col justify-center border-l border-solid border-black px-40">
+				<div class="mega-links-xl col-span-1 flex flex-col">
 					<?php
 					do_action( 'mega_menu_link', 'top_of_jura', 'mega-menu-bg' );
 					do_action( 'mega_menu_link', 'szl', 'mega-menu-bg' );

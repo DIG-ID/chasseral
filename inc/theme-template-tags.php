@@ -75,19 +75,28 @@ function chasseral_theme_mega_menu_link( $slug, $type ) {
 		$logo = get_field( "theme_logos_{$slug}", 'options' );
 		$root = get_field( "root_pages_{$slug}", 'options' );
 
-		$link_logo = $link_open = $link_open_b = $link_close = $link_title = $link_render = $link_img = '';
+		$link_logo = $link_open = $link_open_b = $link_close = $link_title = $link_render = $link_img = $link_class = '';
+		
 
 		$separator    = '<hr>';
-		$link_arrow   = '<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none"><path fill="#000" d="m11 22-1.96-1.925 7.7-7.7H0v-2.75h16.74l-7.7-7.7L11 0l11 11-11 11Z"/></svg>';
-		$title_before = '<span class="flex justify-between items-center">';
+		$link_arrow   = '<span class="mega-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none"><path fill="#000" d="m11 22-1.96-1.925 7.7-7.7H0v-2.75h16.74l-7.7-7.7L11 0l11 11-11 11Z"/></svg></span>';
+		$title_before = '<span class="mega-link-title-wrapper flex justify-between items-center">';
 		$title_after  = '</span>';
+
+		if ( 'hotel_restaurant' === $slug ) :
+			$link_class = 'mega-link--hotel';
+		elseif ( 'top_of_jura' === $slug ) :
+			$link_class = 'mega-link--top-of-jura';
+		elseif ( 'szl' === $slug ) :
+			$link_class = 'mega-link--szl';
+		endif;
 
 		if ( ! empty( $logo ) ) :
 			$link_logo = '<img src="' . esc_url( $logo['url'] )  . '" alt="' . $logo['alt'] . '" class="max-w-[175px]">';
 		endif;
 		if ( ! empty( $root ) ) :
 			$root_id     = $root->ID;
-			$link_open   = '<a href="' . esc_url( get_permalink( $root_id ) ) . '" class="block mb-10">';
+			$link_open   = '<a href="' . esc_url( get_permalink( $root_id ) ) . '" class="mega-link ' . $link_class . '">';
 			$link_open_b = '<a href="' . esc_url( get_permalink( $root_id ) ) . '" class="custom-logo-link">';
 			$link_close  = '</a>';
 			$link_title  = '<h2 class="font-bold text-3xl font-sans text-black uppercase my-5">' . $root->post_title . '</h2>';
@@ -111,8 +120,8 @@ function chasseral_theme_mega_menu_link( $slug, $type ) {
 			$link_render .= $link_title;
 			$link_render .= $link_arrow;
 			$link_render .= $title_after;
-			$link_render .= $link_close;
 			$link_render .= $link_img;
+			$link_render .= $link_close;
 		elseif ( 'mega-menu-simple' === $type ) :
 			$link_render  = $link_open_b;
 			$link_render .= $link_logo;
