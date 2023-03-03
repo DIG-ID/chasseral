@@ -1,4 +1,4 @@
-.header-main
+#header-main
   .custom-logo-link
     display: flex
     justify-content: center
@@ -6,7 +6,7 @@
     width: 300px
     border-right: 1px solid #000
 
-.header-main
+#header-main
   .wpml-ls-legacy-dropdown
     width: 75px
     ul
@@ -61,7 +61,10 @@
 
 
 .navigation-main-content
-  #menu-main
+  #menu-main,
+  #menu-szl,
+  #menu-hotel,
+  #menu-jura
     flex-grow: 1
     display: flex
     justify-content: center
@@ -83,6 +86,30 @@
     .current_page_item
       a
         color: rgba(0, 0, 0, 0.5)
+  #menu-szl
+    .menu-item
+      a
+        &:hover
+          color: var(--main-green)
+    .current_page_item
+      a
+        color: var(--main-green)
+  #menu-hotel
+    .menu-item
+      a
+        &:hover
+          color: var(--main-red)
+    .current_page_item
+      a
+        color: var(--main-red)
+  #menu-jura
+    .menu-item
+      a
+        &:hover
+          color: var(--main-blue)
+    .current_page_item
+      a
+        color: var(--main-blue)
 
 .mega-menu-navigation
   z-index: 180
