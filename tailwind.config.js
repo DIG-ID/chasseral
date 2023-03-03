@@ -9,9 +9,9 @@ module.exports = {
   ],
   theme: {
     colors: {
-      'main-green': '#2E5659',
-      'main-beige': '#CBA884',
-      'darker-green': '#234143',
+      'main-green': '#00944E',
+      'main-blue': '#0071BA',
+      'main-red': '#D12329',
       'bg-color': '#EFF3F6',
       'white': '#FFFFFF',
       'black': '#000000',
@@ -19,11 +19,13 @@ module.exports = {
     fontFamily: {
       sans: ['Montserrat', 'sans-serif'],
     },
-    letterSpacing: {
-      wider: '0.05em',
-      widest: '.11em',
+
+    extend: {
+      letterSpacing: {
+        wider: '0.05em',
+        widest: '.11em',
+      },
     },
-    extend: {},
   },
   plugins: [],
 }

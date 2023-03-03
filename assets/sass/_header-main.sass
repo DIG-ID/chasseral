@@ -69,7 +69,7 @@
   #menu-hotel,
   #menu-jura
     flex-grow: 1
-    display: flex
+    //display: flex
     justify-content: center
     align-items: center
     .menu-item
@@ -83,6 +83,7 @@
         font-weight: bold
         text-transform: uppercase
         transition: all .25s ease-in-out
+        white-space: nowrap
         color: #000
         &:hover
           color: rgba(0, 0, 0, 0.5)
@@ -117,3 +118,8 @@
 .mega-menu-navigation
   z-index: 180
   //height: calc( 100vh - 74px )
+
+@media (max-width: 1024px)
+  #header-main
+    .custom-logo-link
+      border-right: none
