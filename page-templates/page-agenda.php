@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Agena Page Template
+ * Template Name: Agenda Page Template
  */
 
 get_header( 'szl' );
