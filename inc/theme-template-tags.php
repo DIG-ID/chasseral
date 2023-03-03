@@ -76,7 +76,7 @@ function chasseral_theme_mega_menu_link( $slug, $img ) {
 			$link_root = get_field( "root_pages_{$slug}", 'options' );
 			if ( $link_logo && $link_root ) :
 				$lc = '<a href="' . esc_url( get_permalink( $link_root->ID ) ) . '" class="block mb-10">';
-				$lc .= '<img src="' . esc_url( $link_logo['url'] )  . '" alt="' . $link_logo['alt'] . '">';
+				$lc .= '<img src="' . esc_url( $link_logo['url'] )  . '" alt="' . $link_logo['alt'] . '" class="max-w-[175px]">';
 				$lc.= '<span class="flex justify-between items-center"><h2 class="font-bold text-3xl font-sans text-black uppercase my-5">' . $link_root->post_title . '</h2><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none"><path fill="#000" d="m11 22-1.96-1.925 7.7-7.7H0v-2.75h16.74l-7.7-7.7L11 0l11 11-11 11Z"/></svg></span>';
 				$lc .= '<hr></a>';
 				echo $lc;
