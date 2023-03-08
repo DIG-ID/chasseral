@@ -131,8 +131,72 @@ function chasseral_theme_mega_menu_link( $slug, $type ) {
 		endif;
 		echo $link_render;
 	else :
-		echo 'You need to pass a slug for the link! The slud is the name of the acf field.';
+		echo 'You need to pass a slug for the link! The slug is the name of the ACF field.';
 	endif;
 }
 
 add_action( 'mega_menu_link', 'chasseral_theme_mega_menu_link', 10, 2 );
+
+
+/**
+ * This function gets the info fromsub pages.
+ */
+function chasseral_theme_sub_pages( $slug ) {
+
+	if ( ! empty( $slug ) ) :
+		$logo = get_field( "theme_logos_{$slug}", 'options' );
+		$root = get_field( "root_pages_{$slug}", 'options' );
+		$link_logo = $link_open = $link_close = $link_title = $link_render = $link_img = $link_class = '';
+		$link_arrow   = '<span class="sub-page-link--icon"><svg width="22" height="22" fill="none"><path fill="#000" d="m11 22-1.96-1.925 7.7-7.7H0v-2.75h16.74l-7.7-7.7L11 0l11 11-11 11Z"/></svg></span>';
+		$title_before = '<span class="sub-page-link--title-wrapper flex justify-between items-center">';
+		$title_after  = '</span>';
+		$title_overlay = '<p class="sub-page-link--title-overlay font-bold text-3xl font-sans text-black uppercase m-0 absolute top-[14px] transition-all duration-500 ease-in-out -translate-x-full opacity-0">' . esc_html__( 'eintreten', 'chasseral' ) . '</p>';
+		$overlay_open  = '<div class="sub-page-link--overlay">';
+		$overlay_close = '</div>';
+
+		if ( 'hotel_restaurant' === $slug ) :
+			$link_class = 'sub-page-link--hotel';
+		elseif ( 'top_of_jura' === $slug ) :
+			$link_class = 'sub-page-link--top-of-jura';
+		elseif ( 'szl' === $slug ) :
+			$link_class = 'sub-page-link--szl';
+		endif;
+
+		if ( ! empty( $logo ) ) :
+			$link_logo = '<img src="' . esc_url( $logo['url'] )  . '" alt="' . $logo['alt'] . '" class="sub-page-link--logo max-w-[175px] mb-10">';
+		endif;
+		if ( ! empty( $root ) ) :
+			$root_id    = $root->ID;
+			//echo '<pre>' . var_dump( $root ) . '</pre>';
+			$link_open  = '<a href="' . esc_url( get_permalink( $root_id ) ) . '" class="sub-page-link ' . $link_class . '">';
+			$link_close = '</a>';
+			$link_title = '<h2 class="font-bold text-3xl font-sans text-black uppercase mb-10">' . $root->post_title . '</h2>';
+			$link_desc  = get_the_excerpt( $root_id );
+			if ( has_post_thumbnail( $root_id ) ) :
+				$link_img_src = get_the_post_thumbnail_url( $root_id, 'sub-page-thumbnail' );
+				$link_img = '<img src="' . $link_img_src . '" class="sub-page-link--image object-cover absolute z-40 top-0 left-0 w-full h-auto">';
+				//echo '<pre>' . var_dump( $link_img ) . '</pre>';
+			endif;
+		endif;
+
+		$link_render  = $link_open;
+		$link_render .= $title_before;
+		$link_render .= $link_title;
+		$link_render .= $title_overlay;
+		$link_render .= $link_arrow;
+		$link_render .= $title_after;
+		$link_render .= $link_img;
+		$link_render .= $overlay_open;
+		$link_render .= $link_logo;
+		$link_render .= $link_title;
+		$link_render .= $link_desc;
+		$link_render .= $overlay_close;
+		$link_render .= $link_close;
+
+		echo $link_render;
+	else :
+		echo 'You need to pass a slug for the link! The slug is the name of the ACF field.';
+	endif;
+}
+
+add_action( 'sub_pages_link', 'chasseral_theme_sub_pages', 10, 1 );
