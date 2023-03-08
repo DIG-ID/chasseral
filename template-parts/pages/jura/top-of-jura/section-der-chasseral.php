@@ -1,5 +1,5 @@
 <section class="section-2cols-image grid grid-cols-2">
-    <div class="flex justify-center p-20 flex-col border-y border-solid">
+    <div class="flex justify-center p-20 flex-col border-y border-solid border-b-0">
         <h2 class="text-black text-3xl font-bold mb-16"><?php the_field('section_der_chasseral_title'); ?></h2>
         <p class="text-black text-sm font-normal leading-7 mb-14 xl:max-w-[450px]"><?php the_field('section_der_chasseral_description'); ?></p>
         <a href="#" class="btn-general"><?php echo esc_html( 'Mehr erfahren', 'chasseral' ) ?></a>
