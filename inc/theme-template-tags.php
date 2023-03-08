@@ -174,7 +174,7 @@ function chasseral_theme_sub_pages( $slug ) {
 			$link_desc  = get_the_excerpt( $root_id );
 			if ( has_post_thumbnail( $root_id ) ) :
 				$link_img_src = get_the_post_thumbnail_url( $root_id, 'sub-page-thumbnail' );
-				$link_img = '<img src="' . $link_img_src . '" class="sub-page-link--image object-cover absolute z-40 top-0 left-0 w-full h-auto">';
+				$link_img = '<img src="' . $link_img_src . '" class="sub-page-link--image object-cover absolute top-0 left-0 w-full h-auto">';
 				//echo '<pre>' . var_dump( $link_img ) . '</pre>';
 			endif;
 		endif;
