@@ -22,8 +22,11 @@
             $my_query->the_post(); 
             $post_id = get_the_ID(); ?>
                 <article id="post-<?php echo $post_id ?>" <?php post_class( 'col-span-1' ); ?>>
-                    <?php 
-                    echo get_the_post_thumbnail( $post_id, 'activities-thumbnail' ); ?>
+                    <?php if (has_post_thumbnail( $post_id ) ): 
+                    echo get_the_post_thumbnail( $post_id, 'activities-thumbnail' );
+                    else : ?>
+                    <img src="https://via.placeholder.com/420x282">
+                    <?php endif; ?>
                     <div class="activities__content-wrapper p-8 bg-white min-h-[400px] relative">
                         <h2 class="font-bold text-xl mb-4"><?php the_title(); ?></h2>
                         <span class="text-sm leading-7"><?php the_excerpt(); ?></span>
