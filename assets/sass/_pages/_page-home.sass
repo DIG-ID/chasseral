@@ -1,3 +1,13 @@
+@keyframes sliding-left
+  0%
+    transform: translateX( 0% )
+  100%
+    transform: translateX( -100% )
+
+.sliding-text-content
+  .sliding-text
+    animation: 400s sliding-left infinite normal linear
+
 .section-sub-pages
   .sub-page-link
     @apply relative block overflow-hidden border border-solid border-black h-[600px]

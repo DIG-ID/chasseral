@@ -144,12 +144,12 @@ add_action( 'mega_menu_link', 'chasseral_theme_mega_menu_link', 10, 2 );
 function chasseral_theme_sub_pages( $slug ) {
 
 	if ( ! empty( $slug ) ) :
-		$logo = get_field( "theme_logos_{$slug}", 'options' );
-		$root = get_field( "root_pages_{$slug}", 'options' );
-		$link_logo = $link_open = $link_close = $link_title = $link_render = $link_img = $link_class = '';
-		$link_arrow   = '<span class="sub-page-link--icon"><svg width="22" height="22" fill="none"><path fill="#000" d="m11 22-1.96-1.925 7.7-7.7H0v-2.75h16.74l-7.7-7.7L11 0l11 11-11 11Z"/></svg></span>';
-		$title_before = '<span class="sub-page-link--title-wrapper flex justify-between items-center">';
-		$title_after  = '</span>';
+		$logo          = get_field( "theme_logos_{$slug}", 'options' );
+		$root          = get_field( "root_pages_{$slug}", 'options' );
+		$link_logo     = $link_open = $link_close = $link_title = $link_render = $link_img = $link_class = '';
+		$link_arrow    = '<span class="sub-page-link--icon"><svg width="22" height="22" fill="none"><path fill="#000" d="m11 22-1.96-1.925 7.7-7.7H0v-2.75h16.74l-7.7-7.7L11 0l11 11-11 11Z"/></svg></span>';
+		$title_before  = '<span class="sub-page-link--title-wrapper flex justify-between items-center">';
+		$title_after   = '</span>';
 		$title_overlay = '<p class="sub-page-link--title-overlay font-bold text-3xl font-sans text-black uppercase m-0 absolute top-[14px] transition-all duration-300 ease-in-out -translate-x-full opacity-0">' . esc_html__( 'eintreten', 'chasseral' ) . '</p>';
 		$overlay_open  = '<div class="sub-page-link--overlay">';
 		$overlay_close = '</div>';
@@ -167,15 +167,13 @@ function chasseral_theme_sub_pages( $slug ) {
 		endif;
 		if ( ! empty( $root ) ) :
 			$root_id    = $root->ID;
-			//echo '<pre>' . var_dump( $root ) . '</pre>';
 			$link_open  = '<a href="' . esc_url( get_permalink( $root_id ) ) . '" class="sub-page-link ' . $link_class . '">';
 			$link_close = '</a>';
 			$link_title = '<h2 class="font-bold text-3xl font-sans text-black uppercase mb-10">' . $root->post_title . '</h2>';
 			$link_desc  = get_the_excerpt( $root_id );
 			if ( has_post_thumbnail( $root_id ) ) :
 				$link_img_src = get_the_post_thumbnail_url( $root_id, 'sub-page-thumbnail' );
-				$link_img = '<img src="' . $link_img_src . '" class="sub-page-link--image object-cover absolute top-0 left-0 w-full h-auto">';
-				//echo '<pre>' . var_dump( $link_img ) . '</pre>';
+				$link_img     = '<img src="' . $link_img_src . '" class="sub-page-link--image object-cover absolute top-0 left-0 w-full h-auto">';
 			endif;
 		endif;
 
@@ -200,3 +198,32 @@ function chasseral_theme_sub_pages( $slug ) {
 }
 
 add_action( 'sub_pages_link', 'chasseral_theme_sub_pages', 10, 1 );
+
+
+/**
+ * This function gets the color from the category.
+ */
+function chasseral_get_cat_color_class( $type ) {
+	$event_cat          = get_the_category();
+	$event_cat_id       = $event_cat[0]->term_id;
+	$event_cat_hexcolor = get_field( 'category_color', 'category_' . $event_cat_id );
+
+	if ( $event_cat_hexcolor ) :
+		if ( 'hex' === $type ) :
+			$cat_hex = $event_cat_hexcolor;
+			echo esc_attr( $cat_hex );
+		elseif ( 'class' === $type ) :
+			$cat_class = '';
+			if ( '#D12329' === strtoupper( $event_cat_hexcolor ) ) :
+				$cat_class = 'hotel';
+			elseif ( '#00944E' === strtoupper( $event_cat_hexcolor ) ) :
+				$cat_class = 'szl';
+			elseif ( '#0071BA' === strtoupper( $event_cat_hexcolor ) ) :
+				$cat_class = 'jura';
+			endif;
+			echo esc_html( $cat_class );
+		endif;
+	endif;
+}
+
+add_action( 'cat_color', 'chasseral_get_cat_color_class', 10, 1 );

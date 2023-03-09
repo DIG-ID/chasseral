@@ -9,20 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("load", () => {
     if (document.body.classList.contains("page-template-page-home")) {
 
-      // Sliding text
-      const slidingText = document.querySelectorAll('.sliding-text-content');
-      // Use GSAP to animate the text container element
-      gsap.to(slidingText, {
-        x: '-100%', // Slide the text container to the left
-        duration: 40, // Set the duration of the animation
-        ease: 'linear', // Use a linear ease for a smooth sliding effect
-        repeat: -1, // Set the animation to repeat infinitely
-        onComplete: function() {
-          // Reset the text container's position to the starting point
-          gsap.set(textContainer, { x: '0%' });
-        }
-
-      });
     }
     
     /* menu open/close */
