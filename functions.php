@@ -37,6 +37,8 @@ function chasseral_theme_setup() {
 
 	add_image_size( 'activities-thumbnail', 420, 282, 'center', 'center' );
 
+	add_image_size( 'section-column-img', 961, 706, 'center', 'center' );
+
 }
 
 add_action( 'after_setup_theme', 'chasseral_theme_setup' );
