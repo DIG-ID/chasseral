@@ -1,12 +1,12 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'card-event overflow-hidden mb-20' ); ?>>
-	<div class="card-event-content grid grid-cols-2">
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'card-agenda overflow-hidden mb-20' ); ?>>
+	<div class="card-agenda-content grid grid-cols-2">
 		<div class="border border-solid border-black">
 			<?php
 			if ( has_post_thumbnail() ) :
-				$img_url = get_the_post_thumbnail_url( get_the_ID(), 'event-thumbnail' );
-				?><img class="w-full h-auto object-cover max-h-[400px]" src="<?php echo esc_url( $img_url ); ?>" alt="<?php echo get_the_post_thumbnail_caption(); ?>"><?php
+				$img_url = get_the_post_thumbnail_url( get_the_ID(), 'agenda-thumbnail' );
+				?><img class="w-full h-auto object-cover max-h-[475px]" src="<?php echo esc_url( $img_url ); ?>" alt="<?php echo get_the_post_thumbnail_caption(); ?>"><?php
 			else :
-				?><img class="w-full h-auto object-cover max-h-[400px]" src="http://via.placeholder.com/750x750"><?php
+				?><img class="w-full h-auto object-cover max-h-[475px]" src="http://via.placeholder.com/750x750"><?php
 			endif;
 			?>
 		</div>
@@ -26,7 +26,7 @@
 			$event_cat_name = $event_cat[0]->cat_name;
 			?>
 			<p class="badge text-white text-[13px] font-semibold py-1 px-3 mb-10" style="background-color: <?php do_action( 'cat_color', 'hex' ); ?>;"><?php echo $event_cat_name; ?></p>
-			<p class="text-sm font-normal leading-7 max-w-md mb-8 line-clamp-2"><?php echo esc_html( get_the_excerpt() ); ?></p>
+			<p class="text-sm font-normal leading-7 max-w-md mb-8 line-clamp-3"><?php echo esc_html( get_the_excerpt() ); ?></p>
 			<a href="<?php the_permalink(); ?>" class="btn-general btn-general--<?php do_action( 'cat_color', 'class' ); ?>"><?php esc_html_e( 'Mehr erfahren', 'chasseral' ); ?></a>
 		</div>
 	</div>

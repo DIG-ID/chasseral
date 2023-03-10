@@ -38,8 +38,12 @@ function chasseral_theme_setup() {
 	add_image_size( 'activities-thumbnail', 420, 282, 'center', 'center' );
 
 	add_image_size( 'section-column-img', 961, 706, 'center', 'center' );
-	
-	add_image_size( 'event-thumbnail', 750, 750, 'center', 'center' );
+
+	add_image_size( 'agenda-event-thumbnail', 750, 750, 'center', 'center' );
+
+	add_image_size( 'agenda-thumbnail', 500, 500, 'center', 'center' );
+
+	add_image_size( 'event-thumbnail', 450, 450, 'center', 'center' );
 
 }
 
@@ -404,6 +408,7 @@ function chasseral_theme_remove_archive_prefix( $title ) {
 }
 
 add_filter( 'get_the_archive_title', 'chasseral_theme_remove_archive_prefix' );
+
 
 // Theme custom Walker.
 //require get_template_directory() . '/inc/theme-custom-walker.php';

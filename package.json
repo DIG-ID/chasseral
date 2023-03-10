@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/DIG-ID/parsberg#readme",
   "devDependencies": {
+    "@tailwindcss/line-clamp": "^0.4.2",
     "autoprefixer": "^10.4.13",
     "browser-sync": "^2.27.11",
     "browser-sync-webpack-plugin": "^2.3.0",
