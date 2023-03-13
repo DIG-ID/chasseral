@@ -1,4 +1,4 @@
-<section class="section-sub-pages grid gap-5 grid-cols-3">
+<section class="section-sub-pages grid grid-cols-1 lg:grid-cols-3 lg:gap-5">
 	<?php
 	do_action( 'sub_pages_link', 'szl' );
 	do_action( 'sub_pages_link', 'hotel_restaurant' );

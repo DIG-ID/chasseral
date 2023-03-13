@@ -31,6 +31,8 @@ function chasseral_theme_setup() {
 
 	add_post_type_support( 'page', 'excerpt' );
 
+	set_post_thumbnail_size( 500, 350, 'center', 'center' );
+
 	add_image_size( 'mega-link-thumbnail', 1000, 500, 'center', 'center' );
 
 	add_image_size( 'sub-page-thumbnail', 700, 700, 'center', 'center' );
