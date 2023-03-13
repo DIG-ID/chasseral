@@ -17,5 +17,20 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
+    if (document.body.classList.contains("page-template-page-jura")) {
+      const agendaEventsSwiper = new Swiper('.swiper-institutionen', {
+        loop: false,
+        slidesPerView: '4',
+        spaceBetween: 20,
+        direction: 'horizontal',
+        speed: 800,
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next.institutionen-button-next',
+          prevEl: '.swiper-button-prev.institutionen-button-prev',
+        },
+      });
+    }
+
   }, false);
 });
