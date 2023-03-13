@@ -199,11 +199,10 @@ function chasseral_theme_sub_pages( $slug ) {
 
 add_action( 'sub_pages_link', 'chasseral_theme_sub_pages', 10, 1 );
 
-
 /**
  * This function gets the color from the category.
  */
-function chasseral_get_cat_color_class( $type ) {
+function chasseral_theme_get_cat_color_class( $type ) {
 	$event_cat          = get_the_category();
 	$event_cat_id       = $event_cat[0]->term_id;
 	$event_cat_hexcolor = get_field( 'category_color', 'category_' . $event_cat_id );
@@ -226,4 +225,24 @@ function chasseral_get_cat_color_class( $type ) {
 	endif;
 }
 
-add_action( 'cat_color', 'chasseral_get_cat_color_class', 10, 1 );
+add_action( 'cat_color', 'chasseral_theme_get_cat_color_class', 10, 1 );
+
+/**
+ * This function creates the pagination links.
+ */
+function chasseral_theme_pagination( $lquery ) {
+	$big = 999999999;
+	$my_pagination = paginate_links(
+		array(
+			'base'      => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+			'format'    => '?paged=%#%',
+			'total'     => $lquery->max_num_pages,
+			'current'   => max( 1, get_query_var( 'paged' ) ),
+			'prev_text' => __( 'Previous' ),
+			'next_text' => __( 'Next' ),
+		)
+	);
+	echo '<div class="pagination">' . $my_pagination . '</div>';
+}
+
+add_action( 'pagination', 'chasseral_theme_pagination', 10, 1 );

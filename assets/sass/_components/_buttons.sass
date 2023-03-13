@@ -30,14 +30,23 @@ body.mega-menu-open
     &--hotel
       &:hover
         @apply bg-main-red text-white
+    &--hotel.is-checked
+      @apply bg-main-red text-white
     &--szl
       &:hover
         @apply bg-main-green text-white
+    &--szl.is-checked
+      @apply bg-main-green text-white
     &--jura
       &:hover
         @apply bg-main-blue text-white
+    &--jura.is-checked
+      @apply bg-main-blue text-white
   &__arrow-alle
     @apply text-sm font-semibold
     svg
       display: inline
+  &-filter
+    @apply mr-6 last-of-type:mr-0
 
+.btn-general--hotel-active
