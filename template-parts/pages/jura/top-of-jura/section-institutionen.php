@@ -1,5 +1,5 @@
 <section class="section-institutionen px-0 py-52">
-    <div class="flex justify-center flex-col ml-72">
+    <div class="flex justify-center flex-col pl-72">
         <div class="grid grid-cols-6">
             <div class="col-span-4">
                 <h2 class="text-black text-3xl font-bold mb-14"><?php the_field('section_institutionen_title'); ?></h2>
@@ -15,7 +15,7 @@
             <?php while( have_rows('section_institutionen_institutionen_list') ): the_row(); 
                 $image = get_sub_field('logo');
                 ?>
-                <div class="swiper-slide swiper-institutionen-slide border-solid border-black border relative pb-8 !w-[420px] min-h-[630px]">
+                <div class="swiper-slide swiper-institutionen-slide border-solid border-black border relative pb-8 min-h-[630px]">
                     <?php echo wp_get_attachment_image( $image, 'institutionen-thumbnail' ); ?>
                     <div class="p-8">
                         <p class="font-bold text-xl mb-6"><?php the_sub_field('title'); ?></p>

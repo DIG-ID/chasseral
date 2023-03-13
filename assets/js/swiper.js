@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (document.body.classList.contains("page-template-page-jura")) {
       const agendaEventsSwiper = new Swiper('.swiper-institutionen', {
         loop: false,
-        slidesPerView: '4',
+        slidesPerView: '3.8',
         spaceBetween: 20,
         direction: 'horizontal',
         speed: 800,
