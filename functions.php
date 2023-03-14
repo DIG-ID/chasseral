@@ -49,6 +49,8 @@ function chasseral_theme_setup() {
 
 	add_image_size( 'institutionen-thumbnail', 420, 310, 'center', 'center' );
 
+	add_image_size( 'chasseral-page--thumbnail', 960, 1056, 'center', 'center' );
+
 }
 
 add_action( 'after_setup_theme', 'chasseral_theme_setup' );
