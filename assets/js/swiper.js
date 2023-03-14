@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (document.body.classList.contains("page-template-page-jura")) {
-      const agendaEventsSwiper = new Swiper('.swiper-institutionen', {
+      const institutionenEventsSwiper = new Swiper('.swiper-institutionen', {
         loop: false,
         slidesPerView: '3.8',
         spaceBetween: 20,
@@ -28,6 +28,33 @@ document.addEventListener("DOMContentLoaded", () => {
         navigation: {
           nextEl: '.swiper-button-next.institutionen-button-next',
           prevEl: '.swiper-button-prev.institutionen-button-prev',
+        },
+      });
+    }
+
+    if (document.body.classList.contains("page-template-page-activities")) {
+      const summerEventsSwiper = new Swiper('.swiper-act-summer', {
+        loop: false,
+        slidesPerView: '3',
+        spaceBetween: 20,
+        direction: 'horizontal',
+        speed: 800,
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next.act-summer-button-next',
+          prevEl: '.swiper-button-prev.act-summer-button-prev',
+        },
+      });
+      const winterEventsSwiper = new Swiper('.swiper-act-winter', {
+        loop: false,
+        slidesPerView: '3',
+        spaceBetween: 20,
+        direction: 'horizontal',
+        speed: 800,
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next.act-winter-button-next',
+          prevEl: '.swiper-button-prev.act-winter-button-prev',
         },
       });
     }
