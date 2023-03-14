@@ -17,6 +17,77 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
+    if (document.body.classList.contains("page-template-page-gallery")) {
+      // Video slider
+      var videoGalleryThumbnails = new Swiper(".video-swiper-thumbnail", {
+        spaceBetween: 10,
+        slidesPerView: 2,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+      var videoGallery = new Swiper(".video-swiper", {
+        spaceBetween: 10,
+        navigation: {
+          nextEl: ".videos-button-next",
+          prevEl: ".videos-button-prev",
+        },
+        thumbs: {
+          swiper: videoGalleryThumbnails,
+        },
+      });
+      // SZL slider
+      var szlThumbnails = new Swiper(".szl-swiper-thumbnail", {
+        spaceBetween: 10,
+        slidesPerView: 2,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+      var szlGallery = new Swiper(".szl-swiper", {
+        spaceBetween: 10,
+        navigation: {
+          nextEl: ".szl-button-next",
+          prevEl: ".szl-button-prev",
+        },
+        thumbs: {
+          swiper: szlThumbnails,
+        },
+      });
+      // Hotel slider
+      var hotelThumbnails = new Swiper(".hotel-swiper-thumbnail", {
+        spaceBetween: 10,
+        slidesPerView: 2,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+      var hotelGallery = new Swiper(".hotel-swiper", {
+        spaceBetween: 10,
+        navigation: {
+          nextEl: ".hotel-button-next",
+          prevEl: ".hotel-button-prev",
+        },
+        thumbs: {
+          swiper: hotelThumbnails,
+        },
+      });
+      // Jura slider
+      var juraThumbnails = new Swiper(".jura-swiper-thumbnail", {
+        spaceBetween: 10,
+        slidesPerView: 2,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+      var juraGallery = new Swiper(".jura-swiper", {
+        spaceBetween: 10,
+        navigation: {
+          nextEl: ".jura-button-next",
+          prevEl: ".jura-button-prev",
+        },
+        thumbs: {
+          swiper: juraThumbnails,
+        },
+      });
+    }
+
     if (document.body.classList.contains("page-template-page-jura")) {
       const institutionenEventsSwiper = new Swiper('.swiper-institutionen', {
         loop: false,

@@ -1,6 +1,42 @@
-.gallery
-    &__gallery
-        &-section
-            img
-                width: 100%
-                height: auto
+.page-template-page-gallery
+  .carousel__slide.has-thumb.has-image.is-selected
+    .fancybox__thumb
+      @apply rounded-none
+      &::after
+        @apply transition-all duration-200 ease-in-out
+  .carousel__slide.has-thumb.has-image.is-selected.is-nav-selected
+    .fancybox__thumb
+      &::after
+        @apply border-2 border-bg-color rounded-none
+
+  
+.section-gallery
+  .swiper-thumbnail
+    .swiper-slide
+      @apply border-2 border-solid border-bg-color/0 opacity-50 transition-all duration-300 ease-in hover:cursor-pointer hover:opacity-100
+
+
+  &--slz
+    .swiper-button-prev,
+    .swiper-button-next
+      @apply hover:bg-main-green hover:text-white
+    .szl-swiper-thumbnail
+      .swiper-slide-thumb-active
+        @apply border-main-green opacity-100
+
+  &--hotel
+    .swiper-button-prev,
+    .swiper-button-next
+      @apply hover:bg-main-red hover:text-white
+    .hotel-swiper-thumbnail
+      .swiper-slide-thumb-active
+        @apply border-main-red opacity-100
+
+  &--jura
+    .swiper-button-prev,
+    .swiper-button-next
+      @apply hover:bg-main-blue hover:text-white
+    .jura-swiper-thumbnail
+      .swiper-slide-thumb-active
+        @apply border-main-blue opacity-100
+

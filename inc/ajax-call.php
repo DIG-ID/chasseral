@@ -3,7 +3,7 @@ add_action( 'wp_ajax_get_blog_posts', 'get_blog_posts' );
 add_action( 'wp_ajax_nopriv_get_blog_posts', 'get_blog_posts' );
 
 function get_blog_posts() {
-	$msg = '';
+	$pag_container = "";
 	if ( isset( $_POST['page'] ) ) :
 
 		// Sanitize the received page  
@@ -50,12 +50,17 @@ function get_blog_posts() {
 
 		// Loop into all the posts to get them
 		if ( $blog_query->have_posts() ) :
+			echo '<div class="blog-grid-pagination-content blog-grid grid grid-cols-3 gap-5">';
 			while ( $blog_query->have_posts() ) :
 				$blog_query->the_post();
-				$msg .= get_template_part( 'template-parts/components/card', 'blog' );
+				get_template_part( 'template-parts/components/card', 'blog');
 			endwhile;
+			echo '</div>';
 			wp_reset_postdata();
+		else :
+			echo "No posts found.";
 		endif;
+
 
 		//$msg = '<div class="blog-grid--content">' . $msg . '</div>';
 
@@ -81,6 +86,12 @@ function get_blog_posts() {
 		endif;
 
 		// Pagination Buttons logic    
+
+		$icon_last_page = 'yo';
+		$icon_first_page = "";
+		$icon_prev_page = "";
+		$icon_next_page = "";
+
 		$pag_container .= "<ul class='blog-grid-pagination'>";
 
 		if ( $first_btn && $cur_page > 1 ) :
@@ -111,19 +122,17 @@ function get_blog_posts() {
 		endif;
 
 		if ( $last_btn && $cur_page < $no_of_paginations ) :
-			$pag_container .= "<li p='$no_of_paginations' class='active'>Last</li>";
+			$pag_container .= "<li p='$no_of_paginations' class='active'>last</li>";
 		elseif ( $last_btn ) :
-			$pag_container .= "<li p='$no_of_paginations' class='inactive'>Last</li>";
+			$pag_container .= "<li p='$no_of_paginations' class='inactive'>last</li>";
 		endif;
 
-		$pag_container = $pag_container . "</ul>";
+		$pag_container = $pag_container . '</ul>';
 
 		// We echo the final output
 		//echo $msg . '<div class= "blog-grid-pagination-wrapper">' . $pag_container . '</div>';
 
-		echo
-		'<div class = "blog-grid-pagination-content">' . $msg . '</div>' .
-		'<div class = "blog-grid-pagination-nav">' . $pag_container . '</div>';
+		echo '<div class="blog-grid-pagination-nav flex justify-center items-center">' . $pag_container . '</div>';
 
 	endif;
 

@@ -1,4 +1,4 @@
-<header id="header-main" class="header-main w-full fixed box-border bg-bg-color border-b border-black border-solid" itemscope itemtype="http://schema.org/WebSite">
+<header id="header-main" class="header-main w-full fixed top-0 box-border bg-bg-color border-b border-black border-solid" itemscope itemtype="http://schema.org/WebSite">
 	<nav class="navigation-main" role="navigation" aria-label="<?php esc_attr_e( 'Main navigation', 'chasseral' ); ?>">
 		<div class="navigation-main-content w-full h-[75px] flex items-stretch justify-between">
 			<div class="w-1/2 border-r border-solid border-black flex">
