@@ -17,11 +17,9 @@
 		endif;
 		?>
 	</div>
-	<div class="blog-grid grid grid-cols-3 gap-5">
-		<?php //get_template_part( 'template-parts/loops/loop', 'blog' ); ?>
-		<?php //get_template_part( 'template-parts/blog/blog', 'ajax-call' ); ?>
-	</div>
-	<div class="pagination-container">
-		<h1>hery</h1>
+	<div class="blog-grid--loading">
+		<div class="blog-grid--container">
+
+		</div>
 	</div>
 </section>

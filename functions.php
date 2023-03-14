@@ -315,10 +315,10 @@ add_action( 'wp_enqueue_scripts', 'chasseral_theme_enqueue_styles' );
 //Google Map Init
 function my_acf_init() {
 	if ( is_admin() ) :
-    	acf_update_setting('google_api_key', 'AIzaSyCB2RShyxiN7xPsQy1QI_SbqXXjW5p08S0');
+		acf_update_setting( 'google_api_key', 'AIzaSyCB2RShyxiN7xPsQy1QI_SbqXXjW5p08S0' );
 	endif;
 }
-add_action('acf/init', 'my_acf_init');
+add_action( 'acf/init', 'my_acf_init' );
 
 /**
  * Wrap the post thumbnail image in a figure element only in the blog posts and project posts.

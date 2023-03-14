@@ -4,33 +4,31 @@ document.addEventListener("DOMContentLoaded", () => {
   //wait until images, links, fonts, stylesheets, and js is loaded
   window.addEventListener("load", () => {
     if (document.body.classList.contains("blog")) {
-      var page = 1;
-      var postPerPage = 10;
-      var postsContainer = $('.blog-grid');
-
-      function loadBlogPosts() {
-        var data = {
-          action: 'get_blog_posts',
-          page: page,
-          post_per_page: postPerPage
-      };
-      
-      $.ajax({
-        url: blog_ajax_object.ajax_url,
-        type: 'POST',
-        data: data,
-        success: function(response) {
-          postsContainer.append(response);
-          page++;
-        },
-        error: function(xhr, ajaxOptions, thrownError) {
-          console.log(thrownError);
-        }
-      });
-    }
-    
-    loadBlogPosts();
-
+			var ajaxurl = blog_ajax_object.ajax_url;
+			function loadBlogPosts(page){
+				// Start the transition
+				$(".blog-grid--loading").fadeIn().css('background','#ccc');
+				// Data to receive from our server
+				// the value in 'action' is the key that will be identified by the 'wp_ajax_' hook
+				var data = {
+					page: page,
+					action: "get_blog_posts"
+				};
+				// Send the data
+				$.post(ajaxurl, data, function(response) {
+					// If successful Append the data into our html container
+					$(".blog-grid--container").html(response);
+					// End the transition
+					$(".blog-grid--loading").css({'background':'none', 'transition':'all 1s ease-out'});
+				});
+			}
+			// Load page 1 as the default
+			loadBlogPosts(1);
+			// Handle the clicks
+			$('body').on('click', '.blog-grid--container .blog-grid-pagination li.active', function(e){
+				var page = $(this).attr('p');
+				loadBlogPosts(page);
+			});
     }
   }, false);
 });
