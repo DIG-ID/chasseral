@@ -20,7 +20,7 @@
                     <div class="p-8">
                         <p class="font-bold text-xl mb-6"><?php the_sub_field('title'); ?></p>
                         <p class="text-sm font-normal leading-7"><?php the_sub_field('description'); ?></p>
-                        <a href="<?php the_sub_field('external_link'); ?>" alt="" title="" class="absolute bottom-8 left-8 font-semibold inline text-sm"><?php echo esc_html( 'zur Webseite','chasseral' ); ?>
+                        <a href="<?php the_sub_field('external_link'); ?>" alt="" title="" target="_blank" class="absolute bottom-8 left-8 font-semibold inline text-sm"><?php echo esc_html( 'zur Webseite','chasseral' ); ?>
                             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline">
                             <path d="M6 12L4.93125 10.95L9.13125 6.75H0V5.25H9.13125L4.93125 1.05L6 0L12 6L6 12Z" fill="black"/>
                             </svg>
