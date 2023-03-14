@@ -1,5 +1,5 @@
 <section class="section-all-activities pt-40 border-t border-solid">
-    <div class="container px-8 grid grid-cols-1 lg:grid-cols-1 gap-0 lg:gap-4 lg:mx-auto">
+    <div class="container px-8 grid grid-cols-1 lg:grid-cols-1 gap-0 lg:gap-4 lg:mx-auto max-w-7xl">
         <div class="grid grid-cols-6">
             <div class="col-span-4">
                 <h2 class="text-black text-3xl font-bold mb-14"><?php echo esc_html( 'Aktivitäten im Sommer', 'chasseral' ) ?></h2>

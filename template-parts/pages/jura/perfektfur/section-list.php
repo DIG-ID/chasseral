@@ -11,7 +11,7 @@
     $loop = new WP_Query( $args ); 
     while ( $loop->have_posts() ) : $loop->the_post(); ?>
     <article id="post-<?php echo $post->ID ?>" <?php post_class( 'article__perfektfur col-span-1 grid grid-cols-12 mb-36' ); ?>>
-        <div class="perfektfur-col col-span-5">
+        <div class="perfektfur-col col-span-5 border border-solid">
             <?php if( get_the_post_thumbnail() ) :
                 echo  get_the_post_thumbnail( $post->ID, array(640,470), '' ); 
             else : ?>
@@ -22,7 +22,7 @@
         <div class="perfektfur-col col-span-1"></div>
         <div class="perfektfur-col col-span-4">
             <p class="text-black text-3xl font-bold mb-16"><?php the_title(); ?></p>
-            <p class="text-black text-sm font-normal leading-7 mb-14"><?php echo get_the_excerpt(); ?></p>
+            <p class="text-black text-sm font-normal leading-7 mb-14 max-w-sm"><?php echo get_the_excerpt(); ?></p>
             <a href="<?php the_permalink(); ?>" class="btn-general"><?php echo esc_html( 'Mehr erfahren', 'chasseral' ) ?></a>
         </div>
         <div class="perfektfur-col col-span-1"></div>
