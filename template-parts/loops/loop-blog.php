@@ -2,9 +2,9 @@
 $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 $args = array(
 	'post_type'        => 'post',
-	'posts_per_page'   => 6,
+	//'posts_per_page'   => 6,
 	'paged'            => $paged,
-	'category__not_in' => array( get_cat_ID( 'uncategorized' ) ),
+	'category__not_in' => array( get_cat_ID( 'uncategorized' ), get_cat_ID( 'unkategorisiert' ) ),
 	'hide_empty'       => true,
 );
 $loop = new WP_Query( $args );
