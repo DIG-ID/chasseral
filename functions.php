@@ -47,6 +47,8 @@ function chasseral_theme_setup() {
 
 	add_image_size( 'chasseral-page--thumbnail', 960, 1056, 'center', 'center' );
 
+	add_image_size( 'chasseral-jura-preview--thumbnail', 530, 575, 'center', 'center' );
+
 }
 
 add_action( 'after_setup_theme', 'chasseral_theme_setup' );

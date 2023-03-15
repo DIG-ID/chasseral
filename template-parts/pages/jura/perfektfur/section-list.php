@@ -23,7 +23,7 @@
         <div class="perfektfur-col col-span-4">
             <p class="text-black text-3xl font-bold mb-16"><?php the_title(); ?></p>
             <p class="text-black text-sm font-normal leading-7 mb-14 max-w-sm"><?php echo get_the_excerpt(); ?></p>
-            <a href="<?php the_permalink(); ?>" class="btn-general"><?php echo esc_html( 'Mehr erfahren', 'chasseral' ) ?></a>
+            <a href="<?php the_permalink(); ?>" class="btn-general btn-general--jura"><?php echo esc_html( 'Mehr erfahren', 'chasseral' ) ?></a>
         </div>
         <div class="perfektfur-col col-span-1"></div>
     </article>
