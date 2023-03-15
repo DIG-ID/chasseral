@@ -1,5 +1,5 @@
 <section class="section-institutionen pt-40 border-t border-solid">
-    <div class="container px-8 grid grid-cols-1 lg:grid-cols-1 gap-0 lg:gap-4 lg:mx-auto">
+    <div class="container max-w-7xl px-8 grid grid-cols-1 lg:grid-cols-1 gap-0 lg:gap-4 lg:mx-auto">
     <?php
      $args = array(  
         'post_type' => 'perfekt_fur',
@@ -11,7 +11,7 @@
     $loop = new WP_Query( $args ); 
     while ( $loop->have_posts() ) : $loop->the_post(); ?>
     <article id="post-<?php echo $post->ID ?>" <?php post_class( 'article__perfektfur col-span-1 grid grid-cols-12 mb-36' ); ?>>
-        <div class="perfektfur-col col-span-5 border border-solid">
+        <div class="perfektfur-col col-span-6 border border-solid">
             <?php
             $size = 'perfekt-fur-thumbnail';
             if( get_the_post_thumbnail() ) :

@@ -1,5 +1,5 @@
 <section id="single-perfekt-fur-gallery" class="section-perfekt-fur__gallery py-20">
-    <div class="container mx-auto">
+    <div class="container max-w-7xl mx-auto">
         <div class="grid grid-cols-6">
             <div class="col-span-4">
                 <h2 class="text-black text-3xl font-bold mb-14"><?php echo esc_html( 'Galerie', 'chasseral' ) ?></h2>
@@ -17,7 +17,7 @@
             foreach ( $gallery as $image ) :
                 $img_url = $image['url'];
                 echo '<div class="swiper-slide">';
-                echo '<a href="' . esc_url( $img_url ) . '" data-fancybox="gallery-jura" data-caption="' . esc_html( $image['caption'] ) . '" ><img class="w-full h-auto object-cover max-h-[700px]" src="' . esc_url( $img_url ) . '"></a>';
+                echo '<a href="' . esc_url( $img_url ) . '" data-fancybox="gallery-jura" data-caption="' . esc_html( $image['caption'] ) . '" ><img class="w-full h-auto object-cover max-h-[864px]" src="' . esc_url( $img_url ) . '"></a>';
                 echo '</div>';
             endforeach;
             echo '</div></div>';

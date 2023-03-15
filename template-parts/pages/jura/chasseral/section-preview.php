@@ -1,5 +1,5 @@
 <section class="chasseral-preview-section pt-40 pb-80 border-t border-solid">
-    <div class="container mx-auto grid grid-cols-12 border border-solid">
+    <div class="container max-w-7xl mx-auto grid grid-cols-12 border border-solid">
         <div class="col-span-5 border-r border-solid preview-img-box">
         <?php 
             $image = get_field('image');

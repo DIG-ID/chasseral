@@ -7,7 +7,7 @@
         <img src="https://via.placeholder.com/1920x500">
     <?php endif;
     ?>
-    <div class="py-40 container mx-auto">
+    <div class="py-40 container max-w-7xl mx-auto">
         <div class="mb-20 w-full">
             <h2 class="text-black text-6xl font-bold uppercase"><?php the_title(); ?></h2>
         </div>
