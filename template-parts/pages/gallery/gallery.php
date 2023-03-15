@@ -18,8 +18,9 @@ endif;
 	if ( $gallery ) :
 		echo '<div class="swiper '. $template_class . '-swiper"><span></span><div class="swiper-wrapper">';
 		foreach ( $gallery as $image ) :
-			echo '<div class="swiper-slide max-h-[700px]">';
-			echo '<a href="' . esc_url( $image['url'] ) . '" data-fancybox="gallery-' . $template_class . '" data-caption="' . esc_html( $image['caption'] ) . '" ><img class="w-full h-auto object-cover" src="' . esc_url( $image['url'] ) . '"></a>';
+			$img_url = $image['url'];
+			echo '<div class="swiper-slide">';
+			echo '<a href="' . esc_url( $img_url ) . '" data-fancybox="gallery-' . $template_class . '" data-caption="' . esc_html( $image['caption'] ) . '" ><img class="w-full h-auto object-cover max-h-[700px]" src="' . esc_url( $img_url ) . '"></a>';
 			echo '</div>';
 		endforeach;
 		echo '</div></div>';
@@ -28,7 +29,7 @@ endif;
 		echo '<div class="swiper swiper-thumbnail '. $template_class . '-swiper-thumbnail"><div class="swiper-wrapper">';
 		foreach ( $gallery as $image ) :
 			echo '<div class="swiper-slide">';
-			echo '<img class="w-full h-auto object-cover max-h-[150px]" src="' . esc_url( $image['url'] ) . '">';
+			echo '<img class="w-full h-auto object-cover max-h-[150px]" src="' . esc_url( $image['sizes']['thumbnail'] ) . '">';
 			echo '</div>';
 		endforeach;
 		echo '</div></div>';
