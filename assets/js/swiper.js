@@ -88,6 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
+    // Top of Jura Sliders
     if (document.body.classList.contains("page-template-page-jura")) {
       const institutionenEventsSwiper = new Swiper('.swiper-institutionen', {
         loop: false,
@@ -102,7 +103,6 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       });
     }
-
     if (document.body.classList.contains("page-template-page-activities")) {
       const summerEventsSwiper = new Swiper('.swiper-act-summer', {
         loop: false,
@@ -129,6 +129,23 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       });
     }
-
+    if (document.body.classList.contains("single-perfekt_fur")) {
+      var juraThumbnails = new Swiper(".jura-swiper-thumbnail", {
+        spaceBetween: 2,
+        slidesPerView: 6,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+      var juraGallery = new Swiper(".jura-swiper", {
+        spaceBetween: 2,
+        navigation: {
+          nextEl: ".jura-button-next",
+          prevEl: ".jura-button-prev",
+        },
+        thumbs: {
+          swiper: juraThumbnails,
+        },
+      });
+    }
   }, false);
 });
