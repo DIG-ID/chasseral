@@ -7,13 +7,9 @@ function chasseral_theme_setup() {
 	register_nav_menus(
 		array(
 			'main'         => __( 'Main Menu', 'chasseral' ),
-			'main-mega'    => __( 'Main Mega Menu', 'chasseral' ),
 			'hotel'        => __( 'Hotel Menu', 'chasseral' ),
-			'hotel-mega'   => __( 'Hotel Mega Menu', 'chasseral' ),
 			'jura'         => __( 'Jura Menu', 'chasseral' ),
-			'jura-mega'    => __( 'Jura Mega Menu', 'chasseral' ),
 			'szl'          => __( 'SZL Menu', 'chasseral' ),
-			'szl-mega'     => __( 'SZL Mega Menu', 'chasseral' ),
 			'footer'       => __( 'Footer Menu', 'chasseral' ),
 			'footer terms' => __( 'Footer Terms Menu', 'chasseral' ),
 		)
@@ -354,33 +350,6 @@ function chasseral_theme_acf_op_gc_init() {
 				'redirect'        => false,
 				'update_button'   => __( 'Update Theme Options', 'chasseral' ),
 				'updated_message' => __( 'Chasseral Theme Options Updated', 'chasseral' ),
-			)
-		);
-		$option_page = acf_add_options_page(
-			array(
-				'page_title' => __( 'Chasseral General Content', 'chasseral' ),
-				'menu_title' => __( 'General Content', 'chasseral' ),
-				'menu_slug'  => 'chasseral-theme-general-content',
-				'capability' => 'edit_posts',
-				'redirect'   => false,
-			)
-		);
-		$options_sub_page = acf_add_options_sub_page(
-			array(
-				'page_title'  => 'Zimmer Archive',
-				'menu_title'  => 'Zimmer Archive',
-				'parent_slug' => 'chasseral-theme-general-content',
-				'capability'  => 'edit_posts',
-				'post_id'     => 'zimmer_archive',
-			)
-		);
-		$options_sub_page = acf_add_options_sub_page(
-			array(
-				'page_title'  => 'Aktivitaten Archive',
-				'menu_title'  => 'Aktivitaten Archive',
-				'parent_slug' => 'chasseral-theme-general-content',
-				'capability'  => 'edit_posts',
-				'post_id'     => 'aktivitaten_archive',
 			)
 		);
 	endif;
