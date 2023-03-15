@@ -43,11 +43,15 @@ function chasseral_theme_setup() {
 
 	add_image_size( 'event-thumbnail', 450, 450, 'center', 'center' );
 
+	add_image_size( 'perfekt-fur-thumbnail', 640, 470, 'center', 'center' );
+
 	add_image_size( 'institutionen-thumbnail', 420, 310, 'center', 'center' );
 
 	add_image_size( 'chasseral-page--thumbnail', 960, 1056, 'center', 'center' );
 
 	add_image_size( 'chasseral-jura-preview--thumbnail', 530, 575, 'center', 'center' );
+
+	add_image_size( 'chasseral-jura-headers', 1920, 500, 'center', 'center' );
 
 }
 

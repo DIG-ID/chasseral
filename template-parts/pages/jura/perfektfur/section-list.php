@@ -12,8 +12,10 @@
     while ( $loop->have_posts() ) : $loop->the_post(); ?>
     <article id="post-<?php echo $post->ID ?>" <?php post_class( 'article__perfektfur col-span-1 grid grid-cols-12 mb-36' ); ?>>
         <div class="perfektfur-col col-span-5 border border-solid">
-            <?php if( get_the_post_thumbnail() ) :
-                echo  get_the_post_thumbnail( $post->ID, array(640,470), '' ); 
+            <?php
+            $size = 'perfekt-fur-thumbnail',
+            if( get_the_post_thumbnail() ) :
+                echo  get_the_post_thumbnail( $post->ID, $size, '' ); 
             else : ?>
                 <img src="https://via.placeholder.com/640x470">
             <?php endif;

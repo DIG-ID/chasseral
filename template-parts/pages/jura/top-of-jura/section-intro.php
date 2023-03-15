@@ -1,6 +1,7 @@
 <section id="section-topofjura" class="section-topofjura__intro h-screen grid grid-cols-1 grid-rows-2">
     <?php $header_image = get_field('section_intro_header_image');
-    $header_imgArr = wp_get_attachment_image_src( $header_image, 'full' ); ?>
+    $size = 'chasseral-jura-headers';
+    $header_imgArr = wp_get_attachment_image_src( $header_image, $size ); ?>
     <div class="bg-cover bg-center h-full w-full" style="background-image: url(<?php echo $header_imgArr[0]; ?>);"></div>
     <div class="flex justify-center h-full w-full bg-no-repeat" style="background-image: url(<?php echo wp_upload_dir()['url'] . '/jura_mountain.svg' ?>);    background-position: 0 218%;">
         <div class="py-20 container grid grid-cols-3 justify-center">
