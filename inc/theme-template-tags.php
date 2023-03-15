@@ -148,7 +148,7 @@ function chasseral_theme_sub_pages( $slug ) {
 		$root          = get_field( "root_pages_{$slug}", 'options' );
 		$link_logo     = $link_open = $link_close = $link_title = $link_render = $link_img = $link_class = '';
 		$link_arrow    = '<span class="sub-page-link--icon"><svg width="22" height="22" fill="none"><path fill="#000" d="m11 22-1.96-1.925 7.7-7.7H0v-2.75h16.74l-7.7-7.7L11 0l11 11-11 11Z"/></svg></span>';
-		$title_before  = '<span class="sub-page-link--title-wrapper flex justify-between items-center">';
+		$title_before  = '<span class="sub-page-link--title-wrapper">';
 		$title_after   = '</span>';
 		$title_overlay = '<p class="sub-page-link--title-overlay font-bold text-3xl font-sans text-black uppercase m-0 absolute top-[14px] transition-all duration-300 ease-in-out -translate-x-full opacity-0">' . esc_html__( 'eintreten', 'chasseral' ) . '</p>';
 		$overlay_open  = '<div class="sub-page-link--overlay">';
