@@ -11,7 +11,7 @@ mix
   })
 
   .js('assets/js/app.js', 'js')
-  .js('assets/js/blog-ajax.js', 'js')
+  //.js('assets/js/blog-ajax.js', 'js')
   .sass('assets/sass/app.sass', 'css')
   .options({
     postCss: [ tailwindcss('./tailwind.config.js') ],
