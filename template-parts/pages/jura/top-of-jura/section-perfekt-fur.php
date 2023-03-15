@@ -1,5 +1,5 @@
 <section class="section-2cols-image grid grid-cols-2 border-y border-solid">
-    <div class="bg-cover bg-center h-full w-full">
+    <div class="bg-cover bg-center h-full w-full chasseral__col">
         <?php $c_image = get_field('section_perfekt_fur_image'); ?>
         <?php echo wp_get_attachment_image( $c_image, 'section-column-img' ); ?>
     </div>
