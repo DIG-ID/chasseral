@@ -1,3 +1,5 @@
+<?php $gallery = get_field( 'gallery' );
+if ( $gallery ) : ?>
 <section id="single-perfekt-fur-gallery" class="section-perfekt-fur__gallery py-20">
     <div class="container max-w-7xl mx-auto">
         <div class="grid grid-cols-6">
@@ -11,18 +13,14 @@
         </div>
         <div class="gallery__wrapper border border-solid">
         <?php
-        $gallery = get_field( 'gallery' );
-        if ( $gallery ) :
             echo '<div class="swiper jura-swiper"><span></span><div class="swiper-wrapper">';
             foreach ( $gallery as $image ) :
                 $img_url = $image['url'];
                 echo '<div class="swiper-slide">';
-                echo '<a href="' . esc_url( $img_url ) . '" data-fancybox="gallery-jura" data-caption="' . esc_html( $image['caption'] ) . '" ><img class="w-full h-auto object-cover max-h-[864px]" src="' . esc_url( $img_url ) . '"></a>';
+                echo '<a href="' . esc_url( $img_url ) . '" data-fancybox="gallery-jura" data-caption="' . esc_html( $image['caption'] ) . '" ><img class="w-full h-auto object-cover max-h-[800px]" src="' . esc_url( $img_url ) . '"></a>';
                 echo '</div>';
             endforeach;
             echo '</div></div>';
-        endif;
-        if ( $gallery ) :
             echo '<div class="swiper swiper-thumbnail jura-swiper-thumbnail"><div class="swiper-wrapper">';
             foreach ( $gallery as $image ) :
                 echo '<div class="swiper-slide">';
@@ -30,8 +28,8 @@
                 echo '</div>';
             endforeach;
             echo '</div></div>';
-        endif;
         ?>
         </div>
     </div>
 </section>
+<?php endif; ?>

@@ -1,4 +1,5 @@
 <section id="single-perfekt-fur-intro" class="section-perfekt-fur__intro grid grid-cols-1">
+    <div class="w-full chasseral__col">
     <?php 
     $size = 'chasseral-jura-headers';
     if( get_the_post_thumbnail() ) :
@@ -7,6 +8,7 @@
         <img src="https://via.placeholder.com/1920x500">
     <?php endif;
     ?>
+    </div>
     <div class="py-40 container max-w-7xl mx-auto">
         <div class="mb-20 w-full">
             <h2 class="text-black text-6xl font-bold uppercase"><?php the_title(); ?></h2>
