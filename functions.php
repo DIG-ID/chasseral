@@ -317,12 +317,12 @@ function chasseral_theme_enqueue_styles() {
 add_action( 'wp_enqueue_scripts', 'chasseral_theme_enqueue_styles' );
 
 //Google Map Init
-function my_acf_init() {
+function chasseral_theme_google_map_init() {
 	if ( is_admin() ) :
 		acf_update_setting( 'google_api_key', 'AIzaSyCB2RShyxiN7xPsQy1QI_SbqXXjW5p08S0' );
 	endif;
 }
-add_action( 'acf/init', 'my_acf_init' );
+add_action( 'acf/init', 'chasseral_theme_google_map_init' );
 
 /**
  * Wrap the post thumbnail image in a figure element only in the blog posts and project posts.
@@ -400,5 +400,6 @@ require get_template_directory() . '/inc/customizer.php';
 // Theme custom template tags.
 require get_template_directory() . '/inc/theme-template-tags.php';
 
-// Theme custom ajax call.
-//require get_template_directory() . '/inc/ajax-call.php';
+// Make API call if we are on the contact page.
+
+require get_template_directory() . '/inc/open-weather.php';

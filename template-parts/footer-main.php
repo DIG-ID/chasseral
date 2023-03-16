@@ -13,7 +13,6 @@
 				?>
 				<a href="tel:<?php echo trim( get_field( 'footer_fax', 'options' ) ); ?>" class=""><?php the_field( 'footer_fax', 'options' ); ?></a>
 			</div>
-
 		</div>
 		<div class="col-span-1 lg:col-span-3">
 			<?php

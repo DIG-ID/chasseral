@@ -2,54 +2,25 @@
   .wpcf7
     .wpcf7-form
       label
-        display: block
-        font-size: 13.33px
-        font-weight: 400
-        letter-spacing: 0.7998px
-        line-height: 16px
-        text-transform: uppercase
-        margin-bottom: 10px
-        color: $main-green
+        @apply block text-sm text-text-grey font-normal uppercase mb-4
       .wpcf7-form-control-wrap
-        display: block
+        @apply block mb-8
         .wpcf7-form-control
-          padding: 15px
-          width: 100%
-          border: none
-      .wpcf7-text, .wpcf7-textarea
-        font-size: 14px
-        font-weight: 500
-        letter-spacing: 0.46px
-        color: #445659
-        text-transform: uppercase
+          @apply w-full border border-solid border-black p-5
+      .wpcf7-text,
+      .wpcf7-textarea
+        @apply rounded-none text-base font-light text-black focus:outline-1 focus:outline-white focus:rounded-none active:rounded-none focus-visible:rounded-none placeholder:rounded-none
+        &::placeholder
+          @apply rounded-none text-text-grey
       .wpcf7-submit
-        float: right
-        //font-family: $second-font
-        font-size: 14px
-        font-weight: 500
-        letter-spacing: 0.46px
-        border: 1px solid #000
-        padding: 13px 42px
-        text-transform: uppercase
-        transition: all .3s ease-in
-        background-color: #000
-        color: $main-green
-        margin-top: 15px
-        svg
-          transition: all .3s ease-in
-          fill: #000
+        @apply uppercase border border-solid border-black px-16 py-4 font-bold text-base uppercase text-center transition-all duration-300 ease-in-out float-right
         &:hover
           cursor: pointer
-          color: #000
-          background-color: $main-green
-          border: 1px solid#000
-          svg
-            fill: $main-green
+          @apply cursor-pointer bg-white
+
+
 
       .wpcf7-not-valid-tip
-        //font-family: $main-font
-        font-weight: 400
-        font-size: 14px
-        letter-spacing: 0.7998px
-        line-height: 16px
-        padding-top: 10px
+        @apply font-sans text-sm mt-3 border border-solid border-main-red inline-block px-5 py-3
+      .wpcf7-response-output
+        @apply m-0 mt-16 p-0 px-5 py-3 border font-sans text-sm
