@@ -5,8 +5,8 @@
         'post_type' => 'perfekt_fur',
         'post_status' => 'publish',
         'posts_per_page' => 8, 
-        'orderby' => 'title', 
-        'order' => 'ASC', 
+        'orderby' => 'date',
+        'order' => 'ASC',
     );
     $loop = new WP_Query( $args ); 
     while ( $loop->have_posts() ) : $loop->the_post(); ?>

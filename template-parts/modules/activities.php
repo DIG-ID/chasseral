@@ -5,7 +5,9 @@
                 <h2 class="section__title text-black text-3xl font-bold"><?php esc_html_e( 'Aktivitäten', 'chasseral' ); ?></h2>
             </div>
             <div class="col-span-1 text-end">
-                <a class="btn__arrow-alle" href="<?php echo esc_url( get_post_type_archive_link( 'aktivitaten' ) ); ?>"><?php esc_html_e( 'Alle Aktivitäten', 'chasseral' ); ?> <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <?php 
+                $act_page = get_permalink( get_page_by_path('top-of-jura/aktivitaeten') -> ID ); ?>
+                <a class="btn__arrow-alle" href="<?php echo $act_page; ?>"><?php esc_html_e( 'Alle Aktivitäten', 'chasseral' ); ?> <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6 12L4.93125 10.95L9.13125 6.75H0V5.25H9.13125L4.93125 1.05L6 0L12 6L6 12Z" fill="black"/>
                 </svg></a>
             </div>
