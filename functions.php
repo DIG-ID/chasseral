@@ -400,6 +400,15 @@ require get_template_directory() . '/inc/customizer.php';
 // Theme custom template tags.
 require get_template_directory() . '/inc/theme-template-tags.php';
 
-// Make API call if we are on the contact page.
+// The weather API.
+require get_template_directory() . '/inc/open-meteo.php';
 
-require get_template_directory() . '/inc/open-weather.php';
+
+
+function console_log( $output, $with_script_tags = true ) {
+	$js_code = 'console.log(' . wp_json_encode( $output, JSON_HEX_TAG ) . ');';
+	if ( $with_script_tags ) :
+		$js_code = '<script>' . $js_code . '</script>';
+	endif;
+	echo $js_code;
+}
