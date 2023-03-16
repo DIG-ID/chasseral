@@ -9,7 +9,7 @@
                 <p class="mb-8 leading-8"><?php the_field('section_your_stay_description'); ?></p>
             </div>
             <div class="row-span-1">
-                <a href="#" class="btn-general btn-general--hotel block"><?php echo esc_html( 'mehr erfahren', 'chasseral' ) ?></a>
+                <a href="#" class="btn-general btn-general--hotel block"><?php echo esc_html( 'Jetzt buchen', 'chasseral' ) ?></a>
             </div>
         </div>
     </div>

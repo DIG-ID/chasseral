@@ -35,7 +35,7 @@
                         else : ?>
                         <img src="https://via.placeholder.com/420x282">
                         <?php endif; ?>
-                        <div class="events__content-wrapper p-8 min-h-[400px] relative">
+                        <div class="events__content-wrapper py-8 min-h-[400px] relative">
                             <p class="start-date text-sm text-text-grey font-normal whitespace-nowrap mb-2">
                                 <?php
                                 $start_date = get_field( 'start_date' );

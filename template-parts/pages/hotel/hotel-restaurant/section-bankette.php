@@ -3,9 +3,10 @@
         <div class="col-span-1 chasseral__col pt-24 pb-0 pl-24">
             <h2 class="text-black text-3xl font-bold mb-14"><?php the_field('section_bankette_title'); ?></h2>
             <p class="mb-16 leading-8 max-w-lg"><?php the_field('section_bankette_description'); ?></p>
-            <a href="#" class="btn-general btn-general--hotel"><?php echo esc_html( 'mehr erfahren', 'chasseral' ) ?></a>
+            <?php $bankette_page = get_permalink( get_page_by_path('hotel-restaurant/bankette-gruppen') -> ID ); ?>
+            <a href="<?php echo $bankette_page; ?>" class="btn-general btn-general--hotel"><?php echo esc_html( 'mehr erfahren', 'chasseral' ) ?></a>
         </div>
-        <div class="col-span-1 chasseral__col">
+        <div class="col-span-1 chasseral__col border-l border-solid">
             <?php 
             $image = get_field('section_bankette_image');
             $size = 'section-column-img'; 
