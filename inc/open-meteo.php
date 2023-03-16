@@ -4,15 +4,15 @@
  */
 function get_weather_info( $code, $type = 'description' ) {
 	$weather_icons = array(
-		'clear_sky'    => esc_url( get_template_directory_uri() . '/assets/images/weather/sunny.png' ),
-		'mainly_clear' => esc_url( get_template_directory_uri() . '/assets/images/weather/sunny.png' ),
-		'fog'          => esc_url( get_template_directory_uri() . '/assets/images/weather/sunny.png' ),
-		'drizzle'      => esc_url( get_template_directory_uri() . '/assets/images/weather/sunny.png' ),
-		'rain'         => esc_url( get_template_directory_uri() . '/assets/images/weather/sunny.png' ),
-		'snow_fall'    => esc_url( get_template_directory_uri() . '/assets/images/weather/sunny.png' ),
-		'rain_showers' => esc_url( get_template_directory_uri() . '/assets/images/weather/sunny.png' ),
-		'snow_showers' => esc_url( get_template_directory_uri() . '/assets/images/weather/sunny.png' ),
-		'thunderstorm' => esc_url( get_template_directory_uri() . '/assets/images/weather/sunny.png' ),
+		'clear_sky'    => esc_url( get_template_directory_uri() . '/assets/images/weather/sun.svg' ),
+		'mainly_clear' => esc_url( get_template_directory_uri() . '/assets/images/weather/cloud-sun.svg' ),
+		'fog'          => esc_url( get_template_directory_uri() . '/assets/images/weather/fog.svg' ),
+		'drizzle'      => esc_url( get_template_directory_uri() . '/assets/images/weather/drizzle.svg' ),
+		'rain'         => esc_url( get_template_directory_uri() . '/assets/images/weather/rain.svg' ),
+		'snow_fall'    => esc_url( get_template_directory_uri() . '/assets/images/weather/snow.svg' ),
+		'rain_showers' => esc_url( get_template_directory_uri() . '/assets/images/weather/rain.svg' ),
+		'snow_showers' => esc_url( get_template_directory_uri() . '/assets/images/weather/snow.svg' ),
+		'thunderstorm' => esc_url( get_template_directory_uri() . '/assets/images/weather/lightning.svg' ),
 	);
 
 	$weather_info = array(
@@ -193,12 +193,25 @@ function chasseral_theme_display_weather_forecast() {
 				$description  = get_weather_info( $weather_code );
 				$icon         = get_weather_info( $weather_code, 'img_url' );
 
-				$output .= '<li>';
-				$output .= "<p class='weather-date'>$daily_date</p>";
-				$output .= "<img class='weather-icon' src='$icon' alt='$description icon'>";
-				$output .= "<p class='weather-temp'>$temperature &deg;C</p>";
-				$output .= "<p class='weather-description'>$description</p>";
-				$output .= '</li>';
+				if ( 0 === $i ) :
+					$output .= '<li>';
+					$output .= "<p class='weather-date'>$daily_date</p>";
+					$output .= "<p class='weather-location'>Chasseral, Nods, Switzerland</p>";
+					$output .= "<img class='weather-icon' src='$icon' alt='$description icon'>";
+					$output .= "<p class='weather-desc'>$description</p>";
+					$output .= "<p class='weather-temp'>$temperature &deg;C</p>";
+					$output .= '</li>';
+				else :
+					$output .= '<li>';
+					$output .= "<img class='weather-icon' src='$icon' alt='$description icon'>";
+					$output .= "<p class='weather-temp'>$temperature &deg;C</p>";
+					$output .= "<p class='weather-desc'>$description</p>";
+					$output .= "<p class='weather-date'>$daily_date</p>";
+					
+					$output .= '</li>';
+				endif;
+
+
 			endfor;
 		endif;
 		$output .= '</ul>';

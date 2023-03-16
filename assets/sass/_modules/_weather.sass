@@ -1,12 +1,24 @@
 .weather-content
   @apply grid grid-cols-5
   li
-    @apply flex flex-col justify-center items-center 
+    @apply flex flex-col justify-center items-center py-10
     &:first-of-type
       @apply border border-solid border-black
+      .weather-location
+        @apply text-sm font-light mb-5
+      .weather-date
+        @apply text-base mb-2 mt-0
+      .weather-temp
+        @apply mb-0
+      .weather-desc
+        @apply text-sm font-normal mt-5 mb-0
+
     .weather-date
-      @apply text-lg font-bold
+      @apply text-base font-semibold
+    .weather-icon
+      @apply block
     .weather-temp
-      @apply text-xl
-  
+      @apply text-xl font-bold my-5
+    .weather-desc
+      @apply text-sm font-normal mb-2
 
