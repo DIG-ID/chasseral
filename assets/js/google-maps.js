@@ -51,26 +51,10 @@ function initMap( $el ) {
     },
     {
       "featureType": "administrative.land_parcel",
-      "stylers": [
-        {
-          "visibility": "off"
-        }
-      ]
-    },
-    {
-      "featureType": "administrative.land_parcel",
       "elementType": "labels.text.fill",
       "stylers": [
         {
           "color": "#bdbdbd"
-        }
-      ]
-    },
-    {
-      "featureType": "administrative.neighborhood",
-      "stylers": [
-        {
-          "visibility": "off"
         }
       ]
     },
@@ -93,28 +77,11 @@ function initMap( $el ) {
       ]
     },
     {
-      "featureType": "poi.business",
-      "stylers": [
-        {
-          "visibility": "off"
-        }
-      ]
-    },
-    {
       "featureType": "poi.park",
       "elementType": "geometry",
       "stylers": [
         {
           "color": "#e5e5e5"
-        }
-      ]
-    },
-    {
-      "featureType": "poi.park",
-      "elementType": "labels.text",
-      "stylers": [
-        {
-          "visibility": "off"
         }
       ]
     },
@@ -133,15 +100,6 @@ function initMap( $el ) {
       "stylers": [
         {
           "color": "#ffffff"
-        }
-      ]
-    },
-    {
-      "featureType": "road",
-      "elementType": "labels",
-      "stylers": [
-        {
-          "visibility": "off"
         }
       ]
     },
@@ -205,15 +163,6 @@ function initMap( $el ) {
       "stylers": [
         {
           "color": "#c9c9c9"
-        }
-      ]
-    },
-    {
-      "featureType": "water",
-      "elementType": "labels.text",
-      "stylers": [
-        {
-          "visibility": "off"
         }
       ]
     },
