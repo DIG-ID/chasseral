@@ -30,7 +30,7 @@ function get_weather_info( $code, $type = 'description' ) {
 		),
 		3  => array(
 			'description' => __( 'Bedeckt', 'chasseral' ),
-			'img_url'     => $weather_icons['clear_sky'],
+			'img_url'     => $weather_icons['mainly_clear'],
 		),
 		45 => array(
 			'description' => __( 'Nebel und abgelagerter Reifnebel', 'chasseral' ),
@@ -207,10 +207,8 @@ function chasseral_theme_display_weather_forecast() {
 					$output .= "<p class='weather-temp'>$temperature &deg;C</p>";
 					$output .= "<p class='weather-desc'>$description</p>";
 					$output .= "<p class='weather-date'>$daily_date</p>";
-					
 					$output .= '</li>';
 				endif;
-
 
 			endfor;
 		endif;
