@@ -18,7 +18,10 @@
             <?php 
             $my_query = new WP_Query( array(
                 'post_type'           => 'aktivitaten',
+                'post_status'         => 'publish',
                 'posts_per_page'      => 3,
+                'orderby'             => 'date',
+                'order'               => 'ASC',
             ) );
             while ( $my_query->have_posts() ) : 
             $my_query->the_post(); 

@@ -58,6 +58,7 @@
                     <?php 
                     $my_query = new WP_Query( array(
                         'post_type'           => 'aktivitaten',
+                        'post_status'         => 'publish',
                         'category_name'       => 'winter',
                         'orderby'             => 'date',
                         'order'               => 'ASC'

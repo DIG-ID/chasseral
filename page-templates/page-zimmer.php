@@ -8,6 +8,6 @@ get_header( 'hotel' );
 		get_template_part( 'template-parts/pages/hotel/zimmer/section','intro' );
 		get_template_part( 'template-parts/pages/hotel/zimmer/section','zimmer' );
 		get_template_part( 'template-parts/pages/hotel/zimmer/section','your-stay' );
-		get_template_part( 'template-parts/pages/hotel/zimmer/section','accomodation' );
+		get_template_part( 'template-parts/pages/hotel/zimmer/section','group-zimmer' );
 	do_action( 'after_main_content' );
 get_footer();

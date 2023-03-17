@@ -1,0 +1,45 @@
+.page-template-page-zimmer
+    .footer-main
+        border-top: 0
+
+@keyframes sliding-left
+    0%
+        transform: translateX( 0% )
+    100%
+        transform: translateX( -100% )
+
+.section-zimmer
+    &__zimmer, &__group-zimmer
+        .zimmer-link
+            @apply relative block overflow-hidden h-[689px] max-h-[689px] border-x border-b border-solid
+            z-index: 2
+            &--image
+                z-index: 1
+            &--title-wrapper
+                @apply relative flex justify-between items-stretch h-[65px] pl-5 border-b border-solid border-black transition-all duration-500 ease-in-out bg-white overflow-hidden
+                z-index: 4
+                h2
+                    @apply self-center m-0 transition-all duration-300 ease-in-out opacity-100 translate-y-0 whitespace-nowrap text-ellipsis overflow-hidden
+            &--icon
+                @apply relative w-[65px] h-full flex justify-center items-center border-l border-solid border-black bg-bg-color transition-all duration-300 ease-in-out bg-white
+                svg
+                    path
+                    fill: #fff
+            &--overlay
+                @apply absolute top-0 left-0 w-full h-full transition-all duration-500 ease-in-out translate-y-full bg-bg-color flex flex-col justify-center pl-32 pr-40
+                z-index: 3
+            &:hover
+                .zimmer-link--title-wrapper
+                    h2
+                        @apply translate-x-full opacity-0
+                .zimmer-link--overlay
+                    @apply translate-y-0
+                .zimmer-link--title-overlay
+                    @apply translate-x-0 opacity-100
+    &__group-zimmer
+        .zimmer-link
+            @apply h-[500px] max-h-[500px]
+            &--overlay
+                @apply lg:pl-52
+                p
+                    @apply max-w-[660px]
