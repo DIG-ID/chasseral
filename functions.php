@@ -358,6 +358,19 @@ function chasseral_theme_acf_op_gc_init() {
 				'updated_message' => __( 'Chasseral Theme Options Updated', 'chasseral' ),
 			)
 		);
+		$service_status_option = acf_add_options_page(
+			array(
+				'page_title'      => __( 'Services Status', 'chasseral' ),
+				'menu_title'      => __( 'Services Status', 'chasseral' ),
+				'menu_slug'       => 'services-status-options',
+				'capability'      => 'edit_posts',
+				'icon_url'        => 'dashicons-admin-appearance',
+				'redirect'        => false,
+				'update_button'   => __( 'Update Status', 'chasseral' ),
+				'updated_message' => __( 'Service Status Updated', 'chasseral' ),
+				'post_id'         => 'services-status',
+			)
+		);
 	endif;
 }
 
@@ -399,6 +412,9 @@ require get_template_directory() . '/inc/customizer.php';
 
 // Theme custom template tags.
 require get_template_directory() . '/inc/theme-template-tags.php';
+
+// The Service Status functionality.
+require get_template_directory() . '/inc/service-status.php';
 
 // The weather API.
 require get_template_directory() . '/inc/open-meteo.php';

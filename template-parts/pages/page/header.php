@@ -1,6 +1,6 @@
 <section class="section-page-header py-24 mt-[65px]">
 	<div class="container mx-auto px-8 grid grid-cols-12">
-		<h1 class="text-6xl font-bold col-span-4"><?php the_title(); ?></h1>
+		<h1 class="text-6xl font-bold col-span-5"><?php the_title(); ?></h1>
 		<?php
 		$page_subtitle    = get_field( 'header_subtitle' );
 		$page_description = get_field( 'header_description' );

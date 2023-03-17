@@ -147,5 +147,18 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       });
     }
+    if (document.body.classList.contains("page-template-page-szl")) {
+      const szlBannerSwiper = new Swiper('.banner-szl-swiper', {
+        loop: true,
+        spaceBetween: 2,
+        direction: 'horizontal',
+        speed: 800,
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next.banner-szl-button-nextt',
+          prevEl: '.swiper-button-prev.banner-szl-button-prev',
+        },
+      });
+    }
   }, false);
 });
