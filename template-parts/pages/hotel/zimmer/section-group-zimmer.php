@@ -20,7 +20,7 @@
                     </span>
                     <figure class="zimmer-link--image object-cover absolute top-0 left-0 w-full h-auto">
                         <?php
-                        $size = 'section-column-img';
+                        $size = 'chasseral-jura-headers';
                         if( get_the_post_thumbnail() ) :
                             echo  get_the_post_thumbnail( $post->ID, $size, '' ); 
                         else : ?>
