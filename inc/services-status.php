@@ -17,6 +17,7 @@ class ChasseralThemeServicesStatusWidget {
 			$this->size = true;
 		endif;
 		$this->data = get_field( 'service_status', 'services-status' );
+		$this->change_order();
 		$this->setup_defaults();
 		$this->add_day_name_translations();
 		$this->get_current_day();
@@ -77,6 +78,20 @@ class ChasseralThemeServicesStatusWidget {
 			endswitch;
 			return $current_status;
 		endif;
+	}
+
+	/**
+	 * Change the order of the array data.
+	 */
+	private function change_order() {
+		$days_of_week        = $this->data;
+		$current_day_index   = date( 'N' ) - 1;
+		$sorted_days_of_week = array_merge(
+			array_slice( $days_of_week, $current_day_index ),
+			array_slice( $days_of_week, 0, $current_day_index )
+		);
+
+		$this->data = $sorted_days_of_week;
 	}
 
 	/**
