@@ -27,9 +27,9 @@ class ChasseralThemeServicesStatusWidget {
 	 */
 	private function setup_defaults() {
 		$this->status = array(
-			'open'      => '<p class="status-signal text-sm flex items-center ml-3"><span class="status-signal-icon block rounded-full w-[15px] h-[15px] bg-main-green mr-1"></span>(' . esc_html__( 'Offen', 'chasseral' ) . ')</p>',
-			'closed'    => '<p class="status-signal text-sm flex items-center ml-3"><span class="status-signal-icon block rounded-full w-[15px] h-[15px] bg-main-red mr-1"></span>(' . esc_html__( 'Geschlossen', 'chasseral' ) . ')</p>',
-			'undefined' => '<p class="status-signal text-sm flex items-center ml-3"><span class="status-signal-icon block rounded-full w-[15px] h-[15px] bg-text-grey mr-1"></span>(' . esc_html__( 'Unbestimmt', 'chasseral' ) . ')</p>',
+			'open'      => '<p class="service-status-signal text-sm flex items-center ml-3"><span class="service-status-signal-icon block rounded-full w-[15px] h-[15px] bg-main-green mr-1"></span>(' . esc_html__( 'Offen', 'chasseral' ) . ')</p>',
+			'closed'    => '<p class="service-status-signal text-sm flex items-center ml-3"><span class="service-status-signal-icon block rounded-full w-[15px] h-[15px] bg-main-red mr-1"></span>(' . esc_html__( 'Geschlossen', 'chasseral' ) . ')</p>',
+			'undefined' => '<p class="service-status-signal text-sm flex items-center ml-3"><span class="service-status-signal-icon block rounded-full w-[15px] h-[15px] bg-text-grey mr-1"></span>(' . esc_html__( 'Unbestimmt', 'chasseral' ) . ')</p>',
 		);
 		$this->day_names = array(
 			'monday'    => esc_html__( 'Montag', 'chasseral' ),
@@ -82,7 +82,7 @@ class ChasseralThemeServicesStatusWidget {
 	/**
 	 *  Checks todas date to pull data from that date only.
 	 */
-	public function get_current_day() {
+	private function get_current_day() {
 		$current_day = date( 'l' );
 		switch ( $current_day ) :
 			case 'Monday':
@@ -117,12 +117,12 @@ class ChasseralThemeServicesStatusWidget {
 		$output = '';
 		$widget_wrapper_open        = '<ul class="service-status">';
 		$widget_wrapper_close       = '</ul>';
-		$item_wrapper_open          = '<li class="grid grid-cols-3 border-b border-solid border-black mb-5 pb-1">';
+		$item_wrapper_open          = '<li class="service-status-day grid grid-cols-3 border-b border-solid border-black mb-5 pb-1">';
 		$item_wrapper_close         = '</li>';
 		$day_name                   = '';
-		$service_wrapper_open       = '<span class="flex items-center">';
+		$service_wrapper_open       = '<span class="service-wrapper flex items-center">';
 		$service_wrapper_close      = '</span>';
-		$service_name_wrapper_open  = '<p class="text-sm font-bold">';
+		$service_name_wrapper_open  = '<p class="service-name text-sm font-bold">';
 		$service_name_wrapper_close = '</p>';
 		$service_name_road          = $this->services_names['roads'];
 		$service_name_restaurant    = $this->services_names['restaurant'];
