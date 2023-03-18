@@ -85,10 +85,10 @@ class ChasseralThemeServicesStatusWidget {
 	 */
 	private function change_order() {
 		$days_of_week        = $this->data;
-		$current_day_index   = date( 'N' ) - 1;
+		$current_day_index   = date( 'N' ) - 1; // get current day of the week index (0 for Sunday, 1 for Monday, etc.)
 		$sorted_days_of_week = array_merge(
-			array_slice( $days_of_week, $current_day_index ),
-			array_slice( $days_of_week, 0, $current_day_index )
+			array_slice( $days_of_week, $current_day_index ), // get elements from current day index to end of array
+			array_slice( $days_of_week, 0, $current_day_index ) // get elements from start of array to current day index
 		);
 
 		$this->data = $sorted_days_of_week;
