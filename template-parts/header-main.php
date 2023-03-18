@@ -31,7 +31,7 @@
 		<div class="mega-menu-navigation absolute top-75 left-0 h-0 overflow-hidden w-full flex justify-center items-center bg-bg-color border-t border-solid border-black">
 			<div class="mega-menu-content w-full h-full grid grid-cols-1 lg:grid-cols-2">
 				<div class="col-auto flex flex-col justify-center border-r border-solid border-black px-20">
-					<?php //do_action( 'service_status' ); ?>
+					<?php do_action( 'service_status_widget' ); ?>
 				</div>
 				<div class="mega-links col-auto flex flex-col justify-center px-40">
 					<p class="mega-menu-title uppercase font-bold mb-5"><?php esc_html_e( 'Willkommen auf dem Chasseral', 'chasseral' ); ?></p>
