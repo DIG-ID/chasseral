@@ -414,7 +414,10 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/theme-template-tags.php';
 
 // The Service Status functionality.
-require get_template_directory() . '/inc/service-status.php';
+//require get_template_directory() . '/inc/service-status.php';
+
+// The Service Status functionality.
+require get_template_directory() . '/inc/class-services-status.php';
 
 // The weather API.
 require get_template_directory() . '/inc/open-meteo.php';
