@@ -25,7 +25,7 @@
             if( have_rows('menus_block_menu_buttons') ):
             while( have_rows('menus_block_menu_buttons') ) : the_row();
                 $file = get_sub_field('menu_file');
-                if( get_sub_field('label') ):
+                if( get_sub_field('label') && $file ):
                     $url = wp_get_attachment_url( $file ); ?>
                     <a href="<?php echo esc_html($url); ?>" class="btn-general btn-general--hotel block mb-7" target="_blank"><?php the_sub_field('label'); ?></a>
                 <?php endif; ?>

@@ -19,7 +19,7 @@
             </div>
         </div>
 	</div>
-    <div class="container mx-auto max-w-7xl px-8">
+    <div class="container mx-auto max-w-7xl px-8 mt-10">
             <?php $page = get_permalink( get_page_by_path('hotel-restaurant/zimmer') -> ID ); ?>
             <a href="<?php echo $page; ?>">
                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline mr-2">
