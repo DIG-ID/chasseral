@@ -29,8 +29,8 @@
                     ?>
                 </figure>
                 <div class="zimmer-link--overlay">
-                    <p class="text-3xl font-sans text-black mb-10">Doppelzimmer mit Dusche und WC im Zimmer. Diese Zimmer sind alle im zweiten Stock gelegen (kein Lift)</p>
-                    <p class="text-sm font-bold">ab CHF 190.- pro Zimmer</p>
+                    <p class="text-3xl font-sans text-black mb-10"><?php echo get_the_excerpt(); ?></p>
+                    <p class="text-sm font-bold"><?php the_field('section_info_price'); ?></p>
                 </div>
             </a>
         <?php 
@@ -67,12 +67,8 @@
                         ?>
                     </figure>
                     <div class="zimmer-link--overlay">
-                        <p class="text-3xl font-sans text-black mb-10">Zimmer mit Dusche/WC auf Etage für zwei bis vier Personen Diese Zimmer sind im ersten und zweiten Stock gelegen (kein Lift). Die Duschen und WCs befinden sich im ersten Stock.</p>
-                        <p class="text-sm font-bold">
-                            Doppelzimmer 11- 14m2,		CHF 160.- pro Zimmer<br>
-                            Drei-Bettzimmer 15 - 20m2		CHF 225.- pro Zimmer<br>
-                            Vier-Bettzimmer 19m2		CHF 295.- pro Zimmer
-                        </p>
+                        <p class="text-3xl font-sans text-black mb-10"><?php echo get_the_excerpt(); ?></p>
+                        <p class="text-sm font-bold"><?php the_field('section_info_price'); ?></p>
                     </div>
                 </a>
             <?php 

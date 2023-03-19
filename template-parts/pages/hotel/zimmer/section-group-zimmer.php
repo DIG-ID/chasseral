@@ -29,8 +29,8 @@
                         ?>
                     </figure>
                     <div class="zimmer-link--overlay zimmer-group-link--overlay">
-                        <p class="text-3xl font-sans text-black mb-10">Das Hotel Chasseral verfügt über mehrere Gruppenunterkünfte mit gut ausgerüsteten sanitären Anlagen.</p>
-                        <p class="text-sm font-bold">Mindestaufenhalt 2 Nächte CHF 50.- pro Bett/Nacht</p>
+                        <p class="text-3xl font-sans text-black mb-10"><?php echo get_the_excerpt(); ?></p>
+                        <p class="text-sm font-bold"><?php the_field('section_info_price'); ?></p>
                     </div>
                 </a>
         <?php 
