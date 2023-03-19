@@ -25,7 +25,7 @@
                     <?php
                     if( have_rows('list') ):
                     while( have_rows('list') ) : the_row(); ?>
-                        <li class="font-normal text-sm"><?php the_sub_field('list_item'); ?></li>
+                        <li class="font-normal text-sm leading-8"><?php the_sub_field('list_item'); ?></li>
                     <?php endwhile;
                     endif; ?>
                     </ul>

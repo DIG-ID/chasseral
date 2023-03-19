@@ -2,7 +2,8 @@
     <div class="flex justify-center p-20 flex-col">
         <h2 class="text-black text-3xl font-bold mb-16"><?php the_field('section_der_chasseral_title'); ?></h2>
         <p class="text-black text-sm font-normal leading-7 mb-14 xl:max-w-[450px]"><?php the_field('section_der_chasseral_description'); ?></p>
-        <a href="#" class="btn-general btn-general--jura"><?php echo esc_html( 'Mehr erfahren', 'chasseral' ) ?></a>
+        <?php $page = get_permalink( get_page_by_path('top-of-jura/chasseral') -> ID ); ?>
+        <a href="<?php echo $page; ?>" class="btn-general btn-general--jura"><?php echo esc_html( 'Mehr erfahren', 'chasseral' ) ?></a>
     </div>
     <div class="bg-cover bg-center h-full w-full chasseral__col">
         <?php $b_image = get_field('section_der_chasseral_image'); ?>

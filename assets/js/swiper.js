@@ -160,5 +160,20 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       });
     }
+    // Hotel Restaurant - Zimmer Slider
+    if (document.body.classList.contains("single-zimmer")) {
+      var juraThumbnails = new Swiper(".zimmer-swiper-thumbnail", {
+        spaceBetween: 2,
+        slidesPerView: 6,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+      var juraGallery = new Swiper(".zimmer-swiper", {
+        spaceBetween: 2,
+        thumbs: {
+          swiper: juraThumbnails,
+        },
+      });
+    }
   }, false);
 });

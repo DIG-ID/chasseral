@@ -6,6 +6,7 @@
     <div class="flex justify-center p-20 flex-col">
         <h2 class="text-black text-3xl font-bold mb-14"><?php the_field('section_perfekt_fur_title'); ?></h2>
         <p class="text-black text-sm font-normal leading-7 mb-12 xl:max-w-[450px]"><?php the_field('section_perfekt_fur_description'); ?></p>
-        <a href="#" class="btn-general btn-general--jura"><?php echo esc_html( 'Mehr erfahren', 'chasseral' ) ?></a>
+        <?php $page = get_permalink( get_page_by_path('top-of-jura/perfekt-fuer') -> ID ); ?>
+        <a href="<?php echo $page; ?>" class="btn-general btn-general--jura"><?php echo esc_html( 'Mehr erfahren', 'chasseral' ) ?></a>
     </div>
 </section>
