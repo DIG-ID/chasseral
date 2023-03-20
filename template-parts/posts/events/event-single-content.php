@@ -8,7 +8,7 @@
 				?>
 			</p>
 			<h1 class="text-3xl font-bold mb-8"><?php the_title(); ?></h1>
-			<figure class="mb-16">
+			<figure class="mb-16 event__image">
 				<?php
 				$size = 'mega-link-thumbnail';
 				if( get_the_post_thumbnail() ) :

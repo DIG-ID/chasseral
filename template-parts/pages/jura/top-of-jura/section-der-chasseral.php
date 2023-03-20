@@ -5,7 +5,7 @@
         <?php $page = get_permalink( get_page_by_path('top-of-jura/chasseral') -> ID ); ?>
         <a href="<?php echo $page; ?>" class="btn-general btn-general--jura"><?php echo esc_html( 'Mehr erfahren', 'chasseral' ) ?></a>
     </div>
-    <div class="bg-cover bg-center h-full w-full chasseral__col">
+    <div class="bg-cover bg-center h-full w-full chasseral__col border-l border-solid">
         <?php $b_image = get_field('section_der_chasseral_image'); ?>
         <?php echo wp_get_attachment_image( $b_image, 'section-column-img' ); ?>
     </div>
