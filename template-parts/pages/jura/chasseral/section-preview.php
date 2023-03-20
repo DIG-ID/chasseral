@@ -1,4 +1,4 @@
-<section class="chasseral-preview-section pt-40 pb-80 border-t border-solid">
+<section class="chasseral-preview-section pt-40 pb-[30rem] border-t border-solid bg-no-repeat" style="background-image: url(<?php echo wp_upload_dir()['url'] . '/chasseral_illustration.svg' ?>);    background-position: 0 100%;">
     <div class="container max-w-7xl mx-auto grid grid-cols-12 border border-solid">
         <div class="col-span-5 border-r border-solid preview-img-box">
         <?php 
