@@ -91,8 +91,26 @@ document.addEventListener("DOMContentLoaded", () => {
     // Top of Jura Sliders
     if (document.body.classList.contains("page-template-page-jura")) {
       const institutionenEventsSwiper = new Swiper('.swiper-institutionen', {
+        breakpoints: {
+          576: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+          },
+          768: {
+            slidesPerView: 1.4,
+            spaceBetween: 30,
+          },
+          992: {
+            slidesPerView: 2.4,
+            spaceBetween: 30,
+          },
+          1200: {
+            slidesPerView: 3.8,
+            spaceBetween: 30,
+          },
+        },
         loop: false,
-        slidesPerView: '3.8',
+        slidesPerView: '1',
         spaceBetween: 20,
         direction: 'horizontal',
         speed: 800,

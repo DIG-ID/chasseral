@@ -1,6 +1,6 @@
-<section class="section-institutionen px-0 py-52">
-    <div class="flex justify-center flex-col pl-72">
-        <div class="grid grid-cols-6">
+<section class="section-institutionen px-0 py-20 lg:py-52">
+    <div class="flex justify-center flex-col pl-8 pr-8 lg:pr-0 lg:pl-72">
+        <div class="grid grid-cols-1 lg:grid-cols-6">
             <div class="col-span-4">
                 <h2 class="text-black text-3xl font-bold mb-14"><?php the_field('section_institutionen_title'); ?></h2>
             </div>

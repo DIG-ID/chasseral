@@ -13,7 +13,8 @@
         <div class="col-span-7 p-20">
             <h2 class="text-black text-3xl font-bold mb-14"><?php the_field('section_preview_title'); ?></h2>
             <p class=" mb-32 leading-8"><?php the_field('section_preview_description'); ?></p>
-            <a href="<?php the_field('section_preview_button_link'); ?>" class="btn-general btn-general--jura is-checked"><?php echo esc_html( 'Mehr erfahren', 'chasseral' ) ?></a>
+            <?php $derjura_page = get_permalink( get_page_by_path('schweizer-zentrum-fuer-landshaft/vision') -> ID ); ?>
+            <a href="<?php echo $derjura_page;  ?>" class="btn-general btn-general--jura is-checked"><?php echo esc_html( 'Mehr erfahren', 'chasseral' ) ?></a>
         </div>
     </div>
 </section>
