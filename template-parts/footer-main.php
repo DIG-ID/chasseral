@@ -63,9 +63,9 @@
 		<h3 class="text-sm font-bold uppercase">follow us</h3>
 		</div>
 	</div>
-	<div class="copyright border-t border-solid border-black">
-		<div class="container mx-auto px-8 flex justify-between items-center">
-			<p class="copyright-text text-sm text-black font-normal">
+	<div class="copyright border-t border-b border-solid border-black">
+		<div class="flex justify-between items-center">
+			<p class="copyright-text text-sm text-black font-normal pl-5">
 				<?php
 				$y = date( 'Y' );
 				printf(
