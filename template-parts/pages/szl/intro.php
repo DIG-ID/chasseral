@@ -13,6 +13,6 @@
 		</div>
 	</div>
 	<div class="col-span-4 col-start-8">
-		<p class="text-sm leading-6 max-w-lg"><?php the_field( 'intro_description' ); ?></p>
+		<p class="text-sm text-black font-normal leading-8 mb-16 max-w-lg"><?php the_field( 'intro_description' ); ?></p>
 	</div>
 </section>

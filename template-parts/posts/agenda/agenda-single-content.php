@@ -11,7 +11,7 @@
 			<div class="post-content">
 				<?php the_content(); ?>
 			</div>
-			<a href="<?php echo get_permalink( get_field( 'agenda_events_agenda_page', 'options' ) ); ?>" class="inline-block mt-10"><?php esc_html_e( 'Zurück zur Übersicht ', 'chasseral' ); ?></a>
+			<a href="<?php echo get_permalink( get_field( 'archives_pages_agenda', 'options' ) ); ?>" class="inline-block mt-10"><?php esc_html_e( 'Zurück zur Übersicht ', 'chasseral' ); ?></a>
 
 		</div>
 

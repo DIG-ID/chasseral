@@ -55,6 +55,8 @@ function chasseral_theme_setup() {
 
 	add_image_size( 'block-images', 1000, 700, 'center', 'center' );
 
+	add_image_size( 'vision-block-images', 1000, 1000, 'center', 'center' );
+
 }
 
 add_action( 'after_setup_theme', 'chasseral_theme_setup' );
