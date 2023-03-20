@@ -1,19 +1,22 @@
 .footer-main
   .footer-content
     #menu-main,
-    #menu-szl,
+    #menu-szl-1,
     #menu-hotel,
     #menu-jura
+      @apply mb-5
       .menu-item
-        padding-bottom: 5px
+        @apply pb-1
         a
-          display: block
-          font-family: var(--main-font)
-          font-size: 14px
-          font-weight: medium
-          text-transform: uppercase
-          transition: all .25s ease-in-out
-          white-space: nowrap
-          opacity: 1
+          @apply block font-sans text-sm font-medium uppercase transition-all duration-300 ease-in whitespace-nowrap opacity-100 mb-1
           &:hover
-            opacity: .5
+            @apply opacity-60
+
+  #menu-footer-terms
+    @apply border-l border-solid border-black
+    li
+      @apply border-r border-solid border-black
+      a
+        @apply block px-4 py-2 text-sm text-black font-sans font-normal text-sm transition-all duration-300 opacity-100
+        &:hover
+          @apply opacity-60

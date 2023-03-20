@@ -3,15 +3,15 @@
 		<div class="col-span-1 lg:col-span-3 lg:row-span-2">
 			<?php the_custom_logo(); ?>
 			<div class="footer-contacts mt-10 flex flex-col justify-between">
-				<p class=""><?php the_field( 'footer_address', 'options' ); ?></p>
-				<a href="mailto:<?php echo esc_attr( get_field( 'footer_email', 'options' ) ); ?>" class=""><?php the_field( 'footer_email', 'options' ); ?></a>
+				<p class="font-sans font-bold text-sm text-black leading-7 uppercase mb-8"><?php the_field( 'footer_address', 'options' ); ?></p>
+				<a class="font-sans font-bold text-sm text-black uppercase mb-8 transition-all duration-300 hover:text-black/60" href="mailto:<?php echo esc_attr( get_field( 'footer_email', 'options' ) ); ?>" ><?php the_field( 'footer_email', 'options' ); ?></a>
 				<?php
 				$phone = get_field( 'footer_phone', 'options' );
 				if ( $phone ) :
-					?><a href="tel:<?php echo esc_attr( str_replace(' ', '', $phone) ); ?>" class=""><?php the_field( 'footer_phone', 'options' ); ?></a><?php
+					?><a class="font-sans font-bold text-sm text-black uppercase transition-all duration-300 hover:text-black/60" href="tel:<?php echo esc_attr( str_replace(' ', '', $phone) ); ?>" ><?php the_field( 'footer_phone', 'options' ); ?></a><?php
 				endif;
 				?>
-				<a href="tel:<?php echo trim( get_field( 'footer_fax', 'options' ) ); ?>" class=""><?php the_field( 'footer_fax', 'options' ); ?></a>
+				<a class="font-sans font-bold text-sm text-black uppercase mb-8 transition-all duration-300 hover:text-black/60" href="tel:<?php echo trim( get_field( 'footer_fax', 'options' ) ); ?>"><?php the_field( 'footer_fax', 'options' ); ?></a>
 			</div>
 		</div>
 		<div class="col-span-1 lg:col-span-3">
@@ -63,15 +63,28 @@
 		<h3 class="text-sm font-bold uppercase">follow us</h3>
 		</div>
 	</div>
-	<div class="copyright container mx-auto px-8">
-		<p class="copyright-text text-xs font-normal">
+	<div class="copyright border-t border-solid border-black">
+		<div class="container mx-auto px-8 flex justify-between items-center">
+			<p class="copyright-text text-sm text-black font-normal">
+				<?php
+				$y = date( 'Y' );
+				printf(
+					esc_html__( 'Copyright &copy; %d Chasseral', 'chasseral' ),
+					esc_html( $y ),
+				);
+				?>
+			</p>
 			<?php
-			$y = date( 'Y' );
-			printf(
-				esc_html__( 'Copyright &copy; %d Chasseral', 'chasseral' ),
-				esc_html( $y ),
+			wp_nav_menu(
+				array(
+					'theme_location' => 'footer_terms',
+					'container'      => false,
+					'menu_class'     => 'footer-terms',
+					'items_wrap'     => '<ul id="%1$s" class="%2$s flex">%3$s</ul>',
+					'fallback_cb'    => '__return_false',
+				),
 			);
 			?>
-		</p>
+		</div>
 	</div>
 </footer>

@@ -11,7 +11,7 @@ function chasseral_theme_setup() {
 			'jura'         => __( 'Jura Menu', 'chasseral' ),
 			'szl'          => __( 'SZL Menu', 'chasseral' ),
 			'footer'       => __( 'Footer Menu', 'chasseral' ),
-			'footer terms' => __( 'Footer Terms Menu', 'chasseral' ),
+			'footer_terms' => __( 'Footer Terms Menu', 'chasseral' ),
 		)
 	);
 
