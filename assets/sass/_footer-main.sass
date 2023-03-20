@@ -2,15 +2,27 @@
   .footer-content
     #menu-main,
     #menu-szl-1,
+    #menu-szl,
     #menu-hotel,
     #menu-jura
       @apply mb-5
       .menu-item
         @apply pb-1
         a
-          @apply block font-sans text-sm font-medium uppercase transition-all duration-300 ease-in whitespace-nowrap opacity-100 mb-1
-          &:hover
-            @apply opacity-60
+          @apply block font-sans text-sm font-medium uppercase transition-all duration-300 ease-in whitespace-nowrap mb-1
+    #menu-szl-1,
+    #menu-szl
+      .menu-item
+        a:hover
+          @apply text-main-green
+    #menu-hotel
+      .menu-item
+        a:hover
+          @apply text-main-red
+    #menu-jura
+      .menu-item
+        a:hover
+          @apply text-main-blue
 
   #menu-footer-terms
     @apply border-l border-solid border-black
