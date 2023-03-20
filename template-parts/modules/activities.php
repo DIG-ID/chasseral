@@ -15,20 +15,14 @@
     </div>
     <div class="activities-list">
         <div class="container grid grid-cols-3 gap-4 mx-auto max-w-7xl">
-            <?php 
-            $my_query = new WP_Query( array(
-                'post_type'           => 'aktivitaten',
-                'post_status'         => 'publish',
-                'posts_per_page'      => 3,
-                'orderby'             => 'date',
-                'order'               => 'ASC',
-            ) );
-            while ( $my_query->have_posts() ) : 
-            $my_query->the_post(); 
-            $post_id = get_the_ID(); ?>
-                <article id="post-<?php echo $post_id ?>" <?php post_class( 'col-span-1' ); ?>>
-                    <?php if (has_post_thumbnail( $post_id ) ): 
-                    echo get_the_post_thumbnail( $post_id, 'activities-thumbnail' );
+            <?php
+            $featured_events = get_field( 'activities' );
+            if ( $featured_events ) :
+                foreach ( $featured_events as $post ) :
+                    setup_postdata( $post ); ?>
+                <article id="post-<?php the_ID(); ?>" <?php post_class( 'col-span-1' ); ?>>
+                    <?php if ( has_post_thumbnail() ) :
+                    echo get_the_post_thumbnail( get_the_ID(), 'activities-thumbnail' );
                     else : ?>
                     <img src="https://via.placeholder.com/420x282">
                     <?php endif; ?>
@@ -40,7 +34,10 @@
                         </svg></a>
                     </div>
                 </article>
-            <?php endwhile; wp_reset_postdata(); ?>
+                <?php endforeach;
+                wp_reset_postdata();
+            endif; ?>
+            
         </div>
     </div>
 </section>
