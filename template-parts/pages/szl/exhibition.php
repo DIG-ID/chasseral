@@ -3,7 +3,7 @@
 		<?php
 		$image_exhibition = get_field( 'current_exhibition_image' );
 		if ( ! empty( $image_exhibition ) ) :
-			?><img class="w-full h-full object-cover" src="<?php echo wp_get_attachment_image_src( $image_exhibition, 'block-images' ); ?>" alt="<?php echo wp_get_attachment_caption( $image_exhibition ); ?>" /><?php
+			?><img class="w-full h-full object-cover" src="<?php echo wp_get_attachment_image_url( $image_exhibition, 'block-images' ); ?>" alt="<?php echo wp_get_attachment_caption( $image_exhibition ); ?>" /><?php
 		endif;
 		?>
 	</div> 

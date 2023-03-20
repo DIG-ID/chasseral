@@ -3,7 +3,7 @@
 		<?php
 		$environment_image = get_field( 'environment_image' );
 		if ( ! empty( $environment_image ) ) :
-			?><img class="w-full h-full object-cover" src="<?php echo wp_get_attachment_image_src( $environment_image, 'block-images' ); ?>" alt="<?php echo wp_get_attachment_caption( $environment_image ); ?>" /><?php
+			?><img class="w-full h-full object-cover" src="<?php echo wp_get_attachment_image_url( $environment_image, 'block-images' ); ?>" alt="<?php echo wp_get_attachment_caption( $environment_image ); ?>" /><?php
 		endif;
 		?>
 	</div> 

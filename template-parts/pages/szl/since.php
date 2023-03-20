@@ -15,9 +15,8 @@
 	<div class="cols-span-1">
 		<?php
 		$since_image = get_field( 'since_image' );
-		console_log( $since_image );
 		if ( ! empty( $since_image ) ) :
-			?><img class="w-full h-full object-cover" src="<?php echo wp_get_attachment_image_src( $since_image, 'block-images' ); ?>" alt="<?php echo wp_get_attachment_caption( $since_image ); ?>" /><?php
+			?><img class="w-full h-full object-cover" src="<?php echo wp_get_attachment_image_url( $since_image, 'block-images' ); ?>" alt="<?php echo wp_get_attachment_caption( $since_image ); ?>" /><?php
 		endif;
 		?>
 	</div> 

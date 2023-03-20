@@ -4,7 +4,6 @@
 		<p class="text-3xl font-normal"><?php the_field( 'der_jura_small_description' ); ?></p>
 	</div>
 	<div class="col-start-5 col-span-3">
-
 		<p class="leading-8 mb-16"><?php the_field( 'der_jura_description_column_1' ); ?></p>
 		<?php
 		$link = get_field( 'der_jura_link' );

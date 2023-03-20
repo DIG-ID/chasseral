@@ -16,7 +16,7 @@
 		<?php
 		$vision_image = get_field( 'vision_image' );
 		if ( ! empty( $vision_image ) ) :
-			?><img class="w-full h-full object-cover" src="<?php echo wp_get_attachment_image_src( $vision_image, 'block-images' ); ?>" alt="<?php echo wp_get_attachment_caption( $vision_image ); ?>" /><?php
+			?><img class="w-full h-full object-cover" src="<?php echo wp_get_attachment_image_url( $vision_image, 'block-images' ); ?>" alt="<?php echo wp_get_attachment_caption( $vision_image ); ?>" /><?php
 		endif;
 		?>
 	</div> 
