@@ -9,12 +9,12 @@
     <?php endif;
     ?>
     </div>
-    <div class="py-40 container max-w-7xl mx-auto">
-        <div class="mb-20 w-full">
-            <h2 class="text-black text-6xl font-bold uppercase"><?php the_title(); ?></h2>
+    <div class="p-8 lg:py-40 container max-w-7xl mx-auto">
+        <div class="mb-8 lg:mb-20 w-full">
+            <h2 class="text-black text-3xl lg:text-6xl font-bold uppercase"><?php the_title(); ?></h2>
         </div>
         <div>
-            <p class="text-black text-sm font-normal leading-7 columns-2 lg:gap-40 lg:mr-[30%]"><?php the_field('general_information'); ?></p>
+            <p class="text-black text-sm font-normal leading-7 lg:columns-2 lg:gap-40 lg:mr-[30%]"><?php the_field('general_information'); ?></p>
         </div>
         <?php $pf_page = get_permalink( get_page_by_path('top-of-jura/perfekt-fuer') -> ID ); ?>
         <a href="<?php echo $pf_page; ?>" class="inline-block mt-10"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline mr-2">

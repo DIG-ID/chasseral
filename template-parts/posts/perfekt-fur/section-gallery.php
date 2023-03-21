@@ -2,9 +2,9 @@
 if ( $gallery ) : ?>
 <section id="single-perfekt-fur-gallery" class="section-perfekt-fur__gallery py-20">
     <div class="container max-w-7xl mx-auto">
-        <div class="grid grid-cols-6">
+        <div class="grid grid-cols-6 px-8 lg:px-0">
             <div class="col-span-4">
-                <h2 class="text-black text-3xl font-bold mb-14"><?php echo esc_html( 'Galerie', 'chasseral' ) ?></h2>
+                <h2 class="text-black text-2xl lg:text-3xl font-bold mb-14"><?php echo esc_html( 'Galerie', 'chasseral' ) ?></h2>
             </div>
             <div class="col-span-2 flex justify-end">
                 <div class="swiper-button-prev jura-button-prev relative bg-white h-[50px] w-[50px] m-0 top-[unset] left-[unset] border border-solid border-black text-black after:text-lg after:content-['prev'] hover:bg-[#e4e4e4]"></div>

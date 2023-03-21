@@ -1,15 +1,15 @@
-<section class="section-all-activities pt-40 border-t border-solid">
-    <div class="container px-8 grid grid-cols-1 lg:grid-cols-1 gap-0 lg:gap-4 lg:mx-auto max-w-7xl">
+<section class="section-all-activities p-8 lg:pt-40 border-t border-solid">
+    <div class="container lg:px-8 grid grid-cols-1 lg:grid-cols-1 gap-0 lg:gap-4 lg:mx-auto max-w-7xl">
         <div class="grid grid-cols-6">
             <div class="col-span-4">
-                <h2 class="text-black text-3xl font-bold mb-14"><?php echo esc_html( 'Aktivitäten im Sommer', 'chasseral' ) ?></h2>
+                <h2 class="text-black text-2xl lg:text-3xl font-bold mb-14"><?php echo esc_html( 'Aktivitäten im Sommer', 'chasseral' ) ?></h2>
             </div>
             <div class="col-span-2 flex justify-end">
                 <div class="swiper-button-prev act-summer-button-prev relative bg-white h-[50px] w-[50px] m-0 top-[unset] left-[unset] border border-solid border-black text-black after:text-lg after:content-['prev'] hover:bg-[#e4e4e4]"></div>
                 <div class="swiper-button-next act-summer-button-next relative bg-white h-[50px] w-[50px] m-0 top-[unset] right-[unset] border border-solid border-black text-black after:text-lg after:content-['next'] hover:bg-[#e4e4e4]"></div>
             </div>
         </div>
-        <div class="activities-list mb-52">
+        <div class="activities-list mb-8 lg:mb-52">
             <div class="swiper-act-summer container mx-auto max-w-7xl overflow-x-hidden">
                 <div class="swiper-wrapper">
                     <?php 
@@ -45,14 +45,14 @@
 
         <div class="grid grid-cols-6">
             <div class="col-span-4">
-                <h2 class="text-black text-3xl font-bold mb-14"><?php echo esc_html( 'Aktivitäten im Winter', 'chasseral' ) ?></h2>
+                <h2 class="text-black text-2xl lg:text-3xl font-bold mb-14"><?php echo esc_html( 'Aktivitäten im Winter', 'chasseral' ) ?></h2>
             </div>
             <div class="col-span-2 flex justify-end">
                 <div class="swiper-button-prev act-winter-button-prev relative bg-white h-[50px] w-[50px] m-0 top-[unset] left-[unset] border border-solid border-black text-black after:text-lg after:content-['prev'] hover:bg-[#e4e4e4]"></div>
                 <div class="swiper-button-next act-winter-button-next relative bg-white h-[50px] w-[50px] m-0 top-[unset] right-[unset] border border-solid border-black text-black after:text-lg after:content-['next'] hover:bg-[#e4e4e4]"></div>
             </div>
         </div>
-        <div class="activities-list mb-52">
+        <div class="activities-list mb-8 lg:mb-52">
             <div class="swiper-act-winter container mx-auto max-w-7xl overflow-x-hidden">
                 <div class="swiper-wrapper">
                     <?php 

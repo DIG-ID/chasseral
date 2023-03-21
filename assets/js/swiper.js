@@ -93,11 +93,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const institutionenEventsSwiper = new Swiper('.swiper-institutionen', {
         breakpoints: {
           576: {
-            slidesPerView: 1,
+            slidesPerView: 1.2,
             spaceBetween: 30,
           },
           768: {
-            slidesPerView: 1.4,
+            slidesPerView: 2.4,
             spaceBetween: 30,
           },
           992: {
@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
           },
         },
         loop: false,
-        slidesPerView: '1',
+        slidesPerView: '1.2',
         spaceBetween: 20,
         direction: 'horizontal',
         speed: 800,
@@ -123,8 +123,26 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     if (document.body.classList.contains("page-template-page-activities")) {
       const summerEventsSwiper = new Swiper('.swiper-act-summer', {
+        breakpoints: {
+          576: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          992: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          1200: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        },
         loop: false,
-        slidesPerView: '3',
+        slidesPerView: '1',
         spaceBetween: 20,
         direction: 'horizontal',
         speed: 800,
@@ -135,8 +153,26 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       });
       const winterEventsSwiper = new Swiper('.swiper-act-winter', {
+        breakpoints: {
+          576: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          992: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          1200: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        },
         loop: false,
-        slidesPerView: '3',
+        slidesPerView: '1',
         spaceBetween: 20,
         direction: 'horizontal',
         speed: 800,

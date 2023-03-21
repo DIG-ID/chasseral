@@ -4,7 +4,7 @@ $file = get_field('section_pdf_pdf_file');
 if( $file ) : ?>
 <div class="container max-w-7xl mx-auto">
     <div class="grid grid-cols-6">
-        <div class="col-span-6">
+        <div class="col-span-6 px-8 lg:px-0">
             <?php
             $url = wp_get_attachment_url( $file ); ?>
             <a href="<?php echo esc_html($url); ?>"><h2 class="text-black text-3xl font-bold mb-14"><span class="mr-4"><?php echo esc_html( 'Karte', 'chasseral' ) ?></span><svg class="inline" width="18" height="21" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 7.41176H12.8571V0H5.14286V7.41176H0L9 16.0588L18 7.41176ZM0 18.5294V21H18V18.5294H0Z" fill="black"/></svg>

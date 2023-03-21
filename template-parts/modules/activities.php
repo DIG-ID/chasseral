@@ -1,10 +1,10 @@
 <section class="section-activities px-0 py-10 lg:py-32">
     <div class="activities-content">
-        <div class="container grid grid-cols-1 lg:grid-cols-2 items-end mx-auto max-w-7xl mb-8">
+        <div class="container grid grid-cols-1 lg:grid-cols-2 items-end mx-auto max-w-7xl mb-8 px-8 lg:px-0">
             <div class="col-span-1">
-                <h2 class="section__title text-black text-3xl font-bold"><?php esc_html_e( 'Aktivitäten', 'chasseral' ); ?></h2>
+                <h2 class="section__title text-black text-3xl font-bold mb-4 lg:mb-0"><?php esc_html_e( 'Aktivitäten', 'chasseral' ); ?></h2>
             </div>
-            <div class="col-span-1 text-end">
+            <div class="col-span-1 lg:text-end">
                 <?php 
                 $act_page = get_permalink( get_page_by_path('top-of-jura/aktivitaeten') -> ID ); ?>
                 <a class="btn__arrow-alle" href="<?php echo $act_page; ?>"><?php esc_html_e( 'Alle Aktivitäten', 'chasseral' ); ?> <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
