@@ -1,4 +1,4 @@
-<section class="section-contacts-schedule border-t border-solid border-black py-36">
+<section class="section-contacts-schedule border-t border-solid border-black py-36 overflow-hidden">
 	<div class="container mx-auto px-8 grid grid-cols-2">
 		<div class="contacts-wrapper">
 			<h2 class="text-3xl font-bold mb-10"><?php esc_html_e( 'Kontakt', 'chasseral' ); ?></h2>

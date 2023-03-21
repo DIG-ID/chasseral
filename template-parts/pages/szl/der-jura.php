@@ -1,4 +1,4 @@
-<section class="section-der-jura grid grid-cols-12 gap-8 border-t border-solid border-black bg-contain bg-no-repeat bg-bottom pt-52 h-[900px]" style="background-image: url( <?php the_field( 'der_jura_image' ); ?> );">
+<section class="section-der-jura grid grid-cols-12 gap-8 border-t border-solid border-black bg-contain bg-no-repeat bg-bottom pt-52 h-[900px] overflow-hidden" style="background-image: url( <?php the_field( 'der_jura_image' ); ?> );">
 	<div class="col-start-2 col-span-3">
 		<h2 class="text-6xl font-bold uppercase mb-10"><?php the_field( 'der_jura_title' ); ?></h2>
 		<p class="text-3xl font-normal"><?php the_field( 'der_jura_small_description' ); ?></p>

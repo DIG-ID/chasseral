@@ -1,0 +1,11 @@
+.block-wrapper
+  .block-content
+    p
+      @apply text-sm text-black font-sans font-normal leading-7 mb-8
+      &:last-of-type
+        @apply mb-0
+  &:nth-child(odd)
+    .block-image
+      @apply order-2 col-start-7
+    .block-content
+      @apply order-1 col-start-2

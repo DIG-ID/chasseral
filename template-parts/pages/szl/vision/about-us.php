@@ -1,4 +1,4 @@
-<section class="section-about-us grid grid-cols-2 border-t border-solid border-black h-[1000px]">
+<section class="section-about-us grid grid-cols-2 border-t border-solid border-black h-[1000px] overflow-hidden">
 	<div class="cols-span-1 border-r border-solid border-black pt-36 pb-0 pl-36">
 		<h2 class="text-black text-3xl font-bold mb-16"><?php the_field( 'about_us_title' ); ?></h2>
 		<div class="section-about-us-description max-w-lg"><?php the_field( 'about_us_description' ); ?></div>

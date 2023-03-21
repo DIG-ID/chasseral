@@ -1,4 +1,4 @@
-<section class="section-hero w-full h-[95vh] flex flex-col justify-between bg-center bg-fixed bg-no-repeat bg-cover relative z-10" style="background-image: url(<?php echo esc_url( wp_get_attachment_image_url( get_field( 'hero_image' ), 'full' ) ); ?>)">
+<section class="section-hero w-full h-[95vh] flex flex-col justify-between bg-center bg-fixed bg-no-repeat bg-cover relative z-10 overflow-hidden" style="background-image: url(<?php echo esc_url( wp_get_attachment_image_url( get_field( 'hero_image' ), 'full' ) ); ?>)">
 	<?php
 	if ( get_field( 'hero_use_video' ) ) :
 		$video = get_field( 'hero_video_url' );

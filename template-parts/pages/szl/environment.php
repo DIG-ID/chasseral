@@ -1,4 +1,4 @@
-<section class="section-environment grid grid-cols-2 border-t border-solid border-black h-[700px]">
+<section class="section-environment grid grid-cols-2 border-t border-solid border-black h-[700px] overflow-hidden">
 	<div class="cols-span-1 border-r border-solid border-black">
 		<?php
 		$environment_image = get_field( 'environment_image' );

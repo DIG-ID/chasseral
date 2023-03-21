@@ -1,4 +1,4 @@
-<section class="section-vision grid grid-cols-2 border-t border-solid border-black h-[700px]">
+<section class="section-vision grid grid-cols-2 border-t border-solid border-black h-[700px] overflow-hidden">
 	<div class="cols-span-1 border-r border-solid border-black pt-36 pb-0 pl-36">
 		<h2 class="text-black text-3xl font-bold mb-16 "><?php the_field( 'vision_title' ); ?></h2>
 		<p class="text-sm text-black font-normal leading-8 mb-16 max-w-lg"><?php the_field( 'vision_description' ); ?></p>

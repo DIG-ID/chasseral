@@ -1,4 +1,4 @@
-<section class="section-exhibition grid grid-cols-2 border-t border-solid border-black h-[700px]">
+<section class="section-exhibition grid grid-cols-2 border-t border-solid border-black h-[700px] overflow-hidden">
 	<div class="cols-span-1 border-r border-solid border-black">
 		<?php
 		$image_exhibition = get_field( 'current_exhibition_image' );

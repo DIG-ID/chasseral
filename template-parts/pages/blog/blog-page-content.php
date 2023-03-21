@@ -1,4 +1,4 @@
-<section class="section-blog container mx-auto px-8 py-32">
+<section class="section-blog container mx-auto px-8 py-32 overflow-hidden">
 	<h1 class="section-title text-3xl font-bold mb-16"><?php esc_html_e( 'Blog', 'chasseral' ) ?></h1>
 	<div class="button-group filters-button-group mb-10">
 		<?php

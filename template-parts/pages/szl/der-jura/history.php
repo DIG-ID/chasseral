@@ -1,4 +1,4 @@
-<section class="section-history grid grid-cols-2 border-t border-solid border-black h-[700px]">
+<section class="section-history grid grid-cols-2 border-t border-solid border-black h-[700px] overflow-hidden">
 	<div class="cols-span-1 border-r border-solid border-black">
 		<?php
 		$history_image = get_field( 'history_image' );

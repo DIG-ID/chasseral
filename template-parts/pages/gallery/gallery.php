@@ -5,7 +5,7 @@ if ( $args['class'] ) :
 	$gallery_field = "{$template_class}_gallerie_images";
 endif;
 ?>
-<section class="section-gallery section-gallery--<?php echo esc_attr( $template_class ); ?>">
+<section class="section-gallery section-gallery--<?php echo esc_attr( $template_class ); ?> overflow-hidden">
 	<div class="section-gallery-wrapper border-t border-b border-solid border-black flex justify-between items-center">
 		<h2 class="section-title text-3xl font-bold uppercase whitespace-nowrap pl-8"><?php the_field( $gallery_title ); ?></h2>
 		<div class="<?php echo esc_attr( $template_class ); ?>-swiper-buttons relative flex">

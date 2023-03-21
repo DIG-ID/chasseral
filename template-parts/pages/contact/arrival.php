@@ -1,4 +1,4 @@
-<section class="section-arrival grid grid-cols-12 border-t border-solid border-black">
+<section class="section-arrival grid grid-cols-12 border-t border-solid border-black overflow-hidden">
 	<div class="col-start-2 col-span-3 flex flex-col justify-center">
 		<h2 class="section-title text-3xl font-bold mb-16"><?php the_field( 'arrival_title' ); ?></h2>
 		<div class="section-description"><?php echo wp_kses_post( wpautop( get_field( 'arrival_description' ) ) );  ?></div>

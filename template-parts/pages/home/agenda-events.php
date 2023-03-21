@@ -1,4 +1,4 @@
-<section class="section-lastest-agenda-events">
+<section class="section-lastest-agenda-events overflow-hidden">
 	<div class="section-title-wrapper border-t border-b border-solid border-black flex justify-between items-center">
 		<h2 class="section-title text-3xl font-bold uppercase whitespace-nowrap pl-8"><?php esc_html_e( 'aktuelle Events', 'chasseral' ); ?></h2>
 		<div class="agenda-events-swiper-buttons relative flex">

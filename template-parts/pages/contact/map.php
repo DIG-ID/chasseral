@@ -1,4 +1,4 @@
-<section class="section-map border-t border-solid border-black">
+<section class="section-map border-t border-solid border-black overflow-hidden">
 	<?php
 	$location = get_field( 'map' );
 	if ( $location ) :
