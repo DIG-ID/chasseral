@@ -1,10 +1,10 @@
-<section class="section-hotel-restaurant__your-stay py-40 border-t border-solid">
+<section class="section-hotel-restaurant__your-stay py-8 lg:py-40 border-t border-solid">
     <div class="events-content">
-        <div class="container grid grid-cols-2 items-end mx-auto max-w-7xl mb-8">
+        <div class="container grid grid-cols-1 lg:grid-cols-2 items-end mx-auto max-w-7xl mb-8 px-8 lg:px-0">
             <div class="col-span-1">
                 <h2 class="section__title text-black text-3xl font-bold"><?php esc_html_e( 'Aktuelle Events', 'chasseral' ); ?></h2>
             </div>
-            <div class="col-span-1 text-end">
+            <div class="col-span-1 lg:text-end">
                 <?php 
                 $act_page = get_permalink( get_page_by_path('hotel-restaurant/events') -> ID ); ?>
                 <a class="btn__arrow-alle" href="<?php echo $act_page; ?>"><?php esc_html_e( 'Alle Events', 'chasseral' ); ?> <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -14,7 +14,7 @@
         </div>
     </div>
     <div class="events-list">
-        <div class="container grid grid-cols-3 gap-4 mx-auto max-w-7xl">
+        <div class="container grid grid-cols-1 lg:grid-cols-3 gap-4 mx-auto max-w-7xl">
             <?php 
             $my_query = new WP_Query( array(
                 'post_type'           => 'events',
@@ -35,7 +35,7 @@
                         else : ?>
                         <img src="https://via.placeholder.com/420x282">
                         <?php endif; ?>
-                        <div class="events__content-wrapper py-8 min-h-[400px] relative">
+                        <div class="events__content-wrapper p-8 lg:py-8 lg:px-0 min-h-[400px] relative">
                             <p class="start-date text-sm text-text-grey font-normal whitespace-nowrap mb-2">
                                 <?php
                                 $start_date = get_field( 'start_date' );
