@@ -14,8 +14,8 @@
                     <?php endif; ?>
                 </div>
                 <div class="col-span-1 chasseral__col p-8 lg:pt-24 lg:pb-0 lg:pl-24 border-b border-solid">
-                    <h2 class="text-black text-2xl lg:text-3xl font-bold mb-8 lg:mb-14"><?php the_sub_field('title'); ?></h2>
-                    <p class="mb-8 leading-8 max-w-lg"><?php the_sub_field('description'); ?></p>
+                    <h2 class="title-normal"><?php the_sub_field('title'); ?></h2>
+                    <p class="text-body max-w-lg"><?php the_sub_field('description'); ?></p>
                 </div>
             </div>
             <?php endwhile;

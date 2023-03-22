@@ -7,7 +7,7 @@
 				echo gmdate( 'l d, F Y', strtotime( $start_date ) );
 				?>
 			</p>
-			<h1 class="text-3xl font-bold mb-8"><?php the_title(); ?></h1>
+			<h1 class="title-normal !mb-8"><?php the_title(); ?></h1>
 			<figure class="mb-16 event__image">
 				<?php
 				$size = 'mega-link-thumbnail';
@@ -18,7 +18,7 @@
 				<?php endif;
 				?>
 			</figure>
-			<div class="post-content">
+			<div class="post-content text-body lg:pr-[20%]">
 				<?php the_content(); ?>
 			</div>
 			<a href="<?php echo esc_url( get_permalink( get_field( 'archives_pages_events', 'options' ) ) ); ?>" class="inline-block mt-10">

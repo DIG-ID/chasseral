@@ -11,16 +11,16 @@
             <?php endif; ?>
         </div>
         <div class="col-span-1 chasseral__col p-8 lg:pt-24 lg:pb-0 lg:pl-24">
-            <h2 class="text-black text-2xl lg:text-3xl font-bold mb-14"><?php the_field('gastronomie_block_title'); ?></h2>
-            <p class="mb-16 leading-8 max-w-lg"><?php the_field('gastronomie_block_description'); ?></p>
+            <h2 class="title-normal"><?php the_field('gastronomie_block_title'); ?></h2>
+            <p class="text-body !mb-16 max-w-lg"><?php the_field('gastronomie_block_description'); ?></p>
         </div>
     </div>
 </section>
 <section class="section-hotel-restaurant__zimmer p-0 border-t border-solid">
     <div class="chasseral__row grid grid-cols-1 lg:grid-cols-2">
         <div class="col-span-1 chasseral__col p-8 lg:pt-24 lg:pb-0 lg:pl-24">
-            <h2 class="text-black text-2xl lg:text-3xl font-bold mb-14"><?php the_field('menus_block_title'); ?></h2>
-            <p class="mb-16 leading-8 max-w-lg"><?php the_field('menus_block_description'); ?></p>
+            <h2 class="title-normal"><?php the_field('menus_block_title'); ?></h2>
+            <p class="text-body !mb-16 max-w-lg"><?php the_field('menus_block_description'); ?></p>
             <?php
             if( have_rows('menus_block_menu_buttons') ):
             while( have_rows('menus_block_menu_buttons') ) : the_row();

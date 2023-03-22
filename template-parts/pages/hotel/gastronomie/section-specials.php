@@ -1,7 +1,7 @@
 <section class="section-hotel-restaurant__your-stay py-24 lg:py-40 lg:border-t border-solid">
     <div class="container mx-auto max-w-7xl">
         <div class="flex justify-center">
-            <h2 class="text-black text-2xl lg:text-3xl font-bold mb-24"><?php the_field('section_specials_title'); ?></h2>
+            <h2 class="title-normal !mb-24"><?php the_field('section_specials_title'); ?></h2>
         </div>
         <div class="specials__wrapper">
         <?php
@@ -20,16 +20,16 @@
                 </div>
                 <div class="col-span-1 p-8 lg:pt-32 lg:px-24">
                     <p class="font-bold text-xl mb-8"><?php the_sub_field('title'); ?></p>
-                    <p class="font-bold text-sm mb-4"><?php the_sub_field('subtitle'); ?></p>
+                    <p class="!font-bold text-body !mb-4"><?php the_sub_field('subtitle'); ?></p>
                     <ul class="list-disc no-underline mb-20 pl-4">
                     <?php
                     if( have_rows('list') ):
                     while( have_rows('list') ) : the_row(); ?>
-                        <li class="font-normal text-sm leading-8"><?php the_sub_field('list_item'); ?></li>
+                        <li class="text-body"><?php the_sub_field('list_item'); ?></li>
                     <?php endwhile;
                     endif; ?>
                     </ul>
-                    <p class="font-normal text-sm"><?php the_sub_field('additional_info'); ?></p>
+                    <p class="text-body"><?php the_sub_field('additional_info'); ?></p>
                 </div>
             </div>
         <?php endwhile;

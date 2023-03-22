@@ -12,8 +12,8 @@
         <?php endif; ?>
         </div>
         <div class="col-span-7 p-8 lg:p-20">
-            <h2 class="text-black text-2xl lg:text-3xl font-bold mb-14"><?php the_field('section_preview_title'); ?></h2>
-            <p class=" mb-32 leading-8"><?php the_field('section_preview_description'); ?></p>
+            <h2 class="title-normal !mb-14"><?php the_field('section_preview_title'); ?></h2>
+            <p class=" text-body !mb-32"><?php the_field('section_preview_description'); ?></p>
             <a href="<?php the_field('section_preview_button_link'); ?>" class="btn-general btn-general--jura is-checked"><?php echo esc_html( 'Mehr erfahren', 'chasseral' ) ?></a>
         </div>
     </div>

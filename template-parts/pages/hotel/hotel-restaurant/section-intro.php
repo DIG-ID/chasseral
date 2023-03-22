@@ -6,11 +6,11 @@
     <div class="flex justify-center h-full w-full">
         <div class="py-20 container grid grid-cols-1 lg:grid-cols-8 gap-8 justify-center p-8">
             <div class="col-span-3 mb-4">
-                <h2 class="text-black text-4xl lg:text-6xl font-bold uppercase"><?php the_field('section_intro_title'); ?></h2>
+                <h2 class="title-big"><?php the_field('section_intro_title'); ?></h2>
             </div>
             <div class="col-span-5 grid lg:grid-rows-2">
                 <div class="row-span-1 lg:columns-2 mb-20">
-                    <p class="text-black text-sm font-normal leading-7"><?php the_field('section_intro_description'); ?></p>
+                    <p class="text-body"><?php the_field('section_intro_description'); ?></p>
                 </div>
                 <div class="row-span-1">
                     <a href="#" class="btn-general btn-general--hotel is-checked"><?php echo esc_html( 'Jetzt Buchen', 'chasseral' ) ?></a>

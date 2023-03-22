@@ -11,8 +11,8 @@
             <?php endif; ?>
         </div>
         <div class="col-span-1 chasseral__col p-8 lg:pt-24 lg:pb-0 lg:pl-24">
-            <h2 class="text-black text-3xl font-bold mb-14 uppercase"><?php the_field('section_intro_title'); ?></h2>
-            <p class="mb-16 leading-8 max-w-lg"><?php the_field('section_intro_description'); ?></p>
+            <h2 class="title-normal uppercase"><?php the_field('section_intro_title'); ?></h2>
+            <p class="text-body !mb-16 max-w-lg"><?php the_field('section_intro_description'); ?></p>
             <?php
             if( have_rows('section_intro_button_list') ):
             while( have_rows('section_intro_button_list') ) : the_row();
