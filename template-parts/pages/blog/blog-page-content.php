@@ -6,7 +6,6 @@
 		if ( $blog_cats ) :
 			echo '<button class="btn-general btn-filter is-checked" data-filter="*">' . esc_html__( 'Alle', 'chasseral' ) . '</button>';
 			foreach ( $blog_cats as $bcat ) :
-				console_log($bcat);
 				echo '<button class="btn-general btn-filter btn-general--' . $bcat->slug . ' hover:bg-[' . get_field( 'category_color', 'category_' . $bcat->term_id ) . ']" data-filter=".category-' . $bcat->slug . '">' . $bcat->name . '</button>';
 			endforeach;
 		endif;

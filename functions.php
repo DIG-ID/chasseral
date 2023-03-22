@@ -39,7 +39,7 @@ function chasseral_theme_setup() {
 
 	add_image_size( 'agenda-event-thumbnail', 750, 750, 'center', 'center' );
 
-	add_image_size( 'agenda-thumbnail', 500, 500, 'center', 'center' );
+	add_image_size( 'agenda-thumbnail', 550, 550, 'center', 'center' );
 
 	add_image_size( 'event-thumbnail', 450, 450, 'center', 'center' );
 

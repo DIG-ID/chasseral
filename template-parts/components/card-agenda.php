@@ -3,23 +3,32 @@
 		<div class="card-agenda-image border border-solid border-black">
 			<?php
 			if ( has_post_thumbnail() ) :
-				$img_url = get_the_post_thumbnail_url( get_the_ID(), 'agenda-thumbnail' );
-				?><img class="w-full h-auto object-cover max-h-[475px]" src="<?php echo esc_url( $img_url ); ?>" alt="<?php echo get_the_post_thumbnail_caption(); ?>"><?php
+				?><img class="w-full h-auto object-cover max-h-[550px]" src="<?php echo esc_url( get_the_post_thumbnail_url( get_the_ID(), 'agenda-thumbnail' ) ); ?>" alt="<?php echo esc_html( get_the_post_thumbnail_caption() ); ?>"><?php
 			else :
-				?><img class="w-full h-auto object-cover max-h-[475px]" src="http://via.placeholder.com/750x750"><?php
+				?><img class="w-full h-auto object-cover max-h-[550px]" src="http://via.placeholder.com/550x550"><?php
 			endif;
 			?>
 		</div>
-		<div class="card-agenda-content flex flex-col justify-center items-start pl-16  border border-solid border-black border-l-0">
-			<p class="start-date text-sm text-text-grey font-normal whitespace-nowrap mb-4">
-				<?php
-				$start_date = get_field( 'start_date' );
-				echo gmdate( 'l d, F Y', strtotime( $start_date ) );
-				?>
-			</p>
+		<div class="card-agenda-content flex flex-col justify-center items-start px-16 border border-solid border-black border-l-0">
 			<h3 class="text-3xl font-bold mb-6"><?php the_title(); ?></h3>
+			<div class="agenda-metadata mb-8">
+				<p class="start-date text-sm text-black font-bold whitespace-nowrap flex mb-2">
+					<?php the_field( 'info_occasion' ); ?>
+				</p>
+				<div class="flex justify-between">
+					<p class="start-date text-sm text-black font-bold whitespace-nowrap flex mr-10">
+						<?php esc_html_e( 'Ort:', 'chasseral' ); ?>
+						<span class="block font-sans text-sm text-text-grey font-normal whitespace-nowrap mb-2 ml-2"><?php echo esc_html( get_the_category_by_ID( get_field( 'info_location' ) ) ); ?></span>
+					</p>
+					<p class="start-date text-sm text-black font-bold whitespace-nowrap flex">
+						<?php esc_html_e( 'Zeitraum:', 'chasseral' ); ?>
+						<?php $start_date = get_field( 'start_date' ); ?>
+						<time datetime="<?php echo gmdate( 'c', strtotime( $start_date ) ); ?>" itemprop="datePublished" class="block font-sans text-sm text-text-grey font-normal whitespace-nowrap mb-2 ml-2"><?php echo gmdate( 'l d, F Y', strtotime( $start_date ) ); ?></time>
+					</p>
+				</div>
+			</div>
 			<p class="text-sm font-normal leading-7 max-w-md mb-8 line-clamp-3"><?php echo esc_html( get_the_excerpt() ); ?></p>
-			<a href="<?php the_permalink(); ?>" class="btn-general btn-general--<?php do_action( 'cat_color', 'class' ); ?>"><?php esc_html_e( 'Mehr erfahren', 'chasseral' ); ?></a>
+			<a href="<?php the_permalink(); ?>" class="btn-general hover:bg-main-green hover:text-white"><?php esc_html_e( 'Mehr erfahren', 'chasseral' ); ?></a>
 		</div>
 	</div>
 </article>

@@ -20,13 +20,13 @@ document.addEventListener("DOMContentLoaded", () => {
     if (document.body.classList.contains("page-template-page-gallery")) {
       // Video slider
       var videoGalleryThumbnails = new Swiper(".video-swiper-thumbnail", {
-        spaceBetween: 2,
+        spaceBetween: 0,
         slidesPerView: 6,
         freeMode: true,
         watchSlidesProgress: true,
       });
       var videoGallery = new Swiper(".video-swiper", {
-        spaceBetween: 2,
+        spaceBetween: 0,
         navigation: {
           nextEl: ".videos-button-next",
           prevEl: ".videos-button-prev",
@@ -37,13 +37,13 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       // SZL slider
       var szlThumbnails = new Swiper(".szl-swiper-thumbnail", {
-        spaceBetween: 2,
+        spaceBetween: 0,
         slidesPerView: 6,
         freeMode: true,
         watchSlidesProgress: true,
       });
       var szlGallery = new Swiper(".szl-swiper", {
-        spaceBetween: 2,
+        spaceBetween: 0,
         navigation: {
           nextEl: ".szl-button-next",
           prevEl: ".szl-button-prev",
@@ -54,13 +54,13 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       // Hotel slider
       var hotelThumbnails = new Swiper(".hotel-swiper-thumbnail", {
-        spaceBetween: 2,
+        spaceBetween: 0,
         slidesPerView: 6,
         freeMode: true,
         watchSlidesProgress: true,
       });
       var hotelGallery = new Swiper(".hotel-swiper", {
-        spaceBetween: 2,
+        spaceBetween: 0,
         navigation: {
           nextEl: ".hotel-button-next",
           prevEl: ".hotel-button-prev",
@@ -71,13 +71,13 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       // Jura slider
       var juraThumbnails = new Swiper(".jura-swiper-thumbnail", {
-        spaceBetween: 2,
+        spaceBetween: 0,
         slidesPerView: 6,
         freeMode: true,
         watchSlidesProgress: true,
       });
       var juraGallery = new Swiper(".jura-swiper", {
-        spaceBetween: 2,
+        spaceBetween: 0,
         navigation: {
           nextEl: ".jura-button-next",
           prevEl: ".jura-button-prev",
@@ -185,13 +185,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     if (document.body.classList.contains("single-perfekt_fur")) {
       var juraThumbnails = new Swiper(".jura-swiper-thumbnail", {
-        spaceBetween: 2,
+        spaceBetween: 0,
         slidesPerView: 6,
         freeMode: true,
         watchSlidesProgress: true,
       });
       var juraGallery = new Swiper(".jura-swiper", {
-        spaceBetween: 2,
+        spaceBetween: 0,
         navigation: {
           nextEl: ".jura-button-next",
           prevEl: ".jura-button-prev",
@@ -204,7 +204,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (document.body.classList.contains("page-template-page-szl")) {
       const szlBannerSwiper = new Swiper('.banner-szl-swiper', {
         loop: true,
-        spaceBetween: 2,
+        spaceBetween: 0,
         direction: 'horizontal',
         speed: 800,
         // Navigation arrows
@@ -217,13 +217,13 @@ document.addEventListener("DOMContentLoaded", () => {
     // Hotel Restaurant - Zimmer Slider
     if (document.body.classList.contains("single-zimmer")) {
       var juraThumbnails = new Swiper(".zimmer-swiper-thumbnail", {
-        spaceBetween: 2,
+        spaceBetween: 0,
         slidesPerView: 6,
         freeMode: true,
         watchSlidesProgress: true,
       });
       var juraGallery = new Swiper(".zimmer-swiper", {
-        spaceBetween: 2,
+        spaceBetween: 0,
         thumbs: {
           swiper: juraThumbnails,
         },

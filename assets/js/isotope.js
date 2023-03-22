@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (event.target.matches('button')) {
           var filterValue = event.target.getAttribute('data-filter');
           grid.arrange({ filter: filterValue });
-          
           var buttonGroup = event.target.parentNode;
           buttonGroup.querySelectorAll('button').forEach(function(button) {
             button.classList.toggle('is-checked', button === event.target);
