@@ -5,6 +5,8 @@
 			<h1 class="title-normal"><?php the_title(); ?></h1>
 			<figure class="mb-16 post__image relative">
 				<?php
+				$post_cat    = get_the_category();
+				$post_cat_id = $post_cat[0]->term_id;
 				$badge_label = get_field( 'category_badge_label', 'category_' . $post_cat_id );
 				if ( $badge_label ) :
 					?><p class="badge text-white text-[13px] font-semibold py-1 px-3 mb-10 absolute top-5 left-5 uppercase" style="background-color: <?php do_action( 'cat_color', 'hex' ); ?>;"><?php echo esc_html( $badge_label ); ?></p><?php
