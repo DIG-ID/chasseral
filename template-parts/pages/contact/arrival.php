@@ -1,9 +1,9 @@
-<section class="section-arrival grid grid-cols-12 border-t border-solid border-black overflow-hidden">
-	<div class="col-start-2 col-span-3 flex flex-col justify-center">
-		<h2 class="section-title text-3xl font-bold mb-16"><?php the_field( 'arrival_title' ); ?></h2>
+<section class="section-arrival grid grid-cols-1 lg:grid-cols-12 border-t border-solid border-black overflow-hidden">
+	<div class="lg:col-start-2 lg:col-span-3 col-span-1 flex flex-col justify-center p-8 lg:p-0">
+		<h2 class="section-title text-2xl lg:text-3xl font-bold mb-8 lg:mb-16"><?php the_field( 'arrival_title' ); ?></h2>
 		<div class="section-description"><?php echo wp_kses_post( wpautop( get_field( 'arrival_description' ) ) );  ?></div>
 	</div>
-	<div class="col-start-7 col-span-6 border-l border-solid border-black">
+	<div class="lg:col-start-7 lg:col-span-6 col-span-1 border-l border-solid border-black">
 		<?php
 		$image = get_field( 'arrival_image' );
 		if ( ! empty( $image ) ) :

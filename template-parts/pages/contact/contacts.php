@@ -1,8 +1,7 @@
-<section class="section-contacts-schedule border-t border-solid border-black py-36 overflow-hidden">
-	<div class="container mx-auto px-8 grid grid-cols-2">
-		<div class="contacts-wrapper">
-			<h2 class="text-3xl font-bold mb-10"><?php esc_html_e( 'Kontakt', 'chasseral' ); ?></h2>
-
+<section class="section-contacts-schedule border-t border-solid border-black py-16 lg:py-36 overflow-hidden">
+	<div class="container mx-auto px-8 grid grid-cols-1 lg:grid-cols-2">
+		<div class="contacts-wrapper mb-16 lg:mb-0">
+			<h2 class="text-2xl lg:text-3xl font-bold mb-10"><?php esc_html_e( 'Kontakt', 'chasseral' ); ?></h2>
 			<ul class="contacts-content">
 				<li class="flex mb-6">
 					<p class="w-[100px] font-semibold"><?php esc_html_e( 'Adresse:', 'chasseral' ); ?></p>
@@ -31,7 +30,7 @@
 
 		</div>
 		<div class="schedule-wrapper">
-			<h2 class="text-3xl font-bold mb-10"><?php the_field( 'schedule_title' ); ?></h2>
+			<h2 class="text-2xl lg:text-3xl font-bold mb-10"><?php the_field( 'schedule_title' ); ?></h2>
 			<?php
 			if ( have_rows( 'schedule_opening_hours' ) ) :
 				echo '<ul class="opening-hours">';
