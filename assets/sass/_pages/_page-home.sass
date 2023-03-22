@@ -10,7 +10,7 @@
 
 .section-sub-pages
   .sub-page-link
-    @apply relative block overflow-hidden border border-solid border-black h-[600px]
+    @apply relative block overflow-hidden border border-solid border-black lg:h-[600px]
     z-index: 2
     &--image
       z-index: 1
@@ -34,7 +34,7 @@
       .sub-page-link--icon
         background-color: var(--main-green)
     &--overlay
-      @apply absolute top-0 left-0 w-full h-full transition-all duration-500 ease-in-out translate-y-full bg-bg-color flex flex-col justify-center pl-16 pr-10
+      @apply lg:absolute top-0 left-0 w-full h-full lg:transition-all lg:duration-500 lg:ease-in-out lg:translate-y-full bg-bg-color flex flex-col lg:justify-center px-8 py-8 lg:pl-16 lg:pr-10 lg:py-0
       z-index: 3
     &:hover
       .sub-page-link--title-wrapper

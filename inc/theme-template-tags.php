@@ -150,7 +150,7 @@ function chasseral_theme_sub_pages( $slug ) {
 		$link_arrow    = '<span class="sub-page-link--icon"><svg width="22" height="22" fill="none"><path fill="#000" d="m11 22-1.96-1.925 7.7-7.7H0v-2.75h16.74l-7.7-7.7L11 0l11 11-11 11Z"/></svg></span>';
 		$title_before  = '<span class="sub-page-link--title-wrapper">';
 		$title_after   = '</span>';
-		$title_overlay = '<p class="sub-page-link--title-overlay font-bold text-3xl font-sans text-black uppercase m-0 absolute top-[14px] transition-all duration-300 ease-in-out -translate-x-full opacity-0">' . esc_html__( 'eintreten', 'chasseral' ) . '</p>';
+		$title_overlay = '<p class="sub-page-link--title-overlay font-bold text-xl lg:text-3xl font-sans text-black uppercase m-0 lg:absolute top-[14px] transition-all duration-300 ease-in-out -translate-x-full opacity-0">' . esc_html__( 'eintreten', 'chasseral' ) . '</p>';
 		$overlay_open  = '<div class="sub-page-link--overlay">';
 		$overlay_close = '</div>';
 
@@ -169,11 +169,11 @@ function chasseral_theme_sub_pages( $slug ) {
 			$root_id    = $root->ID;
 			$link_open  = '<a href="' . esc_url( get_permalink( $root_id ) ) . '" class="sub-page-link ' . $link_class . '">';
 			$link_close = '</a>';
-			$link_title = '<h2 class="font-bold text-3xl font-sans text-black uppercase mb-10">' . $root->post_title . '</h2>';
+			$link_title = '<h2 class="font-bold text-xl lg:text-3xl font-sans text-black uppercase mb-10">' . $root->post_title . '</h2>';
 			$link_desc  = get_the_excerpt( $root_id );
 			if ( has_post_thumbnail( $root_id ) ) :
 				$link_img_src = get_the_post_thumbnail_url( $root_id, 'sub-page-thumbnail' );
-				$link_img     = '<img src="' . $link_img_src . '" class="sub-page-link--image object-cover absolute top-0 left-0 w-full h-auto">';
+				$link_img     = '<img src="' . $link_img_src . '" class="sub-page-link--image object-cover lg:absolute top-0 left-0 w-full h-auto">';
 			endif;
 		endif;
 

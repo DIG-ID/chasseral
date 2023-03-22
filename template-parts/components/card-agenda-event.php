@@ -1,23 +1,23 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'card-agenda-event swiper-slide overflow-hidden' ); ?>>
-	<div class="card-event-wrapper grid grid-cols-2 border-b border-solid border-black">
-		<div class="card-event-image border-r border-solid border-black ">
+	<div class="card-event-wrapper grid grid-cols-1 lg:grid-cols-2 border-b border-solid border-black">
+		<div class="card-event-image lg:border-r border-solid border-black ">
 			<?php
 			if ( has_post_thumbnail() ) :
 				$img_url = get_the_post_thumbnail_url( get_the_ID(), 'agenda-event-thumbnail' );
-				?><img class="w-full h-auto object-cover max-h-[700px]" src="<?php echo esc_url( $img_url ); ?>" alt="<?php echo get_the_post_thumbnail_caption(); ?>"><?php
+				?><img class="w-full h-auto object-cover lg:max-h-[700px]" src="<?php echo esc_url( $img_url ); ?>" alt="<?php echo get_the_post_thumbnail_caption(); ?>"><?php
 			else :
-				?><img class="w-full h-auto object-cover max-h-[700px]" src="http://via.placeholder.com/750x750"><?php
+				?><img class="w-full h-auto object-cover lg:max-h-[700px]" src="http://via.placeholder.com/750x750"><?php
 			endif;
 			?>
 		</div>
-		<div class="card-event-content flex flex-col justify-center items-start pl-16 bg-bg-color">
+		<div class="card-event-content flex flex-col justify-center items-start px-8 py-8 lg:pl-16 lg:pr-0 lg:py-0 bg-bg-color">
 			<p class="start-date text-sm text-text-grey font-normal whitespace-nowrap mb-2">
 				<?php
 				$start_date = get_field( 'start_date' );
 				echo gmdate( 'l d, F Y', strtotime( $start_date ) );
 				?>
 			</p>
-			<h3 class="text-3xl font-bold mb-8"><?php the_title(); ?></h3>
+			<h3 class="text-xl lg:text-3xl font-bold mb-8"><?php the_title(); ?></h3>
 			<?php
 			if ( get_post_type( get_the_ID() ) === 'agenda' ) :
 				echo '<p class="badge bg-main-green text-white text-[13px] font-semibold py-1 px-3 mb-10">' . esc_html__( 'SZL', 'chasseral' ) . '</p>';
