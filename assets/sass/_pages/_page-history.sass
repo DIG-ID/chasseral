@@ -9,3 +9,16 @@
       @apply order-2 col-start-7
     .block-content
       @apply order-1 col-start-2
+.history-gallery
+  .history-swiper-thumbnail
+    .swiper-slide
+      @apply opacity-60
+      &:hover
+        @apply opacity-100
+    .swiper-slide.swiper-slide-thumb-active
+      @apply opacity-100
+
+  .history-button-prev,
+  .history-button-next
+    &::after
+      @apply text-black

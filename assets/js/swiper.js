@@ -209,7 +209,7 @@ document.addEventListener("DOMContentLoaded", () => {
         speed: 800,
         // Navigation arrows
         navigation: {
-          nextEl: '.swiper-button-next.banner-szl-button-nextt',
+          nextEl: '.swiper-button-next.banner-szl-button-next',
           prevEl: '.swiper-button-prev.banner-szl-button-prev',
         },
       });
@@ -226,6 +226,25 @@ document.addEventListener("DOMContentLoaded", () => {
         spaceBetween: 2,
         thumbs: {
           swiper: juraThumbnails,
+        },
+      });
+    }
+    //SZL - Histoy - Slider
+    if (document.body.classList.contains("page-template-page-history")) {
+      var historyThumbnails = new Swiper(".history-swiper-thumbnail", {
+        spaceBetween: 0,
+        slidesPerView: 6,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+      var historyGallery = new Swiper(".history-swiper", {
+        spaceBetween: 0,
+        navigation: {
+          nextEl: '.swiper-button-next.history-button-next',
+          prevEl: '.swiper-button-prev.history-button-prev',
+        },
+        thumbs: {
+          swiper: historyThumbnails,
         },
       });
     }

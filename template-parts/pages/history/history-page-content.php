@@ -28,21 +28,30 @@
 			endwhile;
 		endif;
 		?>
-		<div class="history-gallery">
+		<div class="history-gallery relative">
 			<?php
 			$history_gallery = get_field( 'gallery' );
 			if ( $history_gallery ) :
-				echo '<div class="swiper history-swiper"><div class="swiper-wrapper">';
+				echo '<div class="swiper history-swiper border border-solid border-black"><div class="swiper-wrapper">';
 				foreach ( $history_gallery as $image ) :
 					echo '<div class="swiper-slide">';
 					echo '<a href="' . esc_url( wp_get_attachment_image_url( $image, 'full' ) ) . '" data-fancybox="history-gallery" data-caption="' . esc_html( wp_get_attachment_caption( $image ) ) . '" ><img class="w-full h-auto object-cover max-h-[700px]" src="' . esc_url( wp_get_attachment_image_url( $image, 'full' ) ) . '"></a>';
 					echo '</div>';
 				endforeach;
-				echo '<div class="swiper-button-prev history-button-prev"></div>';
-				echo '<div class="swiper-button-next history-button-next"></div>';
+				echo '</div></div>';
+			endif;
+			if ( $history_gallery ) :
+				echo '<div class="swiper swiper-thumbnail history-swiper-thumbnail"><div class="swiper-wrapper">';
+				foreach ( $history_gallery as $image ) :
+					echo '<div class="swiper-slide border border-t-0 border-l-0 border-solid border-black first-of-type:border-l hover:cursor-pointer">';
+					echo '<img class="w-full h-[160px] object-cover" src="' . esc_url( wp_get_attachment_image_url( $image, 'thumbnail' ) ) . '">';
+					echo '</div>';
+				endforeach;
 				echo '</div></div>';
 			endif;
 			?>
+			<div class="swiper-button-prev history-button-prev left-[-100px]"></div>
+			<div class="swiper-button-next history-button-next right-[-100px]"></div>
 		</div>
 	</div>
 </article>
