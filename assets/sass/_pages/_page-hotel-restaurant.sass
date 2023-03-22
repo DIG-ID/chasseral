@@ -11,7 +11,7 @@
 .section-zimmer
     &__zimmer, &__group-zimmer
         .zimmer-link
-            @apply relative block overflow-hidden h-[689px] max-h-[689px] border-x border-b border-solid
+            @apply relative block overflow-hidden lg:h-[689px] lg:max-h-[689px] border-x border-b border-solid
             z-index: 2
             &--image
                 z-index: 1
@@ -26,7 +26,7 @@
                     path
                     fill: #fff
             &--overlay
-                @apply absolute top-0 left-0 w-full h-full transition-all duration-500 ease-in-out translate-y-full bg-bg-color flex flex-col justify-center pl-32 pr-40
+                @apply lg:absolute top-0 left-0 w-full h-full lg:transition-all lg:duration-500 lg:ease-in-out lg:translate-y-full bg-bg-color flex flex-col lg:justify-center px-8 py-8 lg:py-0 lg:pl-32 lg:pr-40
                 z-index: 3
             &:hover
                 .zimmer-link--title-wrapper

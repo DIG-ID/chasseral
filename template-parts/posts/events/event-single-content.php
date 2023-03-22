@@ -1,5 +1,5 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'overflow-hidden py-20' ); ?>>
-	<div class="container mx-auto px-8 grid grid-cols-12">
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'overflow-hidden py-8 lg:py-20' ); ?>>
+	<div class="container mx-auto px-8 grid grid-cols-1 lg:grid-cols-12">
 		<div class="post-content-wrapper col-span-10">
 			<p class="start-date text-sm text-[#797979] font-normal whitespace-nowrap mb-4">
 				<?php

@@ -1,11 +1,11 @@
-<section class="zimmer-section__intro pt-40 pb-60">
+<section class="zimmer-section__intro pt-8 lg:pt-40 pb-20 lg:pb-60">
 	<div class="container mx-auto grid grid-cols-1 lg:gap-8 px-8 lg:grid-cols-2 max-w-7xl">
 		<div class="col-span-1 row-span-1">
             <h2 class="text-black text-3xl font-bold uppercase mb-14"><?php the_title(); ?></h2>
             <p class="mb-14 leading-8"><?php the_field('section_info_description'); ?></p>
             <a href="#" class="btn-general btn-general--hotel is-checked block"><?php echo esc_html( 'Jetzt buchen', 'chasseral' ) ?></a>
         </div>
-        <div class="col-span-1 row-span-1">
+        <div class="col-span-1 row-span-1 pt-8 lg:pt-0">
             <div class="amenities-wrapper">
                 <p class="font-bold leading-8 mb-9"><?php the_field('section_info_price'); ?></p>
                 <ul class="list-disc no-underline mb-20 pl-4 ml-4">
@@ -19,7 +19,7 @@
             </div>
         </div>
 	</div>
-    <div class="container mx-auto max-w-7xl px-8 mt-10">
+    <div class="container mx-auto max-w-7xl px-8 mt-0 lg:mt-10">
         <?php $page = get_permalink( get_page_by_path('hotel-restaurant/zimmer') -> ID ); ?>
         <a href="<?php echo $page; ?>">
             <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline mr-2">
