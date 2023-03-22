@@ -1,11 +1,11 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php
 	if ( has_post_thumbnail() ) :
-		?><div class="h-[70vh] border-b border-solid border-black bg-center bg-no-repeat bg-cover bg-fixed" style="background-image: url(<?php echo esc_url( get_the_post_thumbnail_url() ); ?>)"></div>
+		?><div class="h-[80vh] border-b border-solid border-black bg-center bg-no-repeat bg-cover bg-fixed" style="background-image: url(<?php echo esc_url( get_the_post_thumbnail_url( get_the_ID(), 'full' ) ); ?>)"></div>
 		<?php
 	endif;
 	?>
-	<div class="container mx-auto px-8 pt-36 pb-[20vh]">
+	<div class="container mx-auto px-8 py-36">
 
 		<h1 class="text-3xl text-black text-center font-bold mb-36"><?php the_field( 'history_title' ); ?></h1>
 		<?php
