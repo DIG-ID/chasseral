@@ -9,7 +9,7 @@
 				?><p class="badge text-white text-[13px] font-semibold py-1 px-3 mb-10 absolute top-5 left-5 uppercase" style="background-color: <?php do_action( 'cat_color', 'hex' ); ?>;"><?php echo esc_html( $badge_label ); ?></p><?php
 			endif;
 			if ( has_post_thumbnail() ) :
-				$img_url = get_the_post_thumbnail_url( get_the_ID(), 'thumbnail' );
+				$img_url = get_the_post_thumbnail_url( get_the_ID(), 'post-thumbnail' );
 				?><img class="w-full h-auto object-cover lg:max-h-[300px]" src="<?php echo esc_url( $img_url ); ?>" alt="<?php echo esc_html( get_the_post_thumbnail_caption() ); ?>"><?php
 			else :
 				?><img class="w-full h-auto object-cover lg:max-h-[300px]" src="http://via.placeholder.com/750x750"><?php
