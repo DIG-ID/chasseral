@@ -5,9 +5,9 @@
 		<?php
 	endif;
 	?>
-	<div class="container mx-auto px-8 pt-36 grid grid-cols-12">
-		<div class="post-content-wrapper col-span-10">
-			<h1 class="text-3xl text-black font-bold mb-16"><?php the_title(); ?></h1>
+	<div class="container mx-auto px-8 py-36">
+		<div class="post-content-wrapper">
+			<h1 class="title-normal"><?php the_title(); ?></h1>
 			<div class="post-content">
 				<?php the_content(); ?>
 			</div> 
