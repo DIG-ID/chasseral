@@ -102,9 +102,11 @@
         margin-bottom: 40px
     .mega-links-xl
       .mega-link
-        @apply block h-1/2 overflow-hidden border-b border-solid border-black
+        @apply block h-1/2 overflow-hidden border-b border-solid border-black relative
+        &-title-wrapper
+          @apply z-10 relative bg-bg-color
         img
-          @apply w-full h-auto object-cover max-h-[400px]
+          @apply w-full h-auto object-cover absolute top-0 left-0 bottom-0 z-0
         &--hotel
           .mega-link-icon
             @apply bg-main-red
