@@ -18,7 +18,7 @@
 </section>
 <section class="section-hotel-restaurant__zimmer p-0 border-t border-solid">
     <div class="chasseral__row grid grid-cols-1 lg:grid-cols-2">
-        <div class="col-span-1 chasseral__col p-8 lg:pt-24 lg:pb-0 lg:pl-24">
+        <div class="col-span-1 chasseral__col p-8 lg:pt-24 lg:pb-0 lg:pl-24 border-r border-solid">
             <h2 class="title-normal"><?php the_field('menus_block_title'); ?></h2>
             <p class="text-body !mb-16 max-w-lg"><?php the_field('menus_block_description'); ?></p>
             <?php
@@ -32,7 +32,7 @@
             <?php endwhile;
             endif; ?>
         </div>
-        <div class="col-span-1 chasseral__col border-l border-solid">
+        <div class="col-span-1 chasseral__col">
             <?php 
             $image = get_field('menus_block_image');
             $size = 'section-column-img'; 
