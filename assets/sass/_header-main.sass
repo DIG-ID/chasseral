@@ -147,9 +147,9 @@
         margin-bottom: 40px
     .mega-links-xl
       .mega-link
-        @apply h-1/2 overflow-hidden border-b border-solid border-black
+        @apply block h-1/2 overflow-hidden border-b border-solid border-black
         img
-          @apply block w-full h-auto object-cover max-h-[500px]
+          @apply w-full h-auto object-cover max-h-[500px]
         &--hotel
           .mega-link-icon
             @apply bg-main-red
@@ -160,16 +160,9 @@
           .mega-link-icon
             @apply bg-main-green
         .mega-link-title-wrapper
-          display: flex
-          justify-content: space-between
-          align-items: stretch
-          height: 75px
-          padding-left: 20px
-          border-bottom: 1px solid #000
-          transition: all .3s ease-in-out
+          @apply block flex justify-between items-stretch h-[75px] pl-5 border-b border-solid border-black
           h2
-            align-self: center
-            margin: 0
+            @apply self-center m-0
           .mega-link-icon
             width: 75px
             height: 100%
