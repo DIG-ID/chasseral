@@ -1,4 +1,4 @@
-<section class="section-hotel-restaurant__your-stay py-16 lg:py-40 border-b border-solid">
+<section class="section-hotel-restaurant__your-stay py-16 lg:py-40 border-y border-solid">
     <div class="container grid grid-cols-1 lg:grid-cols-3 gap-16 mx-auto p-8 lg:p-0">
         <div class="col-span-1">
             <h2 class="title-big"><?php the_field('section_your_stay_title'); ?></h2>

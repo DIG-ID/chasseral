@@ -3,7 +3,7 @@
     <div class="container max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 lg:border border-solid">
         <div class="col-span-5 border-r border-solid preview-img-box">
         <?php 
-            $image = get_field('image');
+            $image = get_field('section_preview_image');
             $size = 'chasseral-jura-preview--thumbnail'; 
             if( $image ) :
                 echo wp_get_attachment_image( $image, $size );

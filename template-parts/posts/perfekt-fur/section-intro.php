@@ -8,7 +8,7 @@
 		endif;
 		?>
 		</div>
-		<div class="p-8 lg:py-40 container max-w-7xl mx-auto">
+		<div class="p-8 lg:pt-40 lg:pb-20 container max-w-7xl mx-auto">
 			<div class="mb-8 lg:mb-20 w-full">
 				<h2 class="title-big"><?php the_title(); ?></h2>
 			</div>
