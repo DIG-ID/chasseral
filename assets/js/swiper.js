@@ -217,6 +217,20 @@ document.addEventListener("DOMContentLoaded", () => {
     // Hotel Restaurant - Zimmer Slider
     if (document.body.classList.contains("single-zimmer")) {
       var juraThumbnails = new Swiper(".zimmer-swiper-thumbnail", {
+        breakpoints: {
+          576: {
+            slidesPerView: 6,
+          },
+          768: {
+            slidesPerView: 6,
+          },
+          992: {
+            slidesPerView: 8,
+          },
+          1200: {
+            slidesPerView: 8,
+          },
+        },
         spaceBetween: 0,
         slidesPerView: 6,
         freeMode: true,
