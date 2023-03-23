@@ -1,4 +1,4 @@
-<section class="section-page-header py-16 lg:py-24">
+<section class="section-page-header border-t border-solid border-black py-16 lg:py-24">
 	<div class="container mx-auto px-8 grid grid-cols-12">
 		<h1 class="title-big !normal-case col-span-10 lg:col-span-5"><?php the_title(); ?></h1>
 		<?php
