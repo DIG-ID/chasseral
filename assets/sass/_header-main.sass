@@ -1,14 +1,9 @@
 #header-main
   z-index: 999
   .custom-logo-link
-    display: flex
-    justify-content: center
-    align-items: center
-    width: 300px
-    border-right: 1px solid #000
+    @apply flex justify-center items-center w-[300px] border-r border-solid border-black
     img
-      max-width: 175px
-      object-fit: cover
+      @apply max-w-[175px] object-cover
 
 #header-main
   .wpml-ls-legacy-dropdown
@@ -16,23 +11,7 @@
     ul
       .wpml-ls-current-language
         .wpml-ls-item-toggle
-          display: flex
-          justify-content: center
-          align-items: center
-          padding: 0
-          margin: 0
-          border: none
-          border-right: 1px solid #000
-          border-left: 1px solid #000
-
-          height: 75px
-          font-family: var( --main-font )
-          font-size: 16px
-          font-weight: bold
-          //position: relative
-          background-color: var(--bg-color)
-          z-index: 200
-          transition: all .35s ease-in-out
+          @apply flex justify-center items-center p-0 m-0 border-0 border-r border-l border-solid border-black h-[75px] text-base text-black font-sans font-bold bg-bg-color transition-all duration-300 ease-in z-[200]
           &::after
             display: none
           &:hover
@@ -44,18 +23,7 @@
           z-index: 190
           .wpml-ls-item
             .wpml-ls-link
-              display: flex
-              justify-content: center
-              align-items: center
-              height: 75px
-              padding: 0
-              font-family: var( --main-font )
-              font-size: 16px
-              font-weight: bold
-              border: 1px solid #000
-              border-top: none
-              background-color: var(--bg-color)
-              transition: all .35s ease-in-out
+              @apply flex justify-center items-center h-[75px] p-0 font-sans text-base font-bold border border-t-0 border-solid border-black bg-bg-color transition-all duration-300 ease-in
               &:hover
                 background-color: darken($bg-color, 10%)
 
@@ -78,43 +46,30 @@
       &:last-of-type
         padding-right: 0
       a
-        display: block
-        font-family: var(--main-font)
-        font-size: 16px
-        font-weight: bold
-        text-transform: uppercase
-        transition: all .25s ease-in-out
-        white-space: nowrap
-        color: #000
+        @apply block font-sans font-bold text-base text-black uppercase transition-all duration-300 ease-in whitespace-nowrap
         &:hover
           color: rgba(0, 0, 0, 0.5)
     .current_page_item
       a
         color: rgba(0, 0, 0, 0.5)
   #menu-szl
-    .menu-item
-      a
-        &:hover
-          color: var(--main-green)
-    .current_page_item
-      a
-        color: var(--main-green)
+    .menu-item a
+      &:hover
+        @apply text-main-green
+    .current_page_item a
+      @apply text-main-green
   #menu-hotel
-    .menu-item
-      a
-        &:hover
-          color: var(--main-red)
-    .current_page_item
-      a
-        color: var(--main-red)
+    .menu-item a
+      &:hover
+        @apply text-main-red
+    .current_page_item a
+      @apply text-main-red
   #menu-jura
-    .menu-item
-      a
-        &:hover
-          color: var(--main-blue)
-    .current_page_item
-      a
-        color: var(--main-blue)
+    .menu-item a
+      &:hover
+        @apply text-main-blue
+    .current_page_item a
+      @apply text-main-blue
 
 .mega-menu-navigation
   z-index: 180
@@ -164,12 +119,7 @@
           h2
             @apply self-center m-0
           .mega-link-icon
-            width: 75px
-            height: 100%
-            display: flex
-            justify-content: center
-            align-items: center
-            border-left: 1px solid #000
+            @apply w-[75px] h-full flex justify-center items-center border-l border-solid border-black
             svg
               path
                 fill: #fff
