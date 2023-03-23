@@ -128,7 +128,7 @@
         .menu-item
           @apply pb-8
           a
-            @apply block text-3xl text-black font-sans font-bold uppercase transition-all duration-300 ease-in whitespace-nowrap opacity-100 hover:opacity-60
+            @apply block text-3xl text-black font-sans font-bold uppercase transition-all duration-300 ease-in whitespace-nowrap
       #main-mega-menu
         .menu-item
           @apply pb-8
@@ -149,7 +149,7 @@
       .mega-link
         @apply h-1/2 overflow-hidden border-b border-solid border-black
         img
-          @apply block w-full h-full object-cover
+          @apply block w-full h-auto object-cover max-h-[500px] lg:h-full
         &--hotel
           .mega-link-icon
             @apply bg-main-red
