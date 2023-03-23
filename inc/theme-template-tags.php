@@ -101,7 +101,7 @@ function chasseral_theme_mega_menu_link( $slug, $type ) {
 			$link_close  = '</a>';
 			$link_title  = '<h2 class="font-bold text-3xl font-sans text-black uppercase my-5">' . $root->post_title . '</h2>';
 			if ( has_post_thumbnail( $root_id ) ) :
-				$link_img = get_the_post_thumbnail( $root_id, 'full' );
+				$link_img = get_the_post_thumbnail( $root_id, 'mega-link-thumbnail' );
 			endif;
 			console_log( $link_img );
 		endif;
