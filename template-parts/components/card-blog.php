@@ -17,7 +17,7 @@
 		</figure>
 		<div class="card-blog-content bg-bg-color">
 			<time datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished" class="block font-sans text-sm text-text-grey font-normal whitespace-nowrap mb-2"><?php echo get_the_date(); ?></time>
-			<h3 class="text-xl lg:text-3xl font-bold mb-4 line-clamp-2"><?php the_title(); ?></h3>
+			<h3 class=" text-base lg:text-xl font-bold mb-4 line-clamp-2"><?php the_title(); ?></h3>
 			<p class="text-sm font-normal leading-8 max-w-md mb-8 line-clamp-4"><?php echo esc_html( get_the_excerpt() ); ?></p>
 		</div>
 	</a>
