@@ -9,7 +9,7 @@
                 <p class="text-body"><?php the_field('section_your_stay_description'); ?></p>
             </div>
             <div class="row-span-1">
-                <a href="<?php the_field('section_your_stay_button_link') ?>" class="btn-general btn-general--hotel is-checked block"><?php echo esc_html( 'Jetzt buchen', 'chasseral' ) ?></a>
+                <a data-fancybox data-src="#open" href="javascript:;" class="btn-general btn-general--hotel is-checked block"><?php echo esc_html( 'Jetzt buchen', 'chasseral' ) ?></a>
             </div>
         </div>
     </div>

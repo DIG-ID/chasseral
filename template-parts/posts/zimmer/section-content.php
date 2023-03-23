@@ -3,7 +3,8 @@
 		<div class="col-span-1 row-span-1">
 			<h2 class="title-normal uppercase"><?php the_title(); ?></h2>
 			<p class="!mb-14 text-body"><?php the_field( 'section_info_description' ); ?></p>
-			<a href="#" class="btn-general btn-general--hotel is-checked block"><?php esc_html_e( 'Jetzt buchen', 'chasseral' ); ?></a>
+			<a data-fancybox data-src="#open" href="javascript:;" class="btn-general btn-general--hotel is-checked block"><?php esc_html_e( 'Jetzt buchen', 'chasseral' ); ?></a>
+			<?php get_template_part( 'template-parts/modules/booking', 'popup' ); ?>
 		</div>
 		<div class="col-span-1 row-span-1 pt-8 lg:pt-0">
 			<div class="amenities-wrapper">
