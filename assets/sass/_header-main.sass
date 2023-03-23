@@ -119,39 +119,37 @@
 .mega-menu-navigation
   z-index: 180
   .mega-menu-content
+    
     .mega-menu--menus
+      @apply col-span-1 flex flex-col justify-between px-5 py-20 border-r border-solid border-black md:px-10 lg:px-20 xl:px-40 
       #hotel-mega-menu,
       #jura-mega-menu,
-      #szl-mega-menu,
+      #szl-mega-menu
+        .menu-item
+          @apply pb-8
+          a
+            @apply block text-3xl text-black font-sans font-bold uppercase transition-all duration-300 ease-in whitespace-nowrap opacity-100 hover:opacity-60
       #main-mega-menu
         .menu-item
-          padding-bottom: 30px
+          @apply pb-8
           a
-            display: block
-            font-family: var(--main-font)
-            font-size: 30px
-            font-weight: bold
-            text-transform: uppercase
-            transition: all .25s ease-in-out
-            white-space: nowrap
-            opacity: 1
-            &:hover
-              opacity: .5
+            @apply block text-xl text-black font-sans font-bold uppercase transition-all duration-300 ease-in whitespace-nowrap opacity-100 hover:opacity-60
     .mega-links > .mega-link
         margin-bottom: 40px
     .mega-links-xl
       .mega-link
-        height: 50%
-        border-bottom: 1px solid #000
+        @apply h-1/2 overflow-hidden border-b border-solid border-black
+        img
+          @apply block w-full h-full object-cover
         &--hotel
           .mega-link-icon
-            background-color: var( --main-red )
+            @apply bg-main-red
         &--top-of-jura
           .mega-link-icon
-            background-color: var( --main-blue )
+            @apply bg-main-blue
         &--szl
           .mega-link-icon
-            background-color: var( --main-green )
+            @apply bg-main-green
         .mega-link-title-wrapper
           display: flex
           justify-content: space-between

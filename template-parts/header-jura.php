@@ -30,7 +30,7 @@
 
 		<div class="mega-menu-navigation absolute top-75 left-0 h-0 overflow-hidden w-full flex justify-center items-center bg-bg-color border-t border-solid border-black">
 			<div class="mega-menu-content w-full h-full grid grid-cols-2">
-				<div class="mega-menu--menus col-auto flex flex-col justify-center bg-main-blue text-white px-5 md:px-10 lg:px-20 xl:px-40 border-r border-solid border-black">
+				<div class="mega-menu--menus">
 					<?php
 					wp_nav_menu(
 						array(

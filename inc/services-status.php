@@ -28,9 +28,9 @@ class ChasseralThemeServicesStatusWidget {
 	 */
 	private function setup_defaults() {
 		$this->status = array(
-			'open'      => '<p class="service-status-signal text-sm flex items-center ml-3"><span class="service-status-signal-icon block rounded-full w-[15px] h-[15px] bg-main-green mr-1"></span>(' . esc_html__( 'Offen', 'chasseral' ) . ')</p>',
-			'closed'    => '<p class="service-status-signal text-sm flex items-center ml-3"><span class="service-status-signal-icon block rounded-full w-[15px] h-[15px] bg-main-red mr-1"></span>(' . esc_html__( 'Geschlossen', 'chasseral' ) . ')</p>',
-			'undefined' => '<p class="service-status-signal text-sm flex items-center ml-3"><span class="service-status-signal-icon block rounded-full w-[15px] h-[15px] bg-text-grey mr-1"></span>(' . esc_html__( 'Unbestimmt', 'chasseral' ) . ')</p>',
+			'open'      => '<p class="service-status-signal text-sm flex items-center ml-3"><span class="service-status-signal-icon block rounded-full w-[15px] h-[15px] bg-[#1FDD00] mr-1"></span>(' . esc_html__( 'Offen', 'chasseral' ) . ')</p>',
+			'closed'    => '<p class="service-status-signal text-sm flex items-center ml-3"><span class="service-status-signal-icon block rounded-full w-[15px] h-[15px] bg-[#FF0000] mr-1"></span>(' . esc_html__( 'Geschlossen', 'chasseral' ) . ')</p>',
+			'undefined' => '<p class="service-status-signal text-sm flex items-center ml-3"><span class="service-status-signal-icon block rounded-full w-[15px] h-[15px] bg-[#B9B9B9] mr-1"></span>(' . esc_html__( 'Unbestimmt', 'chasseral' ) . ')</p>',
 		);
 		$this->day_names = array(
 			'monday'    => esc_html__( 'Montag', 'chasseral' ),
