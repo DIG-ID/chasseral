@@ -7,7 +7,7 @@ if ( $gallery ) : ?>
             foreach ( $gallery as $image ) :
                 $img_url = $image['url'];
                 echo '<div class="swiper-slide">';
-                echo '<a href="' . esc_url( $img_url ) . '" data-fancybox="gallery-jura" data-caption="' . esc_html( $image['caption'] ) . '" ><img class="w-full h-auto object-cover max-h-[800px]" src="' . esc_url( $img_url ) . '"></a>';
+                echo '<a href="' . esc_url( $img_url ) . '" data-fancybox="gallery-jura" data-caption="' . esc_html( $image['caption'] ) . '" ><img class="w-full h-auto object-cover max-h-[750px]" src="' . esc_url( $img_url ) . '"></a>';
                 echo '</div>';
             endforeach;
             echo '</div></div>';

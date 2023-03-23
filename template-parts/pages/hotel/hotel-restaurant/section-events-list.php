@@ -1,4 +1,4 @@
-<section class="section-hotel-restaurant__your-stay py-8 lg:py-40 border-t border-solid">
+<section class="section-hotel-restaurant__your-stay pt-8 pb-8 lg:pt-40 lg:pb-8 border-t border-solid">
 		<div class="events-content">
 				<div class="container grid grid-cols-1 lg:grid-cols-2 items-end mx-auto max-w-7xl mb-8 px-8 lg:px-0">
 						<div class="col-span-1">
