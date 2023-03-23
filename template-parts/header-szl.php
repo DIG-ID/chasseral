@@ -54,7 +54,7 @@
 					);
 					?>
 				</div>
-				<div class="mega-links-xl col-span-1 flex flex-col">
+				<div class="mega-links-xl">
 					<?php
 					do_action( 'mega_menu_link', 'hotel_restaurant', 'mega-menu-bg' );
 					do_action( 'mega_menu_link', 'top_of_jura', 'mega-menu-bg' );
