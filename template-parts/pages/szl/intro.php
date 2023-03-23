@@ -1,5 +1,5 @@
-<section class="section-szl-intro grid grid-cols-1 lg:grid-cols-12 border-t border-solid border-black py-8 lg:py-36 overflow-hidden">
-	<div class="col-span-1 lg:col-span-5 col-start-2">
+<section class="section-szl-intro grid grid-cols-1 lg:grid-cols-12 border-t border-solid border-black py-8 px-8 lg:px-0 lg:py-36 overflow-hidden">
+	<div class="col-span-1 lg:col-span-5 lg:col-start-2">
 		<h1 class="title-big"><?php the_field( 'intro_title' ); ?></h1>
 		<div class="szl-logos w-full flex">
 			<?php
@@ -12,7 +12,7 @@
 			?>
 		</div>
 	</div>
-	<div class="col-span-1 lg:col-span-4 col-start-8">
+	<div class="col-span-1 lg:col-span-4 lg:col-start-8">
 		<p class="text-sm text-black font-normal leading-8 mb-16 max-w-lg"><?php the_field( 'intro_description' ); ?></p>
 	</div>
 </section>
