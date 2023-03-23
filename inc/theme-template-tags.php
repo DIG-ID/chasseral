@@ -26,7 +26,7 @@ add_action( 'socials', 'chasseral_theme_socials' );
  */
 function chasseral_theme_before_main_content() {
 	?>
-	<main id="main-content" class="main-content mt-[65px]">
+	<main id="main-content" class="main-content mt-[75px]">
 	<?php
 }
 
@@ -297,3 +297,17 @@ function chasseral_theme_see_all_posts( $slug = false, $name ) {
 }
 
 add_action( 'see_all', 'chasseral_theme_see_all_posts', 10, 2 );
+
+
+/**
+ * Breadcrumbs
+ */
+function chasseral_theme_breadcrumbs() {
+
+	if ( function_exists( 'yoast_breadcrumb' ) ) {
+		yoast_breadcrumb( '<p id="breadcrumbs">', '</p>' );
+	}
+
+}
+
+add_action( 'breadcrumbs', 'chasseral_theme_breadcrumbs' );

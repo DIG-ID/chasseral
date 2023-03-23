@@ -5,6 +5,7 @@
 
 get_header();
 	do_action( 'before_main_content' );
+		do_action( 'breadcrumbs' );
 		get_template_part( 'template-parts/pages/page/header' );
 		//get_template_part( 'template-parts/pages/gallery/gallery', 'video' );
 		get_template_part( 'template-parts/pages/gallery/gallery', null, array( 'class' => 'szl' ) );
