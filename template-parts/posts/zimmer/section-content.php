@@ -1,4 +1,4 @@
-<section class="zimmer-section__intro pt-8 lg:pt-40 pb-20 lg:pb-60">
+<section class="zimmer-section__intro pt-8 lg:pt-40 pb-20 lg:pb-36">
 	<div class="container mx-auto grid grid-cols-1 lg:gap-8 px-8 lg:grid-cols-2 max-w-7xl">
 		<div class="col-span-1 row-span-1">
 			<h2 class="title-normal"><?php the_title(); ?></h2>
@@ -23,7 +23,7 @@
 			</div>
 		</div>
 	</div>
-		<div class="container mx-auto max-w-7xl px-8 mt-0 lg:mt-10">
-			<?php do_action( 'get_archive_page', 'archives_pages_zimmer' ); ?>
-		</div>
+	<div class="container mx-auto max-w-7xl px-8 mt-0 lg:mt-10">
+		<?php do_action( 'get_archive_page', 'archives_pages_zimmer' ); ?>
+	</div>
 </section>

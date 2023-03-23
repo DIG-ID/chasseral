@@ -1,6 +1,6 @@
 <?php $gallery = get_field( 'zimmer_gallery' );
 if ( $gallery ) : ?>
-<section id="single-perfekt-fur-gallery" class="section-perfekt-fur__gallery p-0 border-b border-solid">
+<section id="single-perfekt-fur-gallery" class="section-perfekt-fur__gallery p-0 border-b border-t border-solid border-black">
         <div class="gallery__wrapper">
         <?php
             echo '<div class="swiper zimmer-swiper"><span></span><div class="swiper-wrapper">';

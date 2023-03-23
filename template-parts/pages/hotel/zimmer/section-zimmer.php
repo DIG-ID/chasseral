@@ -1,4 +1,4 @@
-<section class="section-zimmer__zimmer p-0">
+<section class="section-zimmer__zimmer p-0 border-t border-solid border-black">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-6">
         <div class="col-span-1 relative">
         <?php
