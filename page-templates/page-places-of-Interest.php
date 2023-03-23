@@ -1,7 +1,7 @@
 <?php
 /**
  * Template Name: Places of Interest Page Template
- * Template Post Type: der-jura
+ * Template Post Type: der_jura, page, post
  */
 
 get_header( 'szl' );
