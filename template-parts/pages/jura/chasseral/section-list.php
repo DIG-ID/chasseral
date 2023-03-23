@@ -6,7 +6,7 @@
                 <div class="col-span-1 chasseral__col odd:border-r  border-b border-solid">
                     <?php 
                     $image = get_sub_field('image');
-                    $size = 'chasseral-page--thumbnail'; 
+                    $size = 'chasseral-page--thumbnail';
                     if( $image ) :
                         echo wp_get_attachment_image( $image, $size );
                     else : ?>
