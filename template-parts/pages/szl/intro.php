@@ -1,6 +1,6 @@
-<section class="section-szl-intro grid grid-cols-12 border-t border-solid border-black py-8 lg:py-36 overflow-hidden">
+<section class="section-szl-intro grid grid-cols-1 lg:grid-cols-12 border-t border-solid border-black py-8 lg:py-36 overflow-hidden">
 	<div class="col-span-5 col-start-2">
-		<h1 class="text-6xl font-bold uppercase mb-10"><?php the_field( 'intro_title' ); ?></h1>
+		<h1 class="title-big"><?php the_field( 'intro_title' ); ?></h1>
 		<div class="szl-logos w-full flex">
 			<?php
 			$szl_logos = get_field( 'intro_szl_logos' );

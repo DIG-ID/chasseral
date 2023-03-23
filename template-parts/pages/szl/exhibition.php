@@ -1,4 +1,4 @@
-<section class="section-exhibition grid grid-cols-2 border-t border-solid border-black h-[700px] overflow-hidden">
+<section class="section-exhibition grid grid-cols-1 lg:grid-cols-2 border-t border-solid border-black h-auto lg:h-[700px] overflow-hidden">
 	<div class="cols-span-1 border-r border-solid border-black">
 		<?php
 		$image_exhibition = get_field( 'current_exhibition_image' );
@@ -7,7 +7,7 @@
 		endif;
 		?>
 	</div> 
-	<div class="cols-span-1 pt-36 pb-0 pl-36">
+	<div class="cols-span-1 p-8 lg:pt-36 lg:pb-0 lg:pl-36">
 		<h2 class="text-black text-3xl font-bold mb-16"><?php the_field( 'current_exhibition_title' ); ?></h2>
 		<p class="text-sm text-black font-normal leading-8 mb-16 max-w-lg"><?php the_field( 'current_exhibition_description' ); ?></p>
 		<?php
