@@ -29,5 +29,6 @@
 			endwhile;
 		endif;
 		?>
+		<?php do_action( 'get_archive_page', 'archives_pages_der_jura' ); ?>
 	</div>
 </article>

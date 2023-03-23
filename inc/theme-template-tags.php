@@ -246,3 +246,28 @@ function chasseral_theme_pagination( $lquery ) {
 }
 
 add_action( 'pagination', 'chasseral_theme_pagination', 10, 1 );
+
+
+/**
+ * This function gets the link to the archive page of custom post types.
+ */
+function chasseral_theme_get_archive_page( $slug = false ) {
+	$link = '';
+	if ( $slug ) :
+		$link = get_permalink( get_field( $slug, 'options' ) );
+	else :
+		$link = get_permalink( get_option( 'page_for_posts' ) );
+	endif;
+	if ( $link ) :
+		?>
+		<a class="inline-block mt-10" href="<?php echo esc_url( $link ); ?>">
+			<svg class="inline mr-2" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M10.9885 9.6065e-07L12.9458 1.925L5.25385 9.625L21.977 9.625L21.977 12.375L5.25385 12.375L12.9458 20.075L10.9885 22L-5.81821e-05 11L10.9885 9.6065e-07Z" fill="#9C9C9C"/>
+			</svg>
+			<span class="text-sm text-[#9C9C9C]"><?php esc_html_e( 'Zurück zur Übersicht ', 'chasseral' ); ?></span>
+		</a>
+		<?php
+	endif;
+}
+
+add_action( 'get_archive_page', 'chasseral_theme_get_archive_page', 10, 1 );
