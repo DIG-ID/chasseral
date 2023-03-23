@@ -104,7 +104,6 @@ function chasseral_theme_mega_menu_link( $slug, $type ) {
 				$link_img = get_the_post_thumbnail_url( $root_id, 'mega-link-thumbnail' );
 				$link_img = '<img src="' . $link_img . '" alt="' . get_the_post_thumbnail_caption( $root_id ) . '">';
 			endif;
-			console_log( $link_img );
 		endif;
 
 		if ( 'mega-menu' === $type ) :
