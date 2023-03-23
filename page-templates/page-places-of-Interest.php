@@ -1,7 +1,7 @@
 <?php
 /**
- * Template Name: Places of Interest Page Template
- * Template Post Type: post, page, der_jura
+ * Template Name: Places of Interest Post Template
+ * Template Post Type: der_jura
  */
 
 get_header( 'szl' );
