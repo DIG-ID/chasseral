@@ -34,7 +34,7 @@
 						<div class="activities__content-wrapper p-8 bg-white min-h-[400px] relative">
 							<h2 class="font-bold text-xl mb-4"><?php the_title(); ?></h2>
 							<span class="text-sm leading-7"><?php the_excerpt(); ?></span>
-							<a class="btn__arrow-alle absolute bottom-5" href="<?php the_permalink( $post_id ); ?>"><?php esc_html_e( 'Zur Webseite', 'chasseral' ); ?>
+							<a class="btn__arrow-alle absolute bottom-5" href="<?php the_field( 'external_link' ); ?>"><?php esc_html_e( 'Zur Webseite', 'chasseral' ); ?>
 								<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M6 12L4.93125 10.95L9.13125 6.75H0V5.25H9.13125L4.93125 1.05L6 0L12 6L6 12Z" fill="black"/>
 								</svg>
