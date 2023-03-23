@@ -3,14 +3,17 @@
 
 .post-content
   p
-    @apply text-black text-sm font-sans leading-8 mb-8
+    @apply text-black text-sm font-sans leading-8 mb-8 last-of-type:mb-0
   ul
     @apply list-disc columns-2 gap-8 ml-5 mb-8
     li
-      @apply text-black text-sm font-sans leading-7 mb-5 
+      @apply text-black text-sm font-sans leading-7 mb-5 last-of-type:mb-0
   
   h2
-    @apply text-black text-sm font-sans font-bold mb-5
+    @apply text-black text-2xl font-sans font-bold mb-5 lg:text-3xl
+
+  a
+    @apply transition-all duration-300 ease-in hover:text-black/60
 
   .wp-block-image
     .size-full
@@ -22,3 +25,14 @@
   .post-content
     h2
       @apply text-black text-2xl font-bold mb-8 lg:text-3xl lg:mb-16
+
+.page-template-page-jobs
+  .post-content
+    h2
+      @apply text-black text-2xl font-sans font-bold mb-5
+    h3
+      @apply text-black text-base font-sans font-bold mb-5
+    ul
+      @apply columns-1
+      li
+        @apply text-black text-sm font-sans leading-6 mb-3

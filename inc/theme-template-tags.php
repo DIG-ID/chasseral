@@ -26,7 +26,7 @@ add_action( 'socials', 'chasseral_theme_socials' );
  */
 function chasseral_theme_before_main_content() {
 	?>
-	<main id="main-content" class="main-content relative pt-[65px]">
+	<main id="main-content" class="main-content mt-[65px]">
 	<?php
 }
 
@@ -251,7 +251,7 @@ add_action( 'pagination', 'chasseral_theme_pagination', 10, 1 );
 /**
  * This function gets the link to the archive page of custom post types.
  */
-function chasseral_theme_get_archive_page( $slug = false, $where = false ) {
+function chasseral_theme_get_archive_page( $slug = false ) {
 	$link = '';
 	if ( $slug ) :
 		$link = get_permalink( get_field( $slug, 'options' ) );
@@ -268,17 +268,6 @@ function chasseral_theme_get_archive_page( $slug = false, $where = false ) {
 		</a>
 		<?php
 	endif;
-
-	if ( $where ) :
-		?>
-			<a class="btn__arrow-alle" href="<?php echo $link; ?>"><?php esc_html_e( 'Alle Aktivitäten', 'chasseral' ); ?>
-				<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M6 12L4.93125 10.95L9.13125 6.75H0V5.25H9.13125L4.93125 1.05L6 0L12 6L6 12Z" fill="black"/>
-				</svg>
-			</a>
-		<?php
-	endif;
-
 }
 
 add_action( 'get_archive_page', 'chasseral_theme_get_archive_page', 10, 1 );

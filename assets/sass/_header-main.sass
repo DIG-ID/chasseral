@@ -179,3 +179,27 @@
   #header-main
     .custom-logo-link
       border-right: none
+
+
+.admin-bar
+  #header-main,
+  #hotel-mega-menu,
+  #jura-mega-menu,
+  #szl-mega-menu
+    @apply top-[32px]
+
+@media (max-width: 782px)
+  .admin-bar
+    #header-main,
+    #hotel-mega-menu,
+    #jura-mega-menu,
+    #szl-mega-menu
+      @apply top-[46px]
+
+@media (max-width: 600px)
+  .admin-bar
+    #header-main,
+    #hotel-mega-menu,
+    #jura-mega-menu,
+    #szl-mega-menu
+      @apply top-0
