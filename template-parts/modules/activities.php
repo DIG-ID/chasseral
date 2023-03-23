@@ -5,13 +5,7 @@
 				<h2 class="section__title text-black text-3xl font-bold mb-4 lg:mb-0"><?php esc_html_e( 'Aktivitäten', 'chasseral' ); ?></h2>
 			</div>
 			<div class="col-span-1 lg:text-end">
-				<?php
-				$act_page = get_permalink( get_page_by_path( 'top-of-jura/aktivitaeten' ) -> ID ); ?>
-				<a class="btn__arrow-alle" href="<?php echo $act_page; ?>"><?php esc_html_e( 'Alle Aktivitäten', 'chasseral' ); ?>
-					<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M6 12L4.93125 10.95L9.13125 6.75H0V5.25H9.13125L4.93125 1.05L6 0L12 6L6 12Z" fill="black"/>
-					</svg>
-				</a>
+				<?php do_action( 'see_all', 'archives_pages_aktivitaten', 'Aktivitäten' ); ?>
 			</div>
 		</div>
 	</div>
@@ -34,7 +28,7 @@
 						<div class="activities__content-wrapper p-8 bg-white min-h-[400px] relative">
 							<h2 class="font-bold text-xl mb-4"><?php the_title(); ?></h2>
 							<span class="text-sm leading-7"><?php the_excerpt(); ?></span>
-							<a class="btn__arrow-alle absolute bottom-5" href="<?php the_field( 'external_link' ); ?>"><?php esc_html_e( 'Zur Webseite', 'chasseral' ); ?>
+							<a class="btn__arrow-alle absolute bottom-5" href="<?php the_field( 'external_link' ); ?>" target="_blank"><?php esc_html_e( 'Zur Webseite', 'chasseral' ); ?>
 								<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M6 12L4.93125 10.95L9.13125 6.75H0V5.25H9.13125L4.93125 1.05L6 0L12 6L6 12Z" fill="black"/>
 								</svg>

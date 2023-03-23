@@ -251,7 +251,7 @@ add_action( 'pagination', 'chasseral_theme_pagination', 10, 1 );
 /**
  * This function gets the link to the archive page of custom post types.
  */
-function chasseral_theme_get_archive_page( $slug = false ) {
+function chasseral_theme_get_archive_page( $slug = false, $where = false ) {
 	$link = '';
 	if ( $slug ) :
 		$link = get_permalink( get_field( $slug, 'options' ) );
@@ -268,6 +268,42 @@ function chasseral_theme_get_archive_page( $slug = false ) {
 		</a>
 		<?php
 	endif;
+
+	if ( $where ) :
+		?>
+			<a class="btn__arrow-alle" href="<?php echo $link; ?>"><?php esc_html_e( 'Alle Aktivitäten', 'chasseral' ); ?>
+				<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M6 12L4.93125 10.95L9.13125 6.75H0V5.25H9.13125L4.93125 1.05L6 0L12 6L6 12Z" fill="black"/>
+				</svg>
+			</a>
+		<?php
+	endif;
+
 }
 
 add_action( 'get_archive_page', 'chasseral_theme_get_archive_page', 10, 1 );
+
+
+/**
+ * This function gets the link to the asee all posts fgrom the archive pasts.
+ */
+function chasseral_theme_see_all_posts( $slug = false, $name ) {
+	$link = '';
+	$name = $name;
+	if ( $slug ) :
+		$link = get_permalink( get_field( $slug, 'options' ) );
+	else :
+		$link = get_permalink( get_option( 'page_for_posts' ) );
+	endif;
+	if ( $link ) :
+		?>
+			<a class="btn__arrow-alle" href="<?php echo esc_url( $link ); ?>"><?php esc_html_e( "Alle {$name}", 'chasseral' ); ?>
+				<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M6 12L4.93125 10.95L9.13125 6.75H0V5.25H9.13125L4.93125 1.05L6 0L12 6L6 12Z" fill="black"/>
+				</svg>
+			</a>
+		<?php
+	endif;
+}
+
+add_action( 'see_all', 'chasseral_theme_see_all_posts', 10, 2 );
