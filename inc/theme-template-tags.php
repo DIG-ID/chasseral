@@ -5,16 +5,16 @@
 function chasseral_theme_socials() {
 	echo '<div class="socials-wrapper">';
 	$facebook_url  = get_theme_mod( 'facebook_url' );
-	$linkedin_url  = get_theme_mod( 'linkedin_url' );
+	$youtube_url   = get_theme_mod( 'youtube_url' );
 	$instagram_url = get_theme_mod( 'instagram_url' );
-	if ( ! empty( $facebook_url ) ) :
-		echo '<a href="' , esc_url( $facebook_url ) , '" target="_blank" class="social-link social-link__facebook">Facebook</a>';
+	if ( ! empty( $youtube_url ) ) :
+		echo '<a href="' , esc_url( $youtube_url ) , '" target="_blank" class="social-link social-link__youtube">Youtube</a>';
 	endif;
 	if ( ! empty( $instagram_url ) ) :
 		echo '<a href="' , esc_url( $instagram_url ) , '" target="_blank" class="social-link social-link__instagram">Instagram</a>';
 	endif;
-	if ( ! empty( $linkedin_url ) ) :
-		echo '<a href="' , esc_url( $linkedin_url ) , '" target="_blank" class="social-link social-link__linkedin">LinkedIn</a>';
+	if ( ! empty( $facebook_url ) ) :
+		echo '<a href="' , esc_url( $facebook_url ) , '" target="_blank" class="social-link social-link__facebook">Facebook</a>';
 	endif;
 	echo '</div>';
 }

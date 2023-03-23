@@ -36,9 +36,9 @@ $wp_customize->add_control(
 	)
 );
 
-// LinkedIn
+// Youtube
 $wp_customize->add_setting(
-	'linkedin_url',
+	'youtube_url',
 	array(
 		'default'           => '',
 		'type'              => 'theme_mod',
@@ -50,9 +50,9 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
 	new WP_Customize_Control(
 		$wp_customize,
-		'linkedin_url',
+		'youtube_url',
 		array(
-			'label'   => __( 'LinkedIn', 'chasseral' ),
+			'label'   => __( 'Youtube', 'chasseral' ),
 			'type'    => 'url',
 			'section' => 'social_section',
 		)

@@ -408,9 +408,6 @@ function chasseral_theme_remove_archive_prefix( $title ) {
 add_filter( 'get_the_archive_title', 'chasseral_theme_remove_archive_prefix' );
 
 
-// Theme custom Walker.
-//require get_template_directory() . '/inc/theme-custom-walker.php';
-
 // Theme customizer options.
 require get_template_directory() . '/inc/customizer.php';
 

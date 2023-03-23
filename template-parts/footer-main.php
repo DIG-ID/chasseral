@@ -57,10 +57,8 @@
 			?>
 		</div>
 		<div class="col-span-1 lg:col-span-3">
-			<h3 class="text-sm font-bold uppercase">newsletter</h3>
-		</div>
-		<div class="col-span-1 lg:col-span-3">
-		<h3 class="text-sm font-bold uppercase">follow us</h3>
+			<h3 class="text-sm text-black font-sans font-bold uppercase"><?php esc_html_e( 'FOLGEN SIE UNS', 'chasseral' )?></h3>
+			<?php do_action( 'socials' ); ?>
 		</div>
 	</div>
 	<div class="copyright border-t border-b border-solid border-black">
