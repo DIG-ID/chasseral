@@ -26,7 +26,7 @@ add_action( 'socials', 'chasseral_theme_socials' );
  */
 function chasseral_theme_before_main_content() {
 	?>
-	<main id="main-content" class="main-content relative top-[65px]">
+	<main id="main-content" class="main-content relative pt-[65px]">
 	<?php
 }
 
