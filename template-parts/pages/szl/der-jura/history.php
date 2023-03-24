@@ -3,7 +3,7 @@
 		<?php
 		$history_image = get_field( 'history_image' );
 		if ( ! empty( $history_image ) ) :
-			?><img class="w-full h-full object-cover border border-solid border-black" src="<?php echo esc_url( wp_get_attachment_image_url( $history_image, 'block-images' ) ); ?>" alt="<?php echo esc_html( wp_get_attachment_caption( $history_image ) ); ?>" /><?php
+			?><img class="w-full h-full object-cover src="<?php echo esc_url( wp_get_attachment_image_url( $history_image, 'block-images' ) ); ?>" alt="<?php echo esc_html( wp_get_attachment_caption( $history_image ) ); ?>" /><?php
 		endif;
 		?>
 	</div> 
