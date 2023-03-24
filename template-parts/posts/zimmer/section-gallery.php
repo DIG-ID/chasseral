@@ -1,7 +1,7 @@
 <?php $gallery = get_field( 'zimmer_gallery' );
 if ( $gallery ) : ?>
 <section id="single-perfekt-fur-gallery" class="section-perfekt-fur__gallery p-0 border-b border-t border-solid border-black">
-        <div class="gallery__wrapper">
+        <div class="gallery__wrapper relative">
         <?php
             echo '<div class="swiper zimmer-swiper"><span></span><div class="swiper-wrapper">';
             foreach ( $gallery as $image ) :
@@ -11,13 +11,15 @@ if ( $gallery ) : ?>
                 echo '</div>';
             endforeach;
             echo '</div></div>';
-            echo '<div class="swiper swiper-thumbnail zimmer-swiper-thumbnail"><div class="swiper-wrapper">';
+            echo '<div class="swiper swiper-thumbnail zimmer-swiper-thumbnail hidden"><div class="swiper-wrapper">';
             foreach ( $gallery as $image ) :
                 echo '<div class="swiper-slide">';
                 echo '<img class="w-full h-auto object-cover max-h-[150px] cursor-pointer border border-b-0 border-black border-solid" src="' . esc_url( $image['sizes']['thumbnail'] ) . '">';
                 echo '</div>';
             endforeach;
             echo '</div></div>';
+            echo '<div class="swiper-button-prev zimmer-button-prev left-[10px] text-main-red"></div>';
+            echo '<div class="swiper-button-next zimmer-button-next right-[10px] text-main-red"></div>';
         ?>
         </div>
 </section>

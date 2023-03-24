@@ -244,6 +244,11 @@ document.addEventListener("DOMContentLoaded", () => {
         thumbs: {
           swiper: juraThumbnails,
         },
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next.zimmer-button-next',
+          prevEl: '.swiper-button-prev.zimmer-button-prev',
+        },
       });
     }
     //SZL - Histoy - Slider
