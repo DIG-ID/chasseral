@@ -4,7 +4,7 @@
 			<p class="start-date text-sm text-[#797979] font-normal whitespace-nowrap mb-4">
 				<?php
 				$start_date = get_field( 'start_date' );
-				echo gmdate( 'l d, F Y', strtotime( $start_date ) );
+				echo date_i18n( 'l, d. F Y', strtotime( $start_date ) );
 				?>
 			</p>
 			<h1 class="title-normal !mb-8"><?php the_title(); ?></h1>
