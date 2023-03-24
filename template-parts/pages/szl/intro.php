@@ -6,7 +6,7 @@
 			$szl_logos = get_field( 'intro_szl_logos' );
 			if ( $szl_logos ) :
 				foreach ( $szl_logos as $logo ) :
-					?><img class="max-w-[180px] h-auto object-cover" src="<?php echo wp_get_attachment_image_url( $logo, 'full' ); ?>" alt="<?php echo wp_get_attachment_caption( $logo ); ?>" /><?php
+					?><img class="max-w-[180px] h-auto object-contain" src="<?php echo wp_get_attachment_image_url( $logo, 'full' ); ?>" alt="<?php echo wp_get_attachment_caption( $logo ); ?>" /><?php
 				endforeach;
 			endif;
 			?>
