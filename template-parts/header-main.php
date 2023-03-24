@@ -33,7 +33,7 @@
 				<div class="col-auto flex flex-col justify-center border-r border-solid border-black px-20">
 					<div class="see-webcam w-full flex items-center gap-5 mb-8">
 						<div class="grow">
-							<h3 class="text-xl font-bold text-black font-sans mb-3"><?php the_field( 'widget_text_title', 'services-status' ); ?></h3>
+							<h3 class="text-xl font-bold text-black font-sans mb-3 uppercase"><?php the_field( 'widget_text_title', 'services-status' ); ?></h3>
 							<p class="text-body !leading-5"><?php the_field( 'widget_text_description', 'services-status' ); ?></p>
 						</div>
 						<?php
