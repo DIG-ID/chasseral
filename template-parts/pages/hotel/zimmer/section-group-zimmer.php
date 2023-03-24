@@ -1,4 +1,4 @@
-<section class="section-zimmer__group-zimmer p-0">
+<section class="section-zimmer__group-zimmer p-0 border-b border-solid border-black">
     <div class="w-full">
         <div class="relative">
         <?php
