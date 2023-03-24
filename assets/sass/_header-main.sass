@@ -33,10 +33,10 @@
 
 
 .navigation-main-content
-  #menu-main,
-  #menu-szl,
-  #menu-hotel,
-  #menu-jura
+  #menu-main, #menu-main-fr,
+  #menu-szl, #menu-szl-fr,
+  #menu-hotel, #menu-hotel-fr,
+  #menu-jura, #menu-jura-fr
     flex-grow: 1
     //display: flex
     justify-content: center
@@ -52,19 +52,19 @@
     .current_page_item
       a
         color: rgba(0, 0, 0, 0.5)
-  #menu-szl
+  #menu-szl, #menu-szl-fr
     .menu-item a
       &:hover
         @apply text-main-green
     .current_page_item a
       @apply text-main-green
-  #menu-hotel
+  #menu-hotel, #menu-hotel-fr
     .menu-item a
       &:hover
         @apply text-main-red
     .current_page_item a
       @apply text-main-red
-  #menu-jura
+  #menu-jura, #menu-jura-fr
     .menu-item a
       &:hover
         @apply text-main-blue
