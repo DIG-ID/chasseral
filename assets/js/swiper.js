@@ -206,9 +206,9 @@ document.addEventListener("DOMContentLoaded", () => {
         loop: true,
         spaceBetween: 0,
         direction: 'horizontal',
-        speed: 800,
+        speed: 1000,
         autoplay: {
-          delay: 800,
+          delay: 2000,
         },
         // Navigation arrows
         navigation: {

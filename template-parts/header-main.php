@@ -31,7 +31,30 @@
 		<div class="mega-menu-navigation absolute top-75 left-0 h-0 overflow-hidden w-full flex justify-center items-center bg-bg-color border-t border-solid border-black">
 			<div class="mega-menu-content w-full h-full grid grid-cols-1 lg:grid-cols-2">
 				<div class="col-auto flex flex-col justify-center border-r border-solid border-black px-20">
+					<div class="see-webcam w-full flex items-center gap-5 mb-8">
+						<div class="grow">
+							<h3 class="text-xl font-bold text-black font-sans mb-3"><?php the_field( 'widget_text_title', 'services-status' ); ?></h3>
+							<p class="text-body !leading-5"><?php the_field( 'widget_text_description', 'services-status' ); ?></p>
+						</div>
+						<?php
+						$webcam_link = get_field( 'widget_text_link', 'services-status' );
+						if ( $webcam_link ) :
+							$link_url    = $webcam_link['url'];
+							$link_title  = $webcam_link['title'];
+							$link_target = $webcam_link['target'] ? $link['target'] : '_self';
+							?>
+							<a class="btn-general whitespace-nowrap flex items-center !px-6" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
+								<?php echo esc_html( $link_title ); ?>
+								<svg class="ml-1 " width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M6 12L4.93125 10.95L9.13125 6.75H0V5.25H9.13125L4.93125 1.05L6 0L12 6L6 12Z" fill="black"/>
+								</svg>
+							</a>
+							<?php
+						endif;
+						?>
+					</div>
 					<?php do_action( 'service_status_widget' ); ?>
+					<?php do_action( 'notification' ); ?>
 				</div>
 				<div class="mega-links col-auto flex flex-col justify-center px-40">
 					<p class="mega-menu-title uppercase font-bold mb-5"><?php esc_html_e( 'Willkommen auf dem Chasseral', 'chasseral' ); ?></p>

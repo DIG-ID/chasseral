@@ -21,9 +21,9 @@
 						<span class="block font-sans text-sm text-text-grey font-normal whitespace-nowrap mb-2 ml-2"><?php echo esc_html( get_the_category_by_ID( get_field( 'info_location' ) ) ); ?></span>
 					</p>
 					<p class="start-date text-sm text-black font-bold whitespace-nowrap flex">
-						<?php esc_html_e( 'Zeitraum:', 'chasseral' ); ?>
+						<?php esc_html_e( 'Zeitraum:', 'chasseral' ); ?> <span class="font-normal text-text-grey ml-2"><?php the_field( 'info_zeitraum' ); ?></span>
 						<?php $start_date = get_field( 'start_date' ); ?>
-						<time datetime="<?php echo gmdate( 'c', strtotime( $start_date ) ); ?>" itemprop="datePublished" class="block font-sans text-sm text-text-grey font-normal whitespace-nowrap mb-2 ml-2"><?php echo gmdate( 'l d, F Y', strtotime( $start_date ) ); ?></time>
+						<!--<time datetime="<?php echo gmdate( 'c', strtotime( $start_date ) ); ?>" itemprop="datePublished" class="block font-sans text-sm text-text-grey font-normal whitespace-nowrap mb-2 ml-2"><?php echo gmdate( 'l d, F Y', strtotime( $start_date ) ); ?></time>-->
 					</p>
 				</div>
 			</div>
