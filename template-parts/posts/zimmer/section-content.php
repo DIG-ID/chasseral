@@ -1,7 +1,7 @@
 <section class="zimmer-section__intro pt-8 lg:pt-40 pb-20 lg:pb-36">
 	<div class="container mx-auto grid grid-cols-1 lg:gap-8 px-8 lg:grid-cols-2 max-w-7xl">
 		<div class="col-span-1 row-span-1">
-			<h2 class="title-normal"><?php the_title(); ?></h2>
+			<h2 class="title-normal lg:max-w-[400px]"><?php the_title(); ?></h2>
 			<p class="!mb-14 text-body"><?php the_field( 'section_info_description' ); ?></p>
 			<a data-fancybox data-src="#open" href="javascript:;" class="btn-general btn-general--hotel is-checked block"><?php esc_html_e( 'Jetzt buchen', 'chasseral' ); ?></a>
 			<?php get_template_part( 'template-parts/modules/booking', 'popup' ); ?>
