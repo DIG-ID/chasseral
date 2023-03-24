@@ -69,7 +69,7 @@
 				<?php
 				$y = date( 'Y' );
 				printf(
-					esc_html__( 'Copyright &copy; %d Chasseral', 'chasseral' ),
+					esc_html__( 'Urheberrecht &copy; %d Chasseral', 'chasseral' ),
 					esc_html( $y ),
 				);
 				?>
