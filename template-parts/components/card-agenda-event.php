@@ -14,7 +14,7 @@
 			<p class="start-date text-sm text-text-grey font-normal whitespace-nowrap mb-2">
 				<?php
 				$start_date = get_field( 'start_date' );
-				echo gmdate( 'l d, F Y', strtotime( $start_date ) );
+				echo date_i18n( 'l, d. F Y', strtotime( $start_date ) );
 				?>
 			</p>
 			<h3 class="text-xl lg:text-3xl font-bold mb-8"><?php the_title(); ?></h3>
