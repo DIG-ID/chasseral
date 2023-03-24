@@ -4,7 +4,7 @@
         <?php
         $args = array(  
             'post_type'      => 'zimmer',
-            'name'           => 'gruppenunterkuenfte',
+            'post_name__in'  => ['gruppenunterkuenfte', 'hebergement-de-groupe'],
             'post_status'    => 'publish',
             'posts_per_page' => 1, 
         );

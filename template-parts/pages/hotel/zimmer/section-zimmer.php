@@ -4,7 +4,7 @@
         <?php
         $args = array(  
             'post_type'      => 'zimmer',
-            'name'           => 'zimmer-mit-dusche-wc',
+            'post_name__in'  => [ 'zimmer-mit-dusche-wc', 'chambre-avec-douche-wc' ],
             'post_status'    => 'publish',
             'posts_per_page' => 1, 
         );
@@ -42,7 +42,7 @@
             <?php
             $args = array(  
                 'post_type'      => 'zimmer',
-                'name'           => 'zimmer-mit-dusche-wc-auf-der-etage',
+                'post_name__in'  => ['zimmer-mit-dusche-wc-auf-der-etage', 'chambre-avec-douche-wc-a-letage'],
                 'post_status'    => 'publish',
                 'posts_per_page' => 1, 
             );
