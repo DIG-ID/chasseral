@@ -6,7 +6,7 @@ if ( $args['class'] ) :
 endif;
 ?>
 <section class="section-gallery section-gallery--<?php echo esc_attr( $template_class ); ?> overflow-hidden">
-	<div class="section-gallery-wrapper border-t border-b border-solid border-black flex justify-between items-center">
+	<div class="section-gallery-wrapper border-t border-b border-solid border-black flex justify-between items-center relative">
 		<h2 class="section-title text-xl lg:text-3xl font-bold uppercase whitespace-nowrap pl-2 lg:pl-8"><?php the_field( $gallery_title ); ?></h2>
 		<div class="<?php echo esc_attr( $template_class ); ?>-swiper-buttons relative flex">
 			<div class="swiper-button-prev <?php echo esc_attr( $template_class ); ?>-button-prev relative h-[65px] w-[65px] m-0 top-[unset] left-[unset] border-l border-solid border-black text-black transition-all duration-300 ease-in-out after:text-lg after:content-['prev']"></div>
@@ -26,7 +26,7 @@ endif;
 		echo '</div></div>';
 	endif;
 	if ( $gallery ) :
-		echo '<div class="swiper swiper-thumbnail '. $template_class . '-swiper-thumbnail"><div class="swiper-wrapper">';
+		echo '<div class="swiper swiper-thumbnail '. $template_class . '-swiper-thumbnail hidden"><div class="swiper-wrapper">';
 		foreach ( $gallery as $image ) :
 			echo '<div class="swiper-slide">';
 			echo '<img class="w-full h-auto object-cover max-h-[150px]" src="' . esc_url( $image['sizes']['thumbnail'] ) . '">';
