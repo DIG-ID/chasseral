@@ -8,7 +8,9 @@
 				<?php
 				$phone = get_field( 'footer_phone', 'options' );
 				if ( $phone ) :
-					?><a class="font-sans font-bold text-sm text-black uppercase transition-all duration-300 hover:text-black/60" href="tel:<?php echo esc_attr( str_replace(' ', '', $phone) ); ?>" ><?php the_field( 'footer_phone', 'options' ); ?></a><?php
+					$phone = str_replace( array( '(', ')', ' ' ), '', $phone );
+					$phone = preg_replace( '/[^0-9]/', '', $phone );
+					?><a class="font-sans font-bold text-sm text-black uppercase transition-all duration-300 hover:text-black/60" href="tel:<?php echo esc_attr( $phone ); ?>" ><?php the_field( 'footer_phone', 'options' ); ?></a><?php
 				endif;
 				?>
 				<a class="font-sans font-bold text-sm text-black uppercase mb-8 transition-all duration-300 hover:text-black/60" href="tel:<?php echo trim( get_field( 'footer_fax', 'options' ) ); ?>"><?php the_field( 'footer_fax', 'options' ); ?></a>

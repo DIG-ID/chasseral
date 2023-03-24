@@ -207,6 +207,9 @@ document.addEventListener("DOMContentLoaded", () => {
         spaceBetween: 0,
         direction: 'horizontal',
         speed: 800,
+        autoplay: {
+          delay: 800,
+        },
         // Navigation arrows
         navigation: {
           nextEl: '.swiper-button-next.banner-szl-button-next',
