@@ -1,11 +1,18 @@
+.service-status
+  .service-status-day
+    .widget-toggle
+      @apply flex items-center justify-center rounded-full border border-solid border-black w-[25px] h-[25px] relative
+      span
+        @apply block w-[15px] h-[1px] bg-black
+        &:last-of-type
+          @apply absolute rotate-90
+
 .navigation-widget
   .service-status
-    @apply px-8
+    @apply w-full 
     .service-status-day
-      @apply border-0 mb-0
+      @apply w-full border-0 mb-0 pb-0 flex justify-between
       .service-wrapper
-        @apply mr-3
-        &:last-of-type
-          @apply mr-0
+        @apply w-full
       .service-status-signal
         @apply ml-1 text-xs

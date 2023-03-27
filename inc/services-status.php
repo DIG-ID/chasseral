@@ -142,6 +142,7 @@ class ChasseralThemeServicesStatusWidget {
 		$service_name_road          = $this->services_names['roads'];
 		$service_name_restaurant    = $this->services_names['restaurant'];
 		$service_name_hotel         = $this->services_names['hotel'];
+		$open_widget_btn            = '<button class="widget-toggle"><span></span><span></span></button>';
 
 		if ( $this->size ) :
 			$one_day           = $this->get_current_day();
@@ -154,6 +155,7 @@ class ChasseralThemeServicesStatusWidget {
 			$output .= $service_wrapper_open . $service_name_wrapper_open . $service_name_road . $service_name_wrapper_close . $road_status . $service_wrapper_close;
 			$output .= $service_wrapper_open . $service_name_wrapper_open . $service_name_restaurant . $service_name_wrapper_close . $restaurant_status . $service_wrapper_close;
 			$output .= $service_wrapper_open . $service_name_wrapper_open . $service_name_hotel . $service_name_wrapper_close . $hotel_status . $service_wrapper_close;
+			$output .= $open_widget_btn;
 			$output .= $item_wrapper_close;
 			$output .= $widget_wrapper_close;
 		else :
