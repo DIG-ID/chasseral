@@ -13,7 +13,7 @@
 				<h2 class="title-big"><?php the_title(); ?></h2>
 			</div>
 			<div>
-				<p class="text-body lg:columns-2 lg:gap-40 lg:mr-[20%]"><?php the_field( 'general_information' ); ?></p>
+				<p class="text-body lg:columns-2 lg:gap-40 lg:mr-[5%] xl:mr-[20%]"><?php the_field( 'general_information' ); ?></p>
 			</div>
 			<?php do_action( 'get_archive_page', 'archives_pages_perfekt_fur' ); ?>
 	</div>

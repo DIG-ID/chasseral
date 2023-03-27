@@ -1,6 +1,6 @@
-<section class="section-contacts-schedule border-t border-solid border-black py-16 lg:py-36 overflow-hidden">
-	<div class="container mx-auto px-8 grid grid-cols-1 lg:grid-cols-2">
-		<div class="contacts-wrapper mb-16 lg:mb-0">
+<section class="section-contacts-schedule border-t border-solid border-black py-16 lg:py-20 xl:py-36 overflow-hidden">
+	<div class="container mx-auto px-8 grid grid-cols-1 xl:grid-cols-2">
+		<div class="contacts-wrapper mb-16 xl:mb-0">
 			<h2 class="text-2xl lg:text-3xl font-bold mb-10"><?php esc_html_e( 'Kontakt', 'chasseral' ); ?></h2>
 			<ul class="contacts-content">
 				<li class="flex mb-6">

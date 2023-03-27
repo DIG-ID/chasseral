@@ -1,4 +1,4 @@
-<section class="section-institutionen px-0 py-20 lg:py-52">
+<section class="section-institutionen px-0 py-20 xl:py-52">
     <div class="flex justify-center flex-col pl-8 pr-0 lg:pr-0 md:pl-16 xl:pl-72">
         <div class="grid grid-cols-1 lg:grid-cols-6">
             <div class="col-span-4">
