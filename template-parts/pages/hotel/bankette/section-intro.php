@@ -21,7 +21,7 @@
 					if ( get_sub_field( 'label' ) && $file ) :
 							$url = wp_get_attachment_url( $file );
 							?>
-							<a href="<?php echo esc_html( $url ); ?>" class="btn-general btn-general--hotel block mb-7" target="_blank">
+							<a href="<?php echo esc_html( $url ); ?>" class="btn-general btn-general--hotel btn-general--hotel--dl block mb-7" target="_blank">
 								<span class="mr-2"><?php the_sub_field( 'label' ); ?></span>
 								<svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline">
 									<path d="M12 5.29412H8.57143V0H3.42857V5.29412H0L6 11.4706L12 5.29412ZM0 13.2353V15H12V13.2353H0Z" fill="black"/>
