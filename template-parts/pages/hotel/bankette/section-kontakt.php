@@ -9,7 +9,7 @@
         <div class="col-span-2"></div>
         <div class="col-span-5">
             <div><?php $kontakt_page = get_permalink( get_page_by_path('kontakt-anreise') -> ID ); ?>
-                <a href="<?php echo $kontakt_page; ?>" class="btn-general btn-general--hotel block"><?php echo esc_html( 'Kontakt', 'chasseral' ) ?></a>
+                <a href="<?php echo $kontakt_page; ?>" class="btn-general btn-general--hotel block"><?php echo esc_html_e( 'Kontakt', 'chasseral' ) ?></a>
             </div>
         </div>
     </div>
