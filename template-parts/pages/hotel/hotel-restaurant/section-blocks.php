@@ -4,7 +4,7 @@
             <h2 class="title-normal !mb-14"><?php the_field('section_blocks_culinary_title'); ?></h2>
             <p class="text-body !mb-16 max-w-lg"><?php the_field('section_blocks_culinary_description'); ?></p>
             <?php $cul_page = get_permalink( get_page_by_path('hotel-restaurant/gastronomie') -> ID ); ?>
-            <a href="<?php echo $cul_page; ?>" class="btn-general btn-general--hotel"><?php echo esc_html( 'mehr erfahren', 'chasseral' ) ?></a>
+            <a href="<?php echo $cul_page; ?>" class="btn-general btn-general--hotel"><?php echo esc_html_e( 'mehr erfahren', 'chasseral' ) ?></a>
         </div>
         <div class="col-span-1 chasseral__col">
             <?php 
@@ -34,7 +34,7 @@
             <h2 class="title-normal !mb-14"><?php the_field('section_blocks_zimmer_title'); ?></h2>
             <p class="text-body !mb-16 max-w-lg"><?php the_field('section_blocks_zimmer_description'); ?></p>
             <?php $zimmer_page = get_permalink( get_page_by_path('hotel-restaurant/zimmer') -> ID ); ?>
-            <a href="<?php echo $zimmer_page; ?>" class="btn-general btn-general--hotel"><?php echo esc_html( 'Zu den zimmern', 'chasseral' ) ?></a>
+            <a href="<?php echo $zimmer_page; ?>" class="btn-general btn-general--hotel"><?php echo esc_html_e( 'Zu den zimmern', 'chasseral' ) ?></a>
         </div>
     </div>
 </section>

@@ -13,7 +13,7 @@
                     <p class="text-body"><?php the_field('section_intro_description'); ?></p>
                 </div>
                 <div class="row-span-1">
-                    <a data-fancybox data-src="#open" href="javascript:;" class="btn-general btn-general--hotel is-checked"><?php echo esc_html( 'Jetzt Buchen', 'chasseral' ) ?></a>
+                    <a data-fancybox data-src="#open" href="javascript:;" class="btn-general btn-general--hotel is-checked"><?php echo esc_html_e( 'Jetzt Buchen', 'chasseral' ) ?></a>
                 </div>
                 <?php get_template_part( 'template-parts/modules/booking', 'popup' ); ?>
             </div>

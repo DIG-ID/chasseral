@@ -4,7 +4,7 @@
             <h2 class="title-normal"><?php the_field('section_bankette_title'); ?></h2>
             <p class="text-body !mb-16 max-w-lg"><?php the_field('section_bankette_description'); ?></p>
             <?php $bankette_page = get_permalink( get_page_by_path('hotel-restaurant/bankette-gruppen') -> ID ); ?>
-            <a href="<?php echo $bankette_page; ?>" class="btn-general btn-general--hotel"><?php echo esc_html( 'mehr erfahren', 'chasseral' ) ?></a>
+            <a href="<?php echo $bankette_page; ?>" class="btn-general btn-general--hotel"><?php echo esc_html_e( 'mehr erfahren', 'chasseral' ) ?></a>
         </div>
         <div class="col-span-1 chasseral__col border-l border-solid">
             <?php 
