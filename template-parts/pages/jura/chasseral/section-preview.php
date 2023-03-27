@@ -1,4 +1,4 @@
-<section class="chasseral-preview-section pt-0 lg:pt-40 pb-40 lg:pb-[30rem] bg-no-repeat" style="background-image: url(<?php echo wp_upload_dir()['url'] . '/chasseral_illustration.svg' ?>); background-position: 0 100%;">
+<section class="chasseral-preview-section pt-0 lg:pt-40 pb-40 lg:pb-[30rem] bg-no-repeat" style="background-image: url(<?php echo wp_upload_dir()['url'] . '/chasseral_illustration.svg' ?>); background-position: 0 100%;background-size:contain;">
     <div class="container max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 lg:border border-solid">
         <div class="col-span-5 border-r border-solid preview-img-box">
         <?php 
