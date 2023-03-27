@@ -22,7 +22,7 @@
 			?>
 			<ul class="sliding-text flex list-disc">
 				<?php for ( $i = 1; $i <= $num_items; $i++ ) : ?>
-					<li class="text-xl lg:text-3xl font-bold uppercase whitespace-nowrap pr-10 select-none" style="color: <?php the_field( 'hero_sliding_text_color' ); ?>"><?php echo $sliding_text; ?></li>
+					<li class="text-xl lg:text-2xl xl:text-3xl font-bold uppercase whitespace-nowrap pr-10 select-none" style="color: <?php the_field( 'hero_sliding_text_color' ); ?>"><?php echo $sliding_text; ?></li>
 				<?php endfor; ?>
 			</ul>
 		</div>

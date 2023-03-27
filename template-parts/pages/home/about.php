@@ -3,7 +3,7 @@
 		<div class="col-span-1 lg:col-span-4">
 			<h2 class="title-normal !font-normal"><?php the_field( 'about_title' ); ?></h2>
 		</div>
-		<div class="col col-span-1 lg:col-span-5 lg:col-start-6">
+		<div class="col col-span-1 lg:col-span-6 xl:col-span-5 lg:col-start-6">
 			<p class="text-body"><?php the_field( 'about_description' ); ?></p>
 		</div>
 	</div>

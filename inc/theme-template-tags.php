@@ -170,7 +170,7 @@ function chasseral_theme_sub_pages( $slug ) {
 			$root_id    = $root->ID;
 			$link_open  = '<a href="' . esc_url( get_permalink( $root_id ) ) . '" class="sub-page-link ' . $link_class . '">';
 			$link_close = '</a>';
-			$link_title = '<h2 class="font-bold text-xl lg:text-3xl font-sans text-black uppercase mb-10">' . $root->post_title . '</h2>';
+			$link_title = '<h2 class="font-bold text-lg xl:text-3xl font-sans text-black uppercase mb-10">' . $root->post_title . '</h2>';
 			$link_desc  = get_the_excerpt( $root_id );
 			if ( has_post_thumbnail( $root_id ) ) :
 				$link_img_src = get_the_post_thumbnail_url( $root_id, 'sub-page-thumbnail' );
