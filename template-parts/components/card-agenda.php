@@ -2,7 +2,7 @@
 	<div class="card-agenda-wrapper grid grid-cols-2">
 		<div class="card-agenda-image border border-solid border-black">
 			<?php
-			$image = get_the_post_thumbnail_url( get_the_ID(), 'agenda-thumbnail' );
+			$image = get_the_post_thumbnail_url( 'agenda-thumbnail' );
 			console_log($image);
 			if ( $image ) :
 				?><img class="w-full h-auto object-cover max-h-[550px]" src="<?php echo esc_url( $image ); ?>" alt="<?php echo esc_html( get_the_post_thumbnail_caption() ); ?>"><?php
