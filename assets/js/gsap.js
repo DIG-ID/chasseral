@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let $getheader = $("#header-main");
 
-    if ( $getheader.hasClass('header-main--szl') || $getheader.hasClass('header-main--hotel') || $getheader.hasClass('header-main-jura') ) {
+    if ( $getheader.hasClass('header-main--szl') || $getheader.hasClass('header-main--hotel') || $getheader.hasClass('header-main--jura') ) {
       /* menu open/close */
       const toggleBtn = document.querySelector('.mega-menu-toggle');
 
@@ -24,8 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
       togglerTl.to('.menu-top-level', {y:' 100%', opacity: 0, ease: 'back.in'});
       togglerTl.to('.mega-menu-navigation', {height: 'calc( 100vh - 75px )'}, '<0.40');
       togglerTl.from('.site-root-title', {y: '-50px', opacity: 0}, '<');
-      togglerTl.from('.mega-menu-content .mega-menu--menus ul li', {duration: 0.3, y: '-50px', opacity: 0, stagger: 0.15}, '<');
-      togglerTl.from('.mega-menu-content .mega-links-xl .mega-link', {x: '-50px', opacity: 0, stagger: 0.15}, '<0.25');
+      togglerTl.from('.mega-menu-content .mega-menu--menus ul li', {duration: 0.2, y: '-50px', opacity: 0, stagger: 0.10}, '<');
+      togglerTl.from('.mega-menu-content .mega-links-xl .mega-link', {x: '-50px', opacity: 0, stagger: 0.25}, '<');
 
       togglerTl.paused(true);
 
@@ -42,7 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
     } else {
-      console.log('aqui estmos na mains?');
       /* menu open/close */
       const toggleBtn = document.querySelector('.mega-menu-toggle');
       const widgetToggler = document.querySelector('.service-status-toggle');
@@ -55,9 +54,9 @@ document.addEventListener("DOMContentLoaded", () => {
       togglerTl.to('.navigation-widget', {y:' 100%', opacity: 0, ease: 'back.in'});
       togglerTl.to('.mega-menu-navigation', {height: 'calc( 100vh - 75px )'}, '<0.40');
 
-      togglerTl.from('.mega-menu-content .see-webcam, .mega-menu-content .service-status, .mega-menu-content .notification', {y: '-50px', opacity: 0, stagger: 0.15}, '<0.25');
-      togglerTl.from('.mega-menu-title, .mega-menu-description', {y: '-50px', opacity: 0, stagger: 0.25}, '<0.15');
-      togglerTl.from('.mega-links a', {y: '-50px', opacity: 0, stagger: 0.15}, '<0.25');
+      togglerTl.from('.mega-menu-content .see-webcam, .mega-menu-content .service-status, .mega-menu-content .notification', {y: '-50px', opacity: 0, stagger: 0.25}, '<0.25');
+      togglerTl.from('.mega-menu-title, .mega-menu-description', {y: '-50px', opacity: 0, stagger: 0.25}, '<');
+      togglerTl.from('.mega-links a', {y: '-50px', opacity: 0, stagger: 0.25}, '<');
 
       togglerTl.paused(true);
 
