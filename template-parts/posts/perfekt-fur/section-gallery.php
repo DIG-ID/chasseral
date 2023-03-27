@@ -4,7 +4,7 @@ if ( $gallery ) : ?>
     <div class="container max-w-7xl mx-auto relative">
         <div class="grid grid-cols-6 px-8 lg:px-0">
             <div class="col-span-4">
-                <h2 class="title-normal !mb-14"><?php echo esc_html( 'Galerie', 'chasseral' ) ?></h2>
+                <h2 class="title-normal !mb-14 mx-0 lg:mx-8 xl:mx-0"><?php echo esc_html( 'Galerie', 'chasseral' ) ?></h2>
             </div>
         </div>
         <div class="gallery__wrapper border border-solid">
@@ -12,12 +12,12 @@ if ( $gallery ) : ?>
             echo '<div class="swiper jura-swiper"><span></span><div class="swiper-wrapper">';
             foreach ( $gallery as $image ) :
                 $img_url = $image['url'];
-                echo '<div class="swiper-slide">';
-                echo '<a href="' . esc_url( $img_url ) . '" data-fancybox="gallery-jura" data-caption="' . esc_html( $image['caption'] ) . '" ><img class="w-full h-auto object-cover max-h-[800px]" src="' . esc_url( $img_url ) . '"></a>';
+                echo '<div class="swiper-slide h-full xl:h-auto">';
+                echo '<a href="' . esc_url( $img_url ) . '" data-fancybox="gallery-jura" data-caption="' . esc_html( $image['caption'] ) . '" ><img class="w-full h-full xl:h-auto object-cover max-h-[250px] sm:max-h-[350px] md:max-h-[500px] lg:max-h-[600px] xl:max-h-[800px]" src="' . esc_url( $img_url ) . '"></a>';
                 echo '</div>';
             endforeach;
             echo '</div></div>';
-            echo '<div class="swiper swiper-thumbnail jura-swiper-thumbnail"><div class="swiper-wrapper">';
+            echo '<div class="swiper swiper-thumbnail jura-swiper-thumbnail hidden xl:block"><div class="swiper-wrapper">';
             foreach ( $gallery as $image ) :
                 echo '<div class="swiper-slide">';
                 echo '<img class="w-full h-auto object-cover max-h-[150px] cursor-pointer border border-b-0 border-black border-solid" src="' . esc_url( $image['sizes']['thumbnail'] ) . '">';
@@ -25,8 +25,8 @@ if ( $gallery ) : ?>
             endforeach;
             echo '</div>';
             echo '</div>';
-            echo '<div class="swiper-button-prev jura-button-prev left-[-100px]"></div>';
-            echo '<div class="swiper-button-next jura-button-next right-[-100px]"></div>';
+            echo '<div class="swiper-button-prev jura-button-prev left-[50px] xl:left-[-100px]"></div>';
+            echo '<div class="swiper-button-next jura-button-next right-[50px] xl:right-[-100px]"></div>';
         ?>
         </div>
     </div>
