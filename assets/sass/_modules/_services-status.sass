@@ -1,18 +1,24 @@
 .service-status
   .service-status-day
-    .widget-toggle
-      @apply flex items-center justify-center rounded-full border border-solid border-black w-[25px] h-[25px] relative
+    .service-status-toggle
+      @apply rounded-full border border-solid border-black w-[25px] h-[25px] relative transition-all duration-300 ease-in
       span
         @apply block w-[15px] h-[1px] bg-black
         &:last-of-type
           @apply absolute rotate-90
+
 
 .navigation-widget
   .service-status
     @apply w-full 
     .service-status-day
       @apply w-full border-0 mb-0 pb-0 flex justify-between
-      .service-wrapper
-        @apply w-full
       .service-status-signal
         @apply ml-1 text-xs
+
+
+#widget-popup
+  button.carousel__button.is-close
+    color: #000
+    svg
+      stroke: #000

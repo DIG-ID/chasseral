@@ -17,4 +17,21 @@ document.addEventListener('DOMContentLoaded', function() {
     } 
     lastScroll = currentScroll;
   });
+
+  let $getheader = $("#header-main");
+
+  if ( $getheader.hasClass('header-main--szl') ) {
+    let myWidgetPopUpToggler = $(".header-main--szl #services-status-toggle");
+    myWidgetPopUpToggler.attr("data-fancybox", "");
+    myWidgetPopUpToggler.attr("data-src", "#widget-popup" );
+  } else if ( $getheader.hasClass('header-main--hotel') ) {
+    let myWidgetPopUpToggler = $(".header-main--hotel #services-status-toggle");
+    myWidgetPopUpToggler.attr("data-fancybox", "");
+    myWidgetPopUpToggler.attr("data-src", "#widget-popup" );
+  } else if ( $getheader.hasClass('header-main--jura') ) {
+    let myWidgetPopUpToggler = $(".header-main--jura #services-status-toggle");
+    myWidgetPopUpToggler.attr("data-fancybox", "");
+    myWidgetPopUpToggler.attr("data-src", "#widget-popup" );
+  }
+
 });

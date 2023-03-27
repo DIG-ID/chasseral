@@ -30,29 +30,34 @@
 
 		<div class="mega-menu-navigation absolute top-75 left-0 h-0 overflow-hidden w-full flex justify-center items-center bg-bg-color border-t border-solid border-black">
 			<div class="mega-menu-content w-full h-full grid grid-cols-1 lg:grid-cols-2">
-				<div class="mega-menu--menus">
-					<?php
-					wp_nav_menu(
-						array(
-							'theme_location' => 'hotel',
-							'container'      => false,
-							'menu_class'     => '',
-							'menu_id'        => 'hotel-mega-menu',
-							'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-							'fallback_cb'    => '__return_false',
-						),
-					);
-					wp_nav_menu(
-						array(
-							'theme_location' => 'main',
-							'container'      => false,
-							'menu_class'     => '',
-							'menu_id'        => 'main-mega-menu',
-							'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-							'fallback_cb'    => '__return_false',
-						),
-					);
-					?>
+				<div class="mega-menu--wrapper">
+					<div class="site-root-title flex items-center h-[75px] border-b border-solid border-black overflow-hidden px-5 md:px-10 lg:px-20 xl:px-40">
+						<p class="text-3xl font-bold uppercase bold whitespace-nowrap"><?php esc_html_e( 'Hotel & Restaurant', 'chasseral' ); ?></p>
+					</div>
+					<div class="mega-menu--menus">
+						<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'hotel',
+								'container'      => false,
+								'menu_class'     => '',
+								'menu_id'        => 'hotel-mega-menu',
+								'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+								'fallback_cb'    => '__return_false',
+							),
+						);
+						wp_nav_menu(
+							array(
+								'theme_location' => 'main',
+								'container'      => false,
+								'menu_class'     => '',
+								'menu_id'        => 'main-mega-menu',
+								'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+								'fallback_cb'    => '__return_false',
+							),
+						);
+						?>
+					</div>
 				</div>
 				<div class="mega-links-xl">
 					<?php
@@ -64,3 +69,4 @@
 		</div>
 	</nav>
 </header>
+<?php get_template_part( 'template-parts/modules/services-status', 'popup' ); ?>

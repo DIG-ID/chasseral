@@ -142,7 +142,7 @@ class ChasseralThemeServicesStatusWidget {
 		$service_name_road          = $this->services_names['roads'];
 		$service_name_restaurant    = $this->services_names['restaurant'];
 		$service_name_hotel         = $this->services_names['hotel'];
-		$open_widget_btn            = '<button class="widget-toggle"><span></span><span></span></button>';
+		$open_widget_btn            = '<button id="services-status-toggle" class="service-status-toggle flex items-center justify-center"><span></span><span></span></button>';
 
 		if ( $this->size ) :
 			$one_day           = $this->get_current_day();
