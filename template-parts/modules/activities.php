@@ -1,4 +1,4 @@
-<section class="section-activities px-0 py-10 lg:py-32">
+<section class="section-activities px-0 py-10 md:px-8 lg:py-32">
 	<div class="activities-content">
 		<div class="container grid grid-cols-1 lg:grid-cols-2 items-end mx-auto max-w-7xl mb-8 px-8 lg:px-0">
 			<div class="col-span-1">
@@ -10,7 +10,7 @@
 		</div>
 	</div>
 	<div class="activities-list">
-		<div class="container grid grid-cols-1 lg:grid-cols-3 gap-4 mx-auto max-w-7xl">
+		<div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto max-w-7xl">
 			<?php
 			$featured_events = get_field( 'activities' );
 			if ( $featured_events ) :

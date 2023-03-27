@@ -1,4 +1,4 @@
-<section class="section-all-activities p-8 lg:pt-40 border-t border-solid">
+<section class="section-all-activities p-8 md:pt-16 xl:pt-40 border-t border-solid">
     <div class="container lg:px-8 grid grid-cols-1 lg:grid-cols-1 gap-0 lg:gap-4 lg:mx-auto max-w-7xl">
         <div class="grid grid-cols-6">
             <div class="col-span-4">

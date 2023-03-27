@@ -15,7 +15,7 @@
 					endif;
 					?>
 				</div>
-				<div class="col-span-1 chasseral__col p-8 lg:pt-24 lg:pb-0 lg:pl-24 border-b even:border-r border-solid ">
+				<div class="col-span-1 chasseral__col p-8 md:pt-12 xl:pt-24 md:pb-8 xl:pb-0 md:pl-12 xl:pl-24 border-b even:border-r border-solid ">
 					<h2 class="title-normal"><?php the_sub_field( 'title' ); ?></h2>
 					<p class="text-body max-w-lg"><?php the_sub_field( 'description' ); ?></p>
 				</div>
