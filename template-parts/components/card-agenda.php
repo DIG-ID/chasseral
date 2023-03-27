@@ -2,8 +2,10 @@
 	<div class="card-agenda-wrapper grid grid-cols-2">
 		<div class="card-agenda-image border border-solid border-black">
 			<?php
-			if ( has_post_thumbnail() ) :
-				?><img class="w-full h-auto object-cover max-h-[550px]" src="<?php echo esc_url( get_the_post_thumbnail_url( get_the_ID(), 'agenda-thumbnail' ) ); ?>" alt="<?php echo esc_html( get_the_post_thumbnail_caption() ); ?>"><?php
+			$image = get_the_post_thumbnail_url( get_the_ID(), 'agenda-thumbnail' );
+			console_log($image);
+			if ( $image ) :
+				?><img class="w-full h-auto object-cover max-h-[550px]" src="<?php echo esc_url( $image ); ?>" alt="<?php echo esc_html( get_the_post_thumbnail_caption() ); ?>"><?php
 			else :
 				?><img class="w-full h-auto object-cover max-h-[550px]" src="http://via.placeholder.com/550x550"><?php
 			endif;
