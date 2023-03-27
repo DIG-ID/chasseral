@@ -1,6 +1,6 @@
 <footer class="footer-main pt-16 border-t border-solid border-black">
-	<div class="footer-content container mx-auto px-8 grid grid-cols-1 gap-5 lg:grid-cols-12 lg:grid-rows-2">
-		<div class="col-span-1 lg:col-span-3 lg:row-span-2">
+	<div class="footer-content container mx-auto px-8 pb-8 grid grid-cols-1 gap-5 lg:grid-cols-12 ">
+		<div class="col-span-1 lg:col-span-3 ">
 			<?php the_custom_logo(); ?>
 			<div class="footer-contacts mt-10 flex flex-col justify-between">
 				<p class="font-sans font-bold text-sm text-black leading-7 uppercase mb-8"><?php the_field( 'footer_address', 'options' ); ?></p>
@@ -59,8 +59,8 @@
 			?>
 		</div>
 		<div class="col-span-1 lg:col-span-3">
-			<h3 class="text-sm text-black font-sans font-bold uppercase"><?php esc_html_e( 'FOLGEN SIE UNS', 'chasseral' )?></h3>
-			<?php do_action( 'socials' ); ?>
+			<!--<h3 class="text-sm text-black font-sans font-bold uppercase"><?php esc_html_e( 'FOLGEN SIE UNS', 'chasseral' )?></h3>-->
+			<?php //do_action( 'socials' ); ?>
 		</div>
 	</div>
 	<div class="copyright border-t border-b border-solid border-black">
