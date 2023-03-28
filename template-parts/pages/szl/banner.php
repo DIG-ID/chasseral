@@ -1,4 +1,4 @@
-<section class="section section-szl-banner w-full lg:h-[500px] overflow-hidden">
+<section class="section section-szl-banner w-full xl:max-h-[500px] overflow-hidden">
 	<div class="swiper banner-szl-swiper">
 		<div class="swiper-wrapper">
 			<?php

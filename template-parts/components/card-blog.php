@@ -1,4 +1,4 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'card-blog overflow-hidden block mb-10' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'card-blog overflow-hidden block mb-10 w-full lg:w-auto' ); ?>>
 	<a href="<?php the_permalink(); ?>" class="card-blog-wrapper">
 		<figure class="card-blog-thumbnail relative mb-5">
 			<?php

@@ -1,5 +1,5 @@
 <section class="section-environment grid grid-cols-1 lg:grid-cols-2 border-t border-solid border-black h-auto lg:h-[700px] overflow-hidden">
-	<div class="cols-span-1 border-r border-solid border-black">
+	<div class="cols-span-1 border-r border-solid border-black order-2 lg:order-1">
 		<?php
 		$environment_image = get_field( 'environment_image' );
 		if ( ! empty( $environment_image ) ) :
@@ -7,7 +7,7 @@
 		endif;
 		?>
 	</div> 
-	<div class="cols-span-1 p-8 lg:pt-36 lg:pb-0 lg:pl-36">
+	<div class="cols-span-1 p-8 lg:p-16 xl:pt-36 xl:pb-16 xl:pl-36 order-1 lg:order-2">
 		<h2 class="text-black text-3xl font-bold mb-16"><?php the_field( 'environment_title' ); ?></h2>
 		<p class="text-sm text-black font-normal leading-8 mb-16 max-w-lg"><?php the_field( 'environment_description' ); ?></p>
 		<?php

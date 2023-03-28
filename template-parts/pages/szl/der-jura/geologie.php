@@ -1,6 +1,6 @@
-<section class="section-geologie grid grid-cols-2 border-t border-solid border-black h-[700px] overflow-hidden">
-	<div class="cols-span-1 border-r border-solid border-black pt-36 pb-0 pl-36">
-		<h2 class="text-black text-3xl font-bold mb-16 "><?php the_field( 'geologie_title' ); ?></h2>
+<section class="section-geologie grid lg:grid-cols-2 border-t border-solid border-black xl:h-[700px] overflow-hidden">
+	<div class="cols-span-1 border-r border-solid border-black p-8 lg:p-16 xl:pt-36 xl:pb-16 xl:pl-36">
+		<h2 class="text-black title-normal font-bold lg:!mb-16"><?php the_field( 'geologie_title' ); ?></h2>
 		<div class="section-geologie-description text-sm text-black font-normal leading-8 mb-16 max-w-lg"><?php the_field( 'geologie_description' ); ?></div>
 		<?php
 		$link = get_field( 'geologie_link' );

@@ -7,7 +7,7 @@
 		endif;
 		?>
 	</div> 
-	<div class="cols-span-1 p-8 lg:pt-36 lg:pb-0 lg:pl-36">
+	<div class="cols-span-1 p-8 lg:p-16 xl:pt-36 xl:pb-16 xl:pl-36">
 		<h2 class="text-black text-3xl font-bold mb-16"><?php the_field( 'current_exhibition_title' ); ?></h2>
 		<p class="text-sm text-black font-normal leading-8 mb-16 max-w-lg"><?php the_field( 'current_exhibition_description' ); ?></p>
 		<?php
