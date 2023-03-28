@@ -43,8 +43,8 @@
 							$link_title  = $webcam_link['title'];
 							$link_target = $webcam_link['target'] ? $link['target'] : '_self';
 							?>
-							<a class="btn-general whitespace-nowrap flex items-center !px-6" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
-								<?php echo esc_html( $link_title ); ?>
+							<a class="btn-general whitespace-nowrap !flex items-center flex-nowrap !px-6" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
+								<span><?php echo esc_html( $link_title ); ?></span>
 								<svg class="ml-1 " width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M6 12L4.93125 10.95L9.13125 6.75H0V5.25H9.13125L4.93125 1.05L6 0L12 6L6 12Z" fill="black"/>
 								</svg>
@@ -56,7 +56,7 @@
 					<?php do_action( 'service_status_widget' ); ?>
 					<?php do_action( 'notification' ); ?>
 				</div>
-				<div class="mega-links col-auto flex flex-col justify-center px-0 lg:px-20 xl:px-40">
+				<div class="mega-links col-auto flex flex-col justify-center px-0 md:px-5 lg:px-10 xl:px-24">
 					<p class="mega-menu-title uppercase font-bold mb-5 hidden lg:block"><?php esc_html_e( 'Willkommen auf dem Chasseral', 'chasseral' ); ?></p>
 					<p class="mega-menu-description mb-10 hidden lg:block"><?php esc_html_e( 'Erleben Sie die Vielfalt des Jura.', 'chasseral' ); ?></p>
 					<?php
@@ -69,7 +69,7 @@
 						array(
 							'theme_location' => 'main',
 							'container'      => false,
-							'menu_class'     => 'main-menu-mega-menu flex flex-col lg:hidden',
+							'menu_class'     => 'mega-menu-bottom flex flex-col lg:hidden',
 							'items_wrap'     => '<ul id="%1$s" class="%2$s menu-top-level">%3$s</ul>',
 							'fallback_cb'    => '__return_false',
 						),
