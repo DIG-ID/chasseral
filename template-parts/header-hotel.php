@@ -31,7 +31,7 @@
 		<div class="mega-menu-navigation absolute top-75 left-0 h-0 overflow-hidden w-full flex justify-center items-center bg-bg-color border-t border-solid border-black">
 			<div class="mega-menu-content w-full h-full flex flex-col justify-between lg:grid grid-cols-1 lg:grid-cols-2">
 				<div class="mega-menu--wrapper">
-					<div class="site-root-title hidden lg:flex items-center h-[75px] border-b border-solid border-black overflow-hidden px-5 md:px-10 lg:px-20 xl:px-40 mb-20">
+					<div class="site-root-title hidden lg:flex items-center h-[75px] border-b border-solid border-black overflow-hidden px-5 md:px-10 lg:px-20 xl:px-40">
 						<p class="text-3xl font-bold uppercase bold whitespace-nowrap"><?php esc_html_e( 'Hotel & Restaurant', 'chasseral' ); ?></p>
 					</div>
 					<div class="mega-menu--menus">
