@@ -5,7 +5,7 @@
 								<h2 class="section__title text-black text-3xl font-bold"><?php esc_html_e( 'Aktuelle Events', 'chasseral' ); ?></h2>
 						</div>
 						<div class="col-span-1 lg:text-end">
-								<?php do_action( 'see_all', 'archives_pages_events', 'Events' ); ?>
+								<?php do_action( 'see_all', 'archives_pages_events', __( 'Events', 'chasseral' ) ); ?>
 						</div>
 				</div>
 		</div>

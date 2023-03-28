@@ -32,18 +32,17 @@
 			<div class="mega-menu-content w-full h-full grid grid-cols-1 lg:grid-cols-2">
 				<div class="col-auto flex-col justify-center border-r border-solid border-black px-20 hidden lg:flex">
 
-						<?php
-						wp_nav_menu(
-							array(
-								'theme_location' => 'main',
-								'container'      => false,
-								'menu_class'     => 'hidden lg:flex',
-								'items_wrap'     => '<ul id="%1$s" class="%2$s menu-top-level">%3$s</ul>',
-								'fallback_cb'    => '__return_false',
-							),
-						);
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'main',
+							'container'      => false,
+							'menu_class'     => 'flex lg:hidden',
+							'items_wrap'     => '<ul id="%1$s" class="%2$s menu-top-level">%3$s</ul>',
+							'fallback_cb'    => '__return_false',
+						),
+					);
 					?>
-
 
 					<div class="see-webcam w-full flex items-center gap-5 mb-8">
 						<div class="grow">
