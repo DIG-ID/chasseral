@@ -1,5 +1,5 @@
-<section class="section-institutionen px-0 py-20 xl:py-52">
-    <div class="flex justify-center flex-col pl-8 pr-0 lg:pr-0 md:pl-16 xl:pl-72">
+<section class="section-institutionen px-0 py-8 lg:py-16 xl:py-52">
+    <div class="flex justify-center flex-col pl-8 pr-0 lg:pr-0 lg:pl-16 xl:pl-72">
         <div class="grid grid-cols-1 lg:grid-cols-6">
             <div class="col-span-4">
                 <h2 class="text-black text-2xl lg:text-3xl font-bold mb-14 pr-8"><?php the_field('section_institutionen_title'); ?></h2>

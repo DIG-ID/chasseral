@@ -1,6 +1,6 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'card-agenda overflow-hidden mb-20' ); ?>>
 	<div class="card-agenda-wrapper grid grid-cols-1 lg:grid-cols-2">
-		<div class="card-agenda-image col-span-1 border border-solid border-black order-2 lg:order-1">
+		<div class="card-agenda-image col-span-1 border border-solid border-black">
 			<?php
 			$image = get_the_post_thumbnail_url( get_the_ID(), 'agenda-thumbnail' );
 			console_log($image);
@@ -11,7 +11,7 @@
 			endif;
 			?>
 		</div>
-		<div class="card-agenda-content col-span-1 flex flex-col justify-center items-start px-8 py-8 lg:px-16 lg:py-0 border border-solid border-black lg:border-l-0 order-1 lg:order-2">
+		<div class="card-agenda-content col-span-1 flex flex-col justify-center items-start px-8 py-8 lg:px-16 lg:py-0 border border-solid border-black lg:border-l-0">
 			<h3 class="title-normal font-bold lg:!mb-6"><?php the_title(); ?></h3>
 			<div class="agenda-metadata mb-8">
 				<p class="start-date text-sm text-black font-bold whitespace-nowrap flex mb-2">

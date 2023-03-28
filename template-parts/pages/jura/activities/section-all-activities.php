@@ -9,7 +9,7 @@
                 <div class="swiper-button-next act-summer-button-next relative bg-white h-[50px] w-[50px] m-0 top-[unset] right-[unset] border border-solid border-black text-black after:text-lg after:content-['next'] hover:bg-[#e4e4e4]"></div>
             </div>
         </div>
-        <div class="activities-list mb-8 lg:mb-52">
+        <div class="activities-list mb-16 lg:mb-24 xl:mb-52">
             <div class="swiper-act-summer container mx-auto max-w-7xl overflow-x-hidden">
                 <div class="swiper-wrapper">
                     <?php 
@@ -52,7 +52,7 @@
                 <div class="swiper-button-next act-winter-button-next relative bg-white h-[50px] w-[50px] m-0 top-[unset] right-[unset] border border-solid border-black text-black after:text-lg after:content-['next'] hover:bg-[#e4e4e4]"></div>
             </div>
         </div>
-        <div class="activities-list mb-8 lg:mb-52">
+        <div class="activities-list mb-8 lg:mb-24 xl:mb-52">
             <div class="swiper-act-winter container mx-auto max-w-7xl overflow-x-hidden">
                 <div class="swiper-wrapper">
                     <?php 

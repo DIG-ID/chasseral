@@ -1,4 +1,4 @@
-<section id="single-perfekt-fur-pdf" class="section-perfekt-fur__pdf py-20">
+<section id="single-perfekt-fur-pdf" class="section-perfekt-fur__pdf pt-0 pb-20 lg:py-20">
 <?php
 $file = get_field('section_pdf_pdf_file');
 if( $file ) : ?>
