@@ -28,7 +28,7 @@
                             else : ?>
                             <img src="https://via.placeholder.com/420x282">
                             <?php endif; ?>
-                            <div class="activities__content-wrapper p-8 bg-white min-h-[400px] relative">
+                            <div class="activities__content-wrapper p-8 bg-white min-h-[500px] lg:min-h-[400px] relative">
                                 <h2 class="font-bold text-xl mb-4"><?php the_title(); ?></h2>
                                 <span class="text-sm leading-7"><?php the_excerpt(); ?></span>
                                 <?php if( get_field('external_link') ): ?>
@@ -72,7 +72,7 @@
                             else : ?>
                             <img src="https://via.placeholder.com/420x282">
                             <?php endif; ?>
-                            <div class="activities__content-wrapper p-8 bg-white min-h-[400px] relative">
+                            <div class="activities__content-wrapper p-8 bg-white min-h-[500px] lg:min-h-[400px] relative">
                                 <h2 class="font-bold text-xl mb-4"><?php the_title(); ?></h2>
                                 <span class="text-sm leading-7"><?php the_excerpt(); ?></span>
                                 <?php if( get_field('external_link') ): ?>

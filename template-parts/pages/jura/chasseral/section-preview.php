@@ -1,6 +1,6 @@
 <section class="chasseral-preview-section pt-0 xl:pt-40 pb-40 lg:pb-[20rem] xl:pb-[30rem] bg-no-repeat" style="background-image: url(<?php echo wp_upload_dir()['url'] . '/chasseral_illustration.svg' ?>); background-position: 0 100%;background-size:contain;">
     <div class="container max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 xl:border lg:border-b border-solid">
-        <div class="col-span-5 border-r border-solid preview-img-box">
+        <div class="col-span-5 border-r border-solid preview-img-box hidden lg:block">
         <?php 
             $image = get_field('section_preview_image');
             $size = 'chasseral-jura-preview--thumbnail';

@@ -1,6 +1,6 @@
 <section class="section-activities px-0 py-10 md:px-8 lg:py-32">
 	<div class="activities-content">
-		<div class="container grid grid-cols-1 lg:grid-cols-2 items-end mx-auto max-w-7xl mb-8 px-8 lg:px-0">
+		<div class="container grid grid-cols-1 lg:grid-cols-2 items-end mx-auto max-w-7xl mb-8 px-8 md:px-0">
 			<div class="col-span-1">
 				<h2 class="section__title text-black text-3xl font-bold mb-4 lg:mb-0"><?php esc_html_e( 'Aktivitäten', 'chasseral' ); ?></h2>
 			</div>
