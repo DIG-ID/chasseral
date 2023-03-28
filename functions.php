@@ -29,35 +29,35 @@ function chasseral_theme_setup() {
 
 	set_post_thumbnail_size( 500, 350, 'center', 'center' );
 
-	add_image_size( 'mega-link-thumbnail', 1000, 500, 'center', 'center' );
+	add_image_size( 'mega-link-thumbnail', 1000, 500, array( 'center', 'center' ) );
 
-	add_image_size( 'sub-page-thumbnail', 700, 700, 'center', 'center' );
+	add_image_size( 'sub-page-thumbnail', 700, 700, array( 'center', 'center' ) );
 
-	add_image_size( 'activities-thumbnail', 420, 282, 'center', 'center' );
+	add_image_size( 'activities-thumbnail', 420, 282, array( 'center', 'center' ) );
 
-	add_image_size( 'section-column-img', 961, 706, 'center', 'center' );
+	add_image_size( 'section-column-img', 961, 706, array( 'center', 'center' ) );
 
-	add_image_size( 'agenda-event-thumbnail', 750, 750, 'center', 'center' );
+	add_image_size( 'agenda-event-thumbnail', 750, 750, array( 'center', 'center' ) );
 
-	add_image_size( 'agenda-thumbnail', 550, 550, 'center', 'center' );
+	add_image_size( 'agenda-thumbnail', 550, 550, array( 'center', 'center' ) );
 
-	add_image_size( 'event-thumbnail', 450, 450, 'center', 'center' );
+	add_image_size( 'event-thumbnail', 450, 450, array( 'center', 'center' ) );
 
-	add_image_size( 'perfekt-fur-thumbnail', 640, 470, 'center', 'center' );
+	add_image_size( 'perfekt-fur-thumbnail', 640, 470, array( 'center', 'center' ) );
 
-	add_image_size( 'institutionen-thumbnail', 420, 310, 'center', 'center' );
+	add_image_size( 'institutionen-thumbnail', 420, 310, array( 'center', 'center' ) );
 
-	add_image_size( 'chasseral-page--thumbnail', 960, 1056, 'center', 'center' );
+	add_image_size( 'chasseral-page--thumbnail', 960, 1056, array( 'center', 'center' ) );
 
-	add_image_size( 'chasseral-jura-preview--thumbnail', 530, 575, 'center', 'center' );
+	add_image_size( 'chasseral-jura-preview--thumbnail', 530, 575, array( 'center', 'center' ) );
 
 	add_image_size( 'chasseral-jura-headers', 1920, 500, array( 'center', 'center' ) );
 
 	add_image_size( 'chasseral-jura-headers-top', 1920, 501, array( 'center', 'top' ) );
 
-	add_image_size( 'block-images', 1000, 700, 'center', 'center' );
+	add_image_size( 'block-images', 1000, 700, array( 'center', 'center' ) );
 
-	add_image_size( 'vision-block-images', 1000, 1000, 'center', 'center' );
+	add_image_size( 'vision-block-images', 1000, 1000, array( 'center', 'center' ) );
 
 }
 

@@ -3,12 +3,12 @@ $current_date = gmdate( 'Ymd' );
 $args = array(
 	'post_type'      => 'agenda',
 	'posts_per_page' => -1,
-	'meta_key'       => 'info_start_date',
+	'meta_key'       => 'start_date',
 	'orderby'        => 'meta_value_num',
 	'order'          => 'ASC',
 	'meta_query'     => array(
 		array(
-			'key'     => 'info_end_date',
+			'key'     => 'end_date',
 			'value'   => $current_date,
 			'compare' => '>=',
 			'type'    => 'DATE',
