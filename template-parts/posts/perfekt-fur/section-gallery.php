@@ -6,6 +6,10 @@ if ( $gallery ) : ?>
             <div class="col-span-4">
                 <h2 class="title-normal !mb-14 mx-0 lg:mx-8 xl:mx-0"><?php echo esc_html( 'Galerie', 'chasseral' ) ?></h2>
             </div>
+            <div class="col-span-2 flex justify-end lg:mr-6 xl:hidden">
+                <div class="swiper-button-prev jura-button-prev relative bg-white h-[50px] w-[50px] m-0 top-[unset] left-[unset] border border-solid border-black text-black after:text-lg after:content-['prev'] hover:bg-[#e4e4e4]"></div>
+                <div class="swiper-button-next jura-button-next relative bg-white h-[50px] w-[50px] m-0 top-[unset] right-[unset] border border-solid border-black text-black after:text-lg after:content-['next'] hover:bg-[#e4e4e4]"></div>
+            </div>
         </div>
         <div class="gallery__wrapper border border-solid">
         <?php
@@ -25,8 +29,8 @@ if ( $gallery ) : ?>
             endforeach;
             echo '</div>';
             echo '</div>';
-            echo '<div class="swiper-button-prev jura-button-prev left-[50px] xl:left-[-100px]"></div>';
-            echo '<div class="swiper-button-next jura-button-next right-[50px] xl:right-[-100px]"></div>';
+            echo '<div class="swiper-button-prev jura-button-prev hidden xl:flex left-[50px] xl:left-[-100px]"></div>';
+            echo '<div class="swiper-button-next jura-button-next hidden xl:flex right-[50px] xl:right-[-100px]"></div>';
         ?>
         </div>
     </div>
