@@ -4,7 +4,7 @@
 		$video = get_field( 'hero_video_url' );
 		if ( $video ) :
 			?>
-			<video autoplay loop muted class="section-hero-video absolute top-0 left-0 w-full h-full object-cover z-[-1]">
+			<video autoplay loop muted class="section-hero-video absolute top-0 left-0 w-full h-full object-cover z-[-1]" playsinline="playsinline" loop="" autoplay="autoplay" muted="muted">
 				<source src="<?php echo esc_url( $video ); ?>">
 			</video>
 			<?php
