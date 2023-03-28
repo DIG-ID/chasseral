@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       });
       togglerTl.to('.menu-top-level', {y:' 100%', opacity: 0, ease: 'back.in'});
-      togglerTl.to('.mega-menu-navigation', {height: 'calc( 100vh - 75px )'}, '<0.40');
+      togglerTl.to('.mega-menu-navigation', {height: 'calc( 90vh - 75px )'}, '<0.40');
       togglerTl.from('.site-root-title', {y: '-50px', opacity: 0}, '<');
       togglerTl.from('.mega-menu-content .mega-menu--menus ul li', {duration: 0.2, y: '-50px', opacity: 0, stagger: 0.10}, '<');
       togglerTl.from('.mega-menu-content .mega-links-xl .mega-link', {x: '-50px', opacity: 0, stagger: 0.25}, '<');
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       });
       togglerTl.to('.navigation-widget', {y:' 100%', opacity: 0, ease: 'back.in'});
-      togglerTl.to('.mega-menu-navigation', {height: 'calc( 100vh - 75px )'}, '<0.40');
+      togglerTl.to('.mega-menu-navigation', {height: 'calc( 90vh - 75px )'}, '<0.40');
 
       togglerTl.from('.mega-menu-content .see-webcam, .mega-menu-content .service-status, .mega-menu-content .notification', {y: '-50px', opacity: 0, stagger: 0.25}, '<0.25');
       togglerTl.from('.mega-menu-title, .mega-menu-description', {y: '-50px', opacity: 0, stagger: 0.25}, '<');
