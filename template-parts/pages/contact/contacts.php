@@ -32,13 +32,13 @@
 			<?php
 			if ( have_rows( 'schedule_opening_hours' ) ) :
 				echo '<ul class="opening-hours mb-20">';
-				echo '<li class="grid grid-cols-3 mb-10"><p class="col-start-2 font-bold text-lg">' . esc_html( get_field( 'schedule_title_april' ) ) . '</p><p class="col-start-3 font-bold text-lg">' . esc_html( get_field( 'schedule_title_october' ) ) . '</p></li>';
+				echo '<li class="grid grid-cols-3 mb-10"><p class="col-start-2 font-bold text-base lg:text-lg">' . esc_html( get_field( 'schedule_title_april' ) ) . '</p><p class="col-start-3 font-bold text-base lg:text-lg">' . esc_html( get_field( 'schedule_title_october' ) ) . '</p></li>';
 				while ( have_rows( 'schedule_opening_hours' ) ) :
 					the_row();
 					echo '<li class="grid grid-cols-3 border-b border-solid border-black pb-1 mb-7">';
-					echo '<p class="day text-lg font-bold">' . get_sub_field( 'day' ) . '</p>';
-					echo '<p class="hours hours-1 text-lg">' . get_sub_field( 'april' ) . '</p>';
-					echo '<p class="hours hours-2 text-lg">' . get_sub_field( 'october' ) . '</p>';
+					echo '<p class="day text-sm lg:text-lg font-bold">' . get_sub_field( 'day' ) . '</p>';
+					echo '<p class="hours hours-1 text-sm lg:text-lg">' . get_sub_field( 'april' ) . '</p>';
+					echo '<p class="hours hours-2 text-sm lg:text-lg">' . get_sub_field( 'october' ) . '</p>';
 					echo '</li>';
 				endwhile;
 				echo '</ul>';
@@ -51,9 +51,9 @@
 				while ( have_rows( 'schedule_opening_hours_hotel' ) ) :
 					the_row();
 					echo '<li class="grid grid-cols-3 border-b border-solid border-black pb-1 mb-7">';
-					echo '<p class="day text-lg font-bold">' . get_sub_field( 'day' ) . '</p>';
-					echo '<p class="hours hours-1 text-lg">' . get_sub_field( 'april' ) . '</p>';
-					echo '<p class="hours hours-2 text-lg">' . get_sub_field( 'october' ) . '</p>';
+					echo '<p class="day text-sm lg:text-lg font-bold">' . get_sub_field( 'day' ) . '</p>';
+					echo '<p class="hours hours-1 text-sm lg:text-lg">' . get_sub_field( 'april' ) . '</p>';
+					echo '<p class="hours hours-2 text-sm lg:text-lg">' . get_sub_field( 'october' ) . '</p>';
 					echo '</li>';
 				endwhile;
 				echo '</ul>';
