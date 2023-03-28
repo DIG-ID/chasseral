@@ -4,8 +4,8 @@
 			<h2 class="title-big"><?php the_title(); ?></h2>
 		</div>
 		<div class="col-span-2 lg:grid-rows-2">
-				<div class="lg:columns-2 row-span-1 mb-16 gap-8">
-					<p class="text-body"><?php echo wp_kses_post( get_the_excerpt() ); ?></p>
+				<div class="row-span-1 mb-16 gap-8">
+					<?php echo wp_kses_post( get_the_content() ); ?>
 				</div>
 				<div class="row-span-1">
 					<a data-fancybox data-src="#open" href="javascript:;" class="btn-general btn-general--hotel is-checked block"><?php esc_html_e( 'Jetzt buchen', 'chasseral' ); ?></a>
