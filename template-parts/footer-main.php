@@ -23,7 +23,7 @@
 				array(
 					'theme_location' => 'szl',
 					'container'      => false,
-					'menu_class'     => 'mt-10',
+					'menu_class'     => 'menu-footer mt-10',
 					'items_wrap'     => '<ul id="%1$s" class="%2$s menu-top-level">%3$s</ul>',
 					'fallback_cb'    => '__return_false',
 				),
@@ -37,7 +37,7 @@
 				array(
 					'theme_location' => 'hotel',
 					'container'      => false,
-					'menu_class'     => 'mt-10',
+					'menu_class'     => 'menu-footer mt-10',
 					'items_wrap'     => '<ul id="%1$s" class="%2$s menu-top-level">%3$s</ul>',
 					'fallback_cb'    => '__return_false',
 				),
@@ -51,7 +51,7 @@
 				array(
 					'theme_location' => 'jura',
 					'container'      => false,
-					'menu_class'     => 'mt-10',
+					'menu_class'     => 'menu-footer mt-10',
 					'items_wrap'     => '<ul id="%1$s" class="%2$s menu-top-level">%3$s</ul>',
 					'fallback_cb'    => '__return_false',
 				),
@@ -65,7 +65,7 @@
 	</div>
 	<div class="copyright border-t border-b border-solid border-black">
 		<div class="flex justify-between items-center">
-			<p class="copyright-text text-sm text-black font-normal pl-5">
+			<p class="copyright-text text-xs lg:text-sm text-black font-normal pl-5">
 				<?php
 				$y = date( 'Y' );
 				printf(

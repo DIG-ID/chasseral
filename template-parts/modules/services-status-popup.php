@@ -12,7 +12,7 @@
 				$link_title  = $webcam_link['title'];
 				$link_target = $webcam_link['target'] ? $link['target'] : '_self';
 				?>
-				<a class="btn-general whitespace-nowrap flex items-center !px-6" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
+				<a class="btn-general whitespace-nowrap !flex items-center flex-nowrap !px-6" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
 					<?php echo esc_html( $link_title ); ?>
 					<svg class="ml-1 " width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M6 12L4.93125 10.95L9.13125 6.75H0V5.25H9.13125L4.93125 1.05L6 0L12 6L6 12Z" fill="black"/>

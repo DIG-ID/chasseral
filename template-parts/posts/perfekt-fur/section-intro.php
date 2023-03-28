@@ -1,9 +1,9 @@
 <section id="single-perfekt-fur-intro" class="section-perfekt-fur__intro grid grid-cols-1 border-t border-solid border-black">
 	<div class="w-full chasseral__col border-b border-solid border-black">
 		<?php
-		if ( has_post_thumbnail() && get_field('header_image_position') == 'Top' ) :
+		if ( has_post_thumbnail() && get_field( 'header_image_position' ) === 'Top' ) :
 			the_post_thumbnail( 'chasseral-jura-headers-top' );
-		elseif (has_post_thumbnail() && get_field('header_image_position') == 'Center') :
+		elseif ( has_post_thumbnail() && get_field( 'header_image_position' ) === 'Center' ) :
 			the_post_thumbnail( 'chasseral-jura-headers' );
 		else :
 			echo '<img src="https://via.placeholder.com/1920x500">';
