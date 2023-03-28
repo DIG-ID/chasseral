@@ -1,4 +1,4 @@
-<section id="section-hotel-restaurant" class="section-hotel-restaurant__intro lg:h-screen grid grid-cols-1 lg:grid-rows-2">
+<section id="section-hotel-restaurant" class="section-hotel-restaurant__intro xl:h-screen grid grid-cols-1 lg:grid-rows-2">
     <?php $header_image = get_field('section_intro_header_image');
     $size = 'chasseral-jura-headers';
     $header_imgArr = wp_get_attachment_image_src( $header_image, $size ); ?>
@@ -8,8 +8,8 @@
             <div class="col-span-3 mb-4">
                 <h2 class="title-big"><?php the_field('section_intro_title'); ?></h2>
             </div>
-            <div class="col-span-5 grid lg:grid-rows-2">
-                <div class="row-span-1 lg:columns-2 mb-20">
+            <div class="col-span-5 xl:grid xl:grid-rows-2">
+                <div class="row-span-1 xl:columns-2 mb-20">
                     <p class="text-body"><?php the_field('section_intro_description'); ?></p>
                 </div>
                 <div class="row-span-1">

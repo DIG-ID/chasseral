@@ -1,4 +1,4 @@
-<section class="section-hotel-restaurant__your-stay pt-8 pb-8 lg:pt-40 lg:pb-8 border-t border-solid">
+<section class="section-hotel-restaurant__your-stay py-8 px-8 lg:py-16 lg:px-16 xl:px-0 xl:pt-40 xl:pb-8 border-t border-solid">
 		<div class="events-content">
 				<div class="container grid grid-cols-1 lg:grid-cols-2 items-end mx-auto max-w-7xl mb-8 px-8 lg:px-0">
 						<div class="col-span-1">
@@ -31,7 +31,7 @@
 												else : ?>
 												<img src="https://via.placeholder.com/420x282">
 												<?php endif; ?>
-												<div class="events__content-wrapper p-8 lg:py-8 lg:px-0 min-h-[400px] relative">
+												<div class="events__content-wrapper p-8 lg:py-8 lg:px-0 min-h-[250px] relative">
 														<p class="start-date text-sm text-text-grey font-normal whitespace-nowrap mb-2">
 																<?php
 																$start_date = get_field( 'start_date' );

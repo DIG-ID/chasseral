@@ -4,7 +4,7 @@
 	$header_imgArr = wp_get_attachment_image_src( $header_image, $size ); ?>
 	<div class="bg-cover bg-center h-[50vh] lg:h-full w-full lg:row-span-1 border-b border-solid border-black" style="background-image: url(<?php echo $header_imgArr[0]; ?>);"></div>
 	<div class="xl:flex justify-center h-full w-full row-span-1 bg-no-repeat p-8 jura__illustration" style="background-image: url(<?php echo wp_upload_dir()['url'] . '/jura_illustration.svg' ?>);    background-position: 0 105%;">
-		<div class="pb-0 lg:pb-36 lg:pt-20 xl:py-20 lg:container grid grid-cols-1 lg:grid-cols-2 justify-center">
+		<div class="pb-0 lg:pb-16 lg:pt-16 xl:py-20 lg:container grid grid-cols-1 lg:grid-cols-2 justify-center">
 			<div class="mb-4">
 				<h2 class="title-big"><?php the_field( 'section_intro_title' ); ?></h2>
 			</div>
