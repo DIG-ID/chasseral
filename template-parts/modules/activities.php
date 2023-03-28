@@ -25,7 +25,7 @@
 							echo '<img src="https://via.placeholder.com/420x282">';
 						endif;
 						?>
-						<div class="activities__content-wrapper p-8 bg-white min-h-[450px] relative">
+						<div class="activities__content-wrapper p-8 bg-white min-h-[420px] relative">
 							<h2 class="font-bold text-xl mb-4"><?php the_title(); ?></h2>
 							<span class="text-sm leading-7"><?php the_content(); ?></span>
 							<a class="btn__arrow-alle absolute bottom-5" href="<?php the_field( 'external_link' ); ?>" target="_blank"><?php esc_html_e( 'Zur Webseite', 'chasseral' ); ?>
