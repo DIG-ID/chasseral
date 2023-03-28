@@ -51,9 +51,9 @@ function chasseral_theme_setup() {
 
 	add_image_size( 'chasseral-jura-preview--thumbnail', 530, 575, 'center', 'center' );
 
-	add_image_size( 'chasseral-jura-headers', 1920, 500, 'center', 'center' );
+	add_image_size( 'chasseral-jura-headers', 1920, 500, array( 'center', 'center' ) );
 
-	add_image_size( 'chasseral-jura-headers-top', 1920, 500, array( 'center', 'top' ) );
+	add_image_size( 'chasseral-jura-headers-top', 1920, 501, array( 'center', 'top' ) );
 
 	add_image_size( 'block-images', 1000, 700, 'center', 'center' );
 
