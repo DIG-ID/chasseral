@@ -32,7 +32,7 @@
 			<div class="mega-menu-content w-full h-full flex flex-col justify-between lg:grid grid-cols-1 lg:grid-cols-2">
 				<div class="mega-menu--wrapper">
 					<div class="site-root-title hidden lg:flex items-center h-[75px] border-b border-solid border-black overflow-hidden px-5 md:px-10 lg:px-20 xl:px-40">
-						<p class="lg:text-2xl xl:text-3xl font-bold uppercase bold whitespace-nowrap"><?php esc_html_e( 'SCHWEIZER ZENTRUM FÜR LANDSCHAFT', 'chasseral' ); ?></p>
+						<p class="lg:text-2xl xl:text-3xl font-bold uppercase bold whitespace-nowrap"><?php esc_html_e( 'SZL', 'chasseral' ); ?></p>
 					</div>
 					<div class="mega-menu--menus">
 						<?php
