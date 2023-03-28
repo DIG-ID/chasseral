@@ -11,7 +11,7 @@
 .section-zimmer
     &__zimmer, &__group-zimmer
         .zimmer-link
-            @apply relative block overflow-hidden lg:h-[689px] lg:max-h-[689px] border-x border-solid
+            @apply relative block overflow-hidden lg:h-[400px] lg:max-h-[400px] xl:h-[689px] xl:max-h-[689px] border-x border-solid
             z-index: 2
             &--image
                 @apply h-auto lg:h-full
@@ -58,3 +58,24 @@
             @apply gap-8
             .wp-block-column
                 @apply text-black text-sm font-sans font-normal leading-8 mb-8 last-of-type:mb-0
+
+.gastro
+    &__images
+        img
+            @apply w-full h-full
+
+//Responsive
+@media ( max-width: 1024px )
+    .hotel
+        &__header-img
+            background-position:-450px 0
+
+@media ( max-width: 640px )
+    .hotel
+        &__header-img
+            background-position:-375px 0
+
+@media ( max-width: 400px )
+    .hotel
+        &__header-img
+            background-position:-345px 0

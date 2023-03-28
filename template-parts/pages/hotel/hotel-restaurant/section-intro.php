@@ -2,7 +2,7 @@
     <?php $header_image = get_field('section_intro_header_image');
     $size = 'chasseral-jura-headers';
     $header_imgArr = wp_get_attachment_image_src( $header_image, $size ); ?>
-    <div class="bg-cover bg-center h-[50vh] lg:h-full w-full" style="background-image: url(<?php echo $header_imgArr[0]; ?>);"></div>
+    <div class="bg-cover bg-center h-[50vh] lg:h-full w-full hotel__header-img bg-no-repeat" style="background-image: url(<?php echo $header_imgArr[0]; ?>);"></div>
     <div class="flex justify-center h-full w-full">
         <div class="py-20 container grid grid-cols-1 lg:grid-cols-8 gap-8 justify-center p-8">
             <div class="col-span-3 mb-4">

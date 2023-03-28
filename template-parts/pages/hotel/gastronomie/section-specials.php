@@ -8,7 +8,7 @@
         if( have_rows('section_specials_specials') ):
         while( have_rows('section_specials_specials') ) : the_row(); ?>
             <div class="grid grid-cols-1 lg:grid-cols-2 mb-8 lg:mb-40">
-                <div class="col-span-1 border border-solid">
+                <div class="col-span-1 border border-solid gastro__images">
                 <?php 
                 $image = get_sub_field('image');
                 $size = 'perfekt-fur-thumbnail'; 

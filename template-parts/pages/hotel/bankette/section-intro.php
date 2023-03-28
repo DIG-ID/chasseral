@@ -10,7 +10,7 @@
 			endif;
 			?>
 		</div>
-		<div class="col-span-1 chasseral__col p-8 lg:pt-24 lg:pb-0 lg:pl-24">
+		<div class="col-span-1 chasseral__col p-8 lg:p-16 xl:pt-24 xl:pb-16 xl:pl-24">
 			<h2 class="title-normal uppercase"><?php the_field( 'section_intro_title' ); ?></h2>
 			<p class="text-body !mb-16 max-w-lg"><?php the_field( 'section_intro_description' ); ?></p>
 			<?php
