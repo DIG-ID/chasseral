@@ -5,7 +5,7 @@
 				<h2 class="section__title text-black text-3xl font-bold mb-4 lg:mb-0"><?php esc_html_e( 'Aktivitäten', 'chasseral' ); ?></h2>
 			</div>
 			<div class="col-span-1 lg:text-end">
-				<?php do_action( 'see_all', 'archives_pages_aktivitaten', 'Aktivitäten' ); ?>
+				<?php do_action( 'see_all', 'archives_pages_aktivitaten', __( 'Aktivitäten', 'chasseral' ) ); ?>
 			</div>
 		</div>
 	</div>
