@@ -3,7 +3,7 @@
   .custom-logo-link
     @apply flex justify-center items-center pl-5 border-r border-solid border-black md:w-[300px] md:pl-0
     img
-      @apply max-w-[116px] md:max-w-[175px] object-cover
+      @apply max-w-[116px] md:max-w-[175px] object-cover px-0 md:px-5
 
 #header-main
   .wpml-ls-legacy-dropdown
@@ -39,11 +39,11 @@
     justify-content: center
     align-items: center
     .menu-item
-      padding-right: 30px
+      @apply pr-2 xl:pr-8
       &:last-of-type
-        padding-right: 0
+        @apply pr-0
       a
-        @apply block font-sans font-bold text-base text-black uppercase transition-all duration-300 ease-in whitespace-nowrap
+        @apply block font-sans font-bold text-sm xl:text-base text-black uppercase transition-all duration-300 ease-in whitespace-nowrap 
         &:hover
           color: rgba(0, 0, 0, 0.5)
     .current_page_item
@@ -74,16 +74,16 @@
   .mega-menu-content
     
     .mega-menu--wrapper
-      @apply border-r border-solid border-black h-full
+      @apply border-r border-solid border-black h-auto lg:h-full
 
     .mega-menu--menus
-      @apply flex flex-col grow justify-between px-0 md:px-0 lg:px-20 xl:px-40 pt-10 lg:pt-0
+      @apply flex flex-col grow justify-between px-0 md:px-0 lg:px-20 xl:px-40 pt-5 md:pt-10 lg:pt-0
       .mega-menu-top
         @apply border-b border-solid border-black px-5 lg:px-0 lg:border-b-0
         .menu-item
           @apply pb-5 lg:pb-8
           a
-            @apply block text-2xl lg:text-3xl text-black font-sans font-bold uppercase transition-all duration-300 ease-in whitespace-nowrap
+            @apply block text-xl md:text-2xl lg:text-3xl text-black font-sans font-bold uppercase transition-all duration-300 ease-in whitespace-nowrap
       .mega-menu-bottom
         @apply mt-10 lg:mt-20 px-5 lg:px-0 
         .menu-item
@@ -107,7 +107,9 @@
       .mega-link
         @apply block overflow-hidden lg:border-b lg:border-solid lg:border-black relative h-auto lg:h-1/2 
         &:first-of-type
-          @apply border-b-0 border-t
+          @apply border-b-0 border-t lg:border-t-0
+        &:nth-child(2)
+          @apply border-t-0 lg:border-t
         &-title-wrapper
           @apply z-10 relative bg-bg-color
         img
