@@ -33,10 +33,7 @@
 
 
 .navigation-main-content
-  #menu-main, #menu-main-fr,
-  #menu-szl, #menu-szl-fr,
-  #menu-hotel, #menu-hotel-fr,
-  #menu-jura, #menu-jura-fr
+  .menu-top-level
     flex-grow: 1
     //display: flex
     justify-content: center
@@ -73,24 +70,24 @@
 
 .mega-menu-navigation
   z-index: 180
+  height: calc( 100vh - 75px )
   .mega-menu-content
+    
     .mega-menu--wrapper
       @apply border-r border-solid border-black h-full
-      .site-root-title
-        @apply mb-20
+
     .mega-menu--menus
-      @apply flex flex-col grow justify-between px-5 md:px-10 lg:px-20 xl:px-40
-      #hotel-mega-menu,
-      #jura-mega-menu,
-      #szl-mega-menu
+      @apply flex flex-col grow justify-between px-0 md:px-0 lg:px-20 xl:px-40 pt-10 lg:pt-0
+      .mega-menu-top
+        @apply border-b border-solid border-black px-5 lg:px-0 lg:border-b-0
         .menu-item
           @apply pb-8
           a
             @apply block text-3xl text-black font-sans font-bold uppercase transition-all duration-300 ease-in whitespace-nowrap
-      #main-mega-menu
-        @apply mt-40
+      .mega-menu-bottom
+        @apply mt-10 lg:mt-20 px-5 lg:px-0 
         .menu-item
-          @apply pb-8
+          @apply pb-5 lg:pb-8
           a
             @apply block text-xl text-black font-sans font-bold uppercase transition-all duration-300 ease-in whitespace-nowrap opacity-100 hover:opacity-60
       #hotel-mega-menu
@@ -108,11 +105,13 @@
     .mega-links-xl
       @apply overflow-hidden
       .mega-link
-        @apply block h-1/2 overflow-hidden border-b border-solid border-black relative
+        @apply block overflow-hidden lg:border-b lg:border-solid lg:border-black relative h-auto lg:h-1/2 
+        &:first-of-type
+          @apply border-b-0
         &-title-wrapper
           @apply z-10 relative bg-bg-color
         img
-          @apply w-full h-auto object-cover absolute top-0 left-0 bottom-0 z-0
+          @apply w-full h-auto object-cover absolute top-0 left-0 bottom-0 z-0 hidden lg:block
         &--hotel
           .mega-link-icon
             @apply bg-main-red
@@ -136,10 +135,7 @@
 
 @media (max-width: 1200px)
   .navigation-main-content
-    #menu-main, #menu-main-fr,
-    #menu-szl, #menu-szl-fr,
-    #menu-hotel, #menu-hotel-fr,
-    #menu-jura, #menu-jura-fr
+    .main-menu-top-level
       @apply hidden
 
 @media (max-width: 1023px)
@@ -171,24 +167,15 @@
 
 
 .admin-bar
-  #header-main,
-  #hotel-mega-menu,
-  #jura-mega-menu,
-  #szl-mega-menu
+  .main-menu-top-level
     @apply top-[32px]
 
 @media (max-width: 782px)
   .admin-bar
-    #header-main,
-    #hotel-mega-menu,
-    #jura-mega-menu,
-    #szl-mega-menu
+    .main-menu-top-level
       @apply top-[46px]
 
 @media (max-width: 600px)
   .admin-bar
-    #header-main,
-    #hotel-mega-menu,
-    #jura-mega-menu,
-    #szl-mega-menu
+    .main-menu-top-level
       @apply top-0

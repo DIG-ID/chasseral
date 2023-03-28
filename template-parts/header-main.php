@@ -12,7 +12,7 @@
 				array(
 					'theme_location' => 'main',
 					'container'      => false,
-					'menu_class'     => 'hidden lg:flex',
+					'menu_class'     => 'main-menu-top-level hidden lg:flex',
 					'items_wrap'     => '<ul id="%1$s" class="%2$s menu-top-level">%3$s</ul>',
 					'fallback_cb'    => '__return_false',
 				),
