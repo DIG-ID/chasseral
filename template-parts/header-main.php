@@ -31,19 +31,6 @@
 		<div class="mega-menu-navigation absolute top-75 left-0 h-0 overflow-hidden w-full flex justify-center items-center bg-bg-color border-t border-solid border-black">
 			<div class="mega-menu-content w-full h-full grid grid-cols-1 lg:grid-cols-2">
 				<div class="col-auto flex-col justify-center border-r border-solid border-black px-20 hidden lg:flex">
-
-					<?php
-					wp_nav_menu(
-						array(
-							'theme_location' => 'main',
-							'container'      => false,
-							'menu_class'     => 'flex lg:hidden',
-							'items_wrap'     => '<ul id="%1$s" class="%2$s menu-top-level">%3$s</ul>',
-							'fallback_cb'    => '__return_false',
-						),
-					);
-					?>
-
 					<div class="see-webcam w-full flex items-center gap-5 mb-8">
 						<div class="grow">
 							<h3 class="text-xl font-bold text-black font-sans mb-3 uppercase"><?php the_field( 'widget_text_title', 'services-status' ); ?></h3>
@@ -76,6 +63,17 @@
 					do_action( 'mega_menu_link', 'szl', 'mega-menu' );
 					do_action( 'mega_menu_link', 'hotel_restaurant', 'mega-menu' );
 					do_action( 'mega_menu_link', 'top_of_jura', 'mega-menu' );
+					?>
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'main',
+							'container'      => false,
+							'menu_class'     => 'main-menu-mega-menu flex flex-col lg:hidden',
+							'items_wrap'     => '<ul id="%1$s" class="%2$s menu-top-level">%3$s</ul>',
+							'fallback_cb'    => '__return_false',
+						),
+					);
 					?>
 				</div>
 			</div>

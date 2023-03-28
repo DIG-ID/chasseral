@@ -102,7 +102,8 @@
       #szl-mega-menu
         .menu-item a
           @apply hover:text-main-green
-    .mega-links > .mega-link
+    .mega-links
+      > .mega-link
         margin-bottom: 40px
     .mega-links-xl
       @apply overflow-hidden
@@ -140,6 +141,30 @@
     #menu-hotel, #menu-hotel-fr,
     #menu-jura, #menu-jura-fr
       @apply hidden
+
+@media (max-width: 1023px)
+  .mega-menu-navigation
+    .mega-menu-content
+      .mega-links
+        @apply pt-10 justify-start
+        .mega-link
+          img
+            @apply px-5
+          .mega-link-title-wrapper
+            @apply px-5
+            h2
+              @apply text-base
+        .main-menu-mega-menu
+          @apply px-5
+          .menu-item
+            @apply mb-5
+            a
+              @apply block text-sm text-black font-sans font-bold uppercase transition-all duration-300 ease-in whitespace-nowrap opacity-100 hover:opacity-60
+            &:last-of-type
+              @apply mb-0
+
+
+
 
 @media (max-width: 767px)
   #header-main
