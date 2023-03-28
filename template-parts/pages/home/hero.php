@@ -12,7 +12,7 @@
 	endif;
 	?>
 	<div class="container mx-auto px-8 pt-72">
-		<h2 class="text-3xl lg:text-6xl font-bold uppercase text-bg-color drop-shadow"><?php the_field( 'hero_title' ); ?></h2>
+		<h2 class="text-3xl md:text-5xl lg:text-6xl font-bold uppercase text-bg-color drop-shadow"><?php the_field( 'hero_title' ); ?></h2>
 	</div>
 	<div class="sliding-text-wrapper w-full bg-bg-color border-t border-b border-solid border-black py-4 overflow-hidden">
 		<div class="sliding-text-content relative flex z-0">
