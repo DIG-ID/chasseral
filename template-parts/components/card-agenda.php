@@ -1,5 +1,5 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'card-agenda overflow-hidden mb-20' ); ?>>
-	<div class="card-agenda-wrapper grid lg:grid-cols-2">
+	<div class="card-agenda-wrapper grid grid-cols-1 lg:grid-cols-2">
 		<div class="card-agenda-image col-span-1 border border-solid border-black order-2 lg:order-1">
 			<?php
 			$image = get_the_post_thumbnail_url( get_the_ID(), 'agenda-thumbnail' );
@@ -11,13 +11,13 @@
 			endif;
 			?>
 		</div>
-		<div class="card-agenda-content col-span-1 flex flex-col justify-center items-start px-16 py-16 lg:py-0 border border-solid border-black lg:border-l-0 order-1 lg:order-2">
+		<div class="card-agenda-content col-span-1 flex flex-col justify-center items-start px-8 py-8 lg:px-16 lg:py-0 border border-solid border-black lg:border-l-0 order-1 lg:order-2">
 			<h3 class="title-normal font-bold lg:!mb-6"><?php the_title(); ?></h3>
 			<div class="agenda-metadata mb-8">
 				<p class="start-date text-sm text-black font-bold whitespace-nowrap flex mb-2">
 					<?php the_field( 'info_occasion' ); ?>
 				</p>
-				<div class="flex justify-between">
+				<div class="lg:flex justify-between">
 					<p class="start-date text-sm text-black font-bold whitespace-nowrap flex mr-10">
 						<?php esc_html_e( 'Ort:', 'chasseral' ); ?>
 						<span class="block font-sans text-sm text-text-grey font-normal whitespace-nowrap mb-2 ml-2"><?php echo esc_html( get_the_category_by_ID( get_field( 'info_location' ) ) ); ?></span>

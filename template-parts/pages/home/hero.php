@@ -1,4 +1,4 @@
-<section class="section-hero w-full h-[85vh] flex flex-col justify-between bg-center bg-fixed bg-no-repeat bg-cover relative z-10 overflow-hidden" style="background-image: url(<?php echo esc_url( wp_get_attachment_image_url( get_field( 'hero_image' ), 'full' ) ); ?>)">
+<section class="section-hero w-full h-[60vh] lg:h-[80vh] xl:h-[85vh] flex flex-col justify-between bg-center bg-fixed bg-no-repeat bg-cover relative z-10 overflow-hidden" style="background-image: url(<?php echo esc_url( wp_get_attachment_image_url( get_field( 'hero_image' ), 'full' ) ); ?>)">
 	<?php
 	if ( get_field( 'hero_use_video' ) ) :
 		$video = get_field( 'hero_video_url' );
@@ -11,7 +11,7 @@
 		endif;
 	endif;
 	?>
-	<div class="container mx-auto px-8 pt-72">
+	<div class="container mx-auto px-8 pt-32 md:pt-72">
 		<h2 class="text-3xl md:text-5xl lg:text-6xl font-bold uppercase text-bg-color drop-shadow"><?php the_field( 'hero_title' ); ?></h2>
 	</div>
 	<div class="sliding-text-wrapper w-full bg-bg-color border-t border-b border-solid border-black py-4 overflow-hidden">
