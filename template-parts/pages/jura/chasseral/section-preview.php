@@ -7,7 +7,7 @@
             if( $image ) :
                 echo wp_get_attachment_image( $image, $size );
             else : ?>
-            <img class="w-full" src="https://via.placeholder.com/530x575">
+            <img class="w-full h-full" src="https://via.placeholder.com/530x575">
         <?php endif; ?>
         </div>
         <div class="col-span-7 p-8 xl:p-20">
