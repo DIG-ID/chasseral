@@ -99,7 +99,7 @@ function chasseral_theme_mega_menu_link( $slug, $type ) {
 			$link_open   = '<a href="' . esc_url( get_permalink( $root_id ) ) . '" class="mega-link ' . $link_class . '">';
 			$link_open_b = '<a href="' . esc_url( get_permalink( $root_id ) ) . '" class="custom-logo-link">';
 			$link_close  = '</a>';
-			$link_title  = '<h2 class="font-bold text-xl lg:text-3xl font-sans text-black uppercase my-5 whitespace-nowrap text-ellipsis overflow-hidden">' . $root->post_title . '</h2>';
+			$link_title  = '<h2 class="font-bold text-xl lg:text-2xl font-sans text-black uppercase my-5 whitespace-nowrap text-ellipsis overflow-hidden">' . $root->post_title . '</h2>';
 			if ( has_post_thumbnail( $root_id ) ) :
 				$link_img = get_the_post_thumbnail_url( $root_id, 'mega-link-thumbnail' );
 				$link_img = '<img src="' . $link_img . '" alt="' . get_the_post_thumbnail_caption( $root_id ) . '">';
