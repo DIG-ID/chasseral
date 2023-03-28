@@ -25,7 +25,7 @@
         <div class="perfektfur-col col-span-1 lg:col-span-4 p-8 lg:p-0">
             <p class="title-normal"><?php the_title(); ?></p>
             <p class="text-body !mb-8 xl:!mb-14 max-w-sm"><?php echo get_the_excerpt(); ?></p>
-            <a href="<?php the_permalink(); ?>" class="btn-general btn-general--jura"><?php echo esc_html( 'Mehr erfahren', 'chasseral' ) ?></a>
+            <a href="<?php the_permalink(); ?>" class="btn-general btn-general--jura"><?php echo esc_html_e( 'Mehr erfahren', 'chasseral' ) ?></a>
         </div>
         <div class="perfektfur-col col-span-1"></div>
     </article>

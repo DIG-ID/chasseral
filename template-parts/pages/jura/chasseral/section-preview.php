@@ -13,7 +13,7 @@
         <div class="col-span-7 p-8 xl:p-20">
             <h2 class="title-normal"><?php the_field('section_preview_title'); ?></h2>
             <p class="mb-8 md:mb-16 xl:mb-32 text-black text-sm font-normal leading-8"><?php the_field('section_preview_description'); ?></p>
-            <a href="<?php the_field('section_preview_button_link'); ?>" class="btn-general btn-general--jura is-checked"><?php echo esc_html( 'Mehr erfahren', 'chasseral' ) ?></a>
+            <a href="<?php the_field('section_preview_button_link'); ?>" class="btn-general btn-general--jura is-checked"><?php echo esc_html_e( 'Mehr erfahren', 'chasseral' ) ?></a>
         </div>
     </div>
 </section>
