@@ -12,7 +12,7 @@
   .service-status
     @apply w-full 
     .service-status-day
-      @apply w-full border-0 mb-0 pb-0 flex justify-between
+      @apply w-full border-0 mb-0 pb-0 flex justify-between items-center
       .service-status-signal
         @apply ml-1 text-xs
 
@@ -22,3 +22,30 @@
     color: #000
     svg
       stroke: #000
+
+@media (max-width: 1600px)
+  .mega-menu-content
+    .service-status
+      .service-status-day
+        .service-status-signal-text
+          @apply hidden
+
+@media (max-width: 1530px)
+  .navigation-widget
+    .service-status
+      .service-status-day
+        .service-status-signal-text
+          @apply hidden
+
+@media (max-width: 1130px)
+  .navigation-widget
+    .service-status
+      .service-status-day
+        .service-wrapper
+          @apply hidden
+      .services-status-text
+        @apply block
+
+@media (max-width: 767px)
+  .navigation-widget
+    border-right: none

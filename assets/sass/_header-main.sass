@@ -1,7 +1,7 @@
 #header-main
   z-index: 999
   .custom-logo-link
-    @apply flex justify-center items-center w-[300px] border-r border-solid border-black
+    @apply flex justify-center items-center pl-5 border-r border-solid border-black md:w-[300px] md:pl-0
     img
       @apply max-w-[175px] object-cover
 
@@ -132,7 +132,16 @@
                 fill: #fff
 
 //Responsive
-@media (max-width: 1024px)
+
+@media (max-width: 1200px)
+  .navigation-main-content
+    #menu-main, #menu-main-fr,
+    #menu-szl, #menu-szl-fr,
+    #menu-hotel, #menu-hotel-fr,
+    #menu-jura, #menu-jura-fr
+      @apply hidden
+
+@media (max-width: 767px)
   #header-main
     .custom-logo-link
       border-right: none

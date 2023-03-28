@@ -287,7 +287,7 @@ function chasseral_theme_see_all_posts( $slug = false, $name ) {
 	endif;
 	if ( $link ) :
 		?>
-			<a class="btn__arrow-alle" href="<?php echo esc_url( $link ); ?>"><?php esc_html_e( "Alle {$name}", 'chasseral' ); ?>
+			<a class="btn__arrow-alle" href="<?php echo esc_url( $link ); ?>"><?php _e( "Alle {$name}", 'chasseral' ); ?>
 				<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M6 12L4.93125 10.95L9.13125 6.75H0V5.25H9.13125L4.93125 1.05L6 0L12 6L6 12Z" fill="black"/>
 				</svg>

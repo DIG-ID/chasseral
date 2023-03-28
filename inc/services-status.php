@@ -28,9 +28,9 @@ class ChasseralThemeServicesStatusWidget {
 	 */
 	private function setup_defaults() {
 		$this->status = array(
-			'open'      => '<p class="service-status-signal text-sm flex items-center ml-3"><span class="service-status-signal-icon block rounded-full w-[15px] h-[15px] bg-[#1FDD00] mr-1"></span>(' . esc_html__( 'Offen', 'chasseral' ) . ')</p>',
-			'closed'    => '<p class="service-status-signal text-sm flex items-center ml-3"><span class="service-status-signal-icon block rounded-full w-[15px] h-[15px] bg-[#FF0000] mr-1"></span>(' . esc_html__( 'Geschlossen', 'chasseral' ) . ')</p>',
-			'undefined' => '<p class="service-status-signal text-sm flex items-center ml-3"><span class="service-status-signal-icon block rounded-full w-[15px] h-[15px] bg-[#B9B9B9] mr-1"></span>(' . esc_html__( 'Unbestimmt', 'chasseral' ) . ')</p>',
+			'open'      => '<p class="service-status-signal text-sm flex items-center ml-3"><span class="service-status-signal-icon block rounded-full w-[15px] h-[15px] bg-[#1FDD00] mr-1"></span><span class="service-status-signal-text">(' . esc_html__( 'Offen', 'chasseral' ) . ')</span></p>',
+			'closed'    => '<p class="service-status-signal text-sm flex items-center ml-3"><span class="service-status-signal-icon block rounded-full w-[15px] h-[15px] bg-[#FF0000] mr-1"></span><span class="service-status-signal-text">(' . esc_html__( 'Geschlossen', 'chasseral' ) . ')</span></p>',
+			'undefined' => '<p class="service-status-signal text-sm flex items-center ml-3"><span class="service-status-signal-icon block rounded-full w-[15px] h-[15px] bg-[#B9B9B9] mr-1"></span><span class="service-status-signal-text">(' . esc_html__( 'Unbestimmt', 'chasseral' ) . ')</span></p>',
 		);
 		$this->day_names = array(
 			'monday'    => esc_html__( 'Montag', 'chasseral' ),
@@ -143,6 +143,7 @@ class ChasseralThemeServicesStatusWidget {
 		$service_name_restaurant    = $this->services_names['restaurant'];
 		$service_name_hotel         = $this->services_names['hotel'];
 		$open_widget_btn            = '<button id="services-status-toggle" class="service-status-toggle flex items-center justify-center"><span></span><span></span></button>';
+		$only_text                  = '<p class="services-status-text hidden fonts-sans font-semibold text-sm uppercase">' . esc_html__( 'Betriebsstatus', 'chasseral' ) . '</p>';
 
 		if ( $this->size ) :
 			$one_day           = $this->get_current_day();
@@ -152,6 +153,7 @@ class ChasseralThemeServicesStatusWidget {
 
 			$output .= $widget_wrapper_open;
 			$output .= $item_wrapper_open;
+			$output .= $only_text;
 			$output .= $service_wrapper_open . $service_name_wrapper_open . $service_name_road . $service_name_wrapper_close . $road_status . $service_wrapper_close;
 			$output .= $service_wrapper_open . $service_name_wrapper_open . $service_name_restaurant . $service_name_wrapper_close . $restaurant_status . $service_wrapper_close;
 			$output .= $service_wrapper_open . $service_name_wrapper_open . $service_name_hotel . $service_name_wrapper_close . $hotel_status . $service_wrapper_close;
