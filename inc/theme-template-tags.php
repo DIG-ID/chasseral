@@ -99,7 +99,7 @@ function chasseral_theme_mega_menu_link( $slug, $type ) {
 			$link_open   = '<a href="' . esc_url( get_permalink( $root_id ) ) . '" class="mega-link ' . $link_class . '">';
 			$link_open_b = '<a href="' . esc_url( get_permalink( $root_id ) ) . '" class="custom-logo-link">';
 			$link_close  = '</a>';
-			$link_title  = '<h2 class="font-bold text-xl lg:text-3xl font-sans text-black uppercase my-5 whitespace-nowrap text-ellipsis overflow-hidden w-[300px]">' . $root->post_title . '</h2>';
+			$link_title  = '<h2 class="font-bold text-xl lg:text-3xl font-sans text-black uppercase my-5 whitespace-nowrap text-ellipsis overflow-hidden">' . $root->post_title . '</h2>';
 			if ( has_post_thumbnail( $root_id ) ) :
 				$link_img = get_the_post_thumbnail_url( $root_id, 'mega-link-thumbnail' );
 				$link_img = '<img src="' . $link_img . '" alt="' . get_the_post_thumbnail_caption( $root_id ) . '">';
@@ -321,7 +321,7 @@ function chasseral_theme_notification() {
 			<div class="notification-icon border-r border-solid border-black flex justify-center items-center px-8">
 				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none"><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.714" d="M16 11.376v6.926M16 26.383a1.154 1.154 0 1 0 0-2.309 1.154 1.154 0 0 0 0 2.309Z"/><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.714" d="M18.055 2.256a2.308 2.308 0 0 0-4.11 0L1.247 27.652A2.309 2.309 0 0 0 3.302 31h25.396a2.31 2.31 0 0 0 2.055-3.348L18.055 2.256Z"/></svg>
 			</div>
-			<p class="notification-description p-5"><?php the_field( 'notification_description', 'services-status' ); ?></p>
+			<p class="notification-description text-xs lg:text-sm p-5"><?php the_field( 'notification_description', 'services-status' ); ?></p>
 		</div>
 		<?php
 	endif;
