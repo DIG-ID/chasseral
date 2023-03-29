@@ -422,6 +422,9 @@ require get_template_directory() . '/inc/services-status.php';
 // The weather API.
 require get_template_directory() . '/inc/open-meteo.php';
 
+// The theme admin settings
+require get_template_directory() . '/inc/theme-admin-settings.php';
+
 
 
 function console_log( $output, $with_script_tags = true ) {
