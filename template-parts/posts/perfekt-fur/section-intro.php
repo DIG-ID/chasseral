@@ -14,8 +14,14 @@
 			<div class="mb-8 lg:mb-20 w-full">
 				<h2 class="title-big"><?php the_title(); ?></h2>
 			</div>
-			<div>
-				<p class="text-body lg:columns-2 lg:gap-40 lg:mr-[5%] xl:mr-[20%]"><?php the_field( 'general_information' ); ?></p>
+			<div class="grid lg:grid-cols-2 lg:gap-20 xl:gap-40 md:mr-[3%] lg:mr-[5%] xl:mr-[20%]">
+				<div class="col-span-1">
+					<p class="text-body"><?php the_field( 'general_information' ); ?></p>
+				</div>
+				<div class="col-span-1">
+					<p class="text-body"><?php the_field( 'general_information_right' ); ?></p>
+				</div>
+				
 			</div>
 			<?php do_action( 'get_archive_page', 'archives_pages_perfekt_fur' ); ?>
 	</div>
