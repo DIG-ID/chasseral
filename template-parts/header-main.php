@@ -1,6 +1,6 @@
 <header id="header-main" class="header-main w-full fixed top-0 box-border bg-bg-color border-b border-black border-solid" itemscope itemtype="http://schema.org/WebSite">
 	<nav class="navigation-main" role="navigation" aria-label="<?php esc_attr_e( 'Main navigation', 'chasseral' ); ?>">
-		<div class="navigation-main-content w-full h-[75px] flex items-stretch justify-between">
+		<div class="navigation-main-content">
 			<div class="w-1/2 md:border-r border-solid border-black flex">
 				<?php
 				has_custom_logo() ? the_custom_logo() : '';
@@ -12,15 +12,15 @@
 				array(
 					'theme_location' => 'main',
 					'container'      => false,
-					'menu_class'     => 'main-menu-top-level hidden 2xl:flex',
+					'menu_class'     => 'main-menu-top-level',
 					'items_wrap'     => '<ul id="%1$s" class="%2$s menu-top-level">%3$s</ul>',
 					'fallback_cb'    => '__return_false',
 				),
 			);
 			?>
-			<div class="navigation-buttons flex">
+			<div class="navigation-buttons">
 				<?php do_action( 'wpml_add_language_selector' ); ?>
-				<button class="mega-menu-toggle relative box-border m-0 transition-all duration-300 ease-in-out cursor-pointer flex flex-col justify-center items-center">
+				<button class="mega-menu-toggle">
 					<span class="bar"></span>
 					<span class="bar"></span>
 					<span class="bar"></span>
