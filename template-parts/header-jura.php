@@ -12,7 +12,7 @@
 				array(
 					'theme_location' => 'jura',
 					'container'      => false,
-					'menu_class'     => 'main-menu-top-level hidden lg:flex',
+					'menu_class'     => 'main-menu-top-level hidden 2xl:flex',
 					'items_wrap'     => '<ul id="%1$s" class="%2$s menu-top-level">%3$s</ul>',
 					'fallback_cb'    => '__return_false',
 				),
@@ -28,8 +28,8 @@
 			</div>
 		</div>
 
-		<div class="mega-menu-navigation absolute top-75 left-0 h-0 overflow-scroll w-full flex justify-center items-center bg-bg-color border-t border-solid border-black">
-			<div class="mega-menu-content w-full h-full flex flex-col justify-between lg:grid grid-cols-1 lg:grid-cols-2">
+		<div class="mega-menu-navigation">
+			<div class="mega-menu-content">
 				<div class="mega-menu--wrapper">
 					<div class="site-root-title hidden lg:flex items-center h-[75px] border-b border-solid border-black overflow-hidden px-5 md:px-10 lg:px-20 xl:px-40">
 						<p class="text-3xl font-bold uppercase bold whitespace-nowrap"><?php esc_html_e( 'Top of jura', 'chasseral' ); ?></p>

@@ -68,105 +68,17 @@
     .current_page_item a
       @apply text-main-blue
 
-.mega-menu-navigation
-  z-index: 180
-
-  .mega-menu-content
-    
-    .mega-menu--wrapper
-      @apply border-r border-solid border-black h-auto lg:h-full
-
-    .mega-menu--menus
-      @apply flex flex-col grow justify-between px-0 md:px-0 lg:px-20 xl:px-40 pt-5 md:pt-10
-      .mega-menu-top
-        @apply border-b border-solid border-black px-5 lg:px-0 lg:border-b-0 pb-2 lg:pb-0
-        .menu-item
-          @apply pb-2 lg:pb-4
-          a
-            @apply block text-xl lg:text-2xl text-black font-sans font-bold uppercase transition-all duration-300 ease-in whitespace-nowrap
-      .mega-menu-bottom
-        @apply mt-5 lg:mt-10 px-5 lg:px-0 
-        .menu-item
-          @apply pb-2 lg:pb-4
-          a
-            @apply block text-sm lg:text-xl text-black font-sans font-bold uppercase transition-all duration-300 ease-in whitespace-nowrap opacity-100 hover:opacity-60
-      #hotel-mega-menu
-        .menu-item a
-          @apply hover:text-main-red
-      #jura-mega-menu
-        .menu-item a
-          @apply hover:text-main-blue
-      #szl-mega-menu
-        .menu-item a
-          @apply hover:text-main-green
-    .mega-links
-      > .mega-link
-        margin-bottom: 40px
-    .mega-links-xl
-      @apply overflow-hidden
-      .mega-link
-        @apply block overflow-hidden lg:border-b lg:border-solid lg:border-black relative h-auto lg:h-1/2 
-        &:first-of-type
-          @apply border-b-0 border-t lg:border-t-0
-        &:nth-child(2)
-          @apply border-t-0 lg:border-t
-        &-title-wrapper
-          @apply z-10 relative bg-bg-color
-        img
-          @apply w-full h-full object-cover absolute top-0 left-0 bottom-0 z-0 hidden lg:block
-        &--hotel
-          .mega-link-icon
-            @apply bg-main-red
-        &--top-of-jura
-          .mega-link-icon
-            @apply bg-main-blue
-        &--szl
-          .mega-link-icon
-            @apply bg-main-green
-        .mega-link-title-wrapper
-          @apply block flex justify-between items-stretch h-[75px] pl-5 border-b border-solid border-black
-          h2
-            @apply self-center m-0
-          .mega-link-icon
-            @apply w-[75px] h-full flex justify-center items-center border-l border-solid border-black
-            svg
-              path
-                fill: #fff
 
 //Responsive
-
 @media (max-width: 1200px)
   .navigation-main-content
     .main-menu-top-level
       @apply hidden
 
-@media (max-width: 1023px)
-  .mega-menu-navigation
-    .mega-menu-content
-      .mega-links
-        @apply pt-10 justify-start
-        .mega-link
-          img
-            @apply px-5
-          .mega-link-title-wrapper
-            @apply px-5
-            h2
-              @apply text-base
-        .mega-menu-bottom
-          @apply px-5
-          .menu-item
-            @apply mb-2 lg:mb-5
-            a
-              @apply block text-sm text-black font-sans font-bold uppercase transition-all duration-300 ease-in whitespace-nowrap opacity-100 hover:opacity-60
-            &:last-of-type
-              @apply mb-0
-
-
 @media (max-width: 767px)
   #header-main
     .custom-logo-link
       border-right: none
-
 
 .admin-bar
   #header-main

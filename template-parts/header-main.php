@@ -12,7 +12,7 @@
 				array(
 					'theme_location' => 'main',
 					'container'      => false,
-					'menu_class'     => 'main-menu-top-level hidden lg:flex',
+					'menu_class'     => 'main-menu-top-level hidden 2xl:flex',
 					'items_wrap'     => '<ul id="%1$s" class="%2$s menu-top-level">%3$s</ul>',
 					'fallback_cb'    => '__return_false',
 				),
@@ -28,9 +28,9 @@
 			</div>
 		</div>
 
-		<div class="mega-menu-navigation absolute top-75 left-0 h-0 overflow-scroll w-full flex justify-center items-center bg-bg-color border-t border-solid border-black">
-			<div class="mega-menu-content w-full h-full grid grid-cols-1 lg:grid-cols-2">
-				<div class="col-auto flex-col justify-center border-r border-solid border-black px-20 hidden lg:flex">
+		<div class="mega-menu-navigation">
+			<div class="mega-menu-content">
+				<div class="col-auto flex-col justify-center border-r border-solid border-black px-20 hidden 2xl:flex">
 					<div class="see-webcam w-full items-center gap-5 mb-8 hidden xl:flex">
 						<div class="grow">
 							<h3 class="text-xl font-bold text-black font-sans mb-3 uppercase"><?php the_field( 'widget_text_title', 'services-status' ); ?></h3>
@@ -56,6 +56,25 @@
 					<?php do_action( 'service_status_widget', false, false ); ?>
 					<?php do_action( 'notification' ); ?>
 				</div>
+				<div class="mega-menu--wrapper 2xl:hidden">
+					<div class="site-root-title hidden lg:flex items-center h-[75px] border-b border-solid border-black overflow-hidden px-5 md:px-10 lg:px-20 xl:px-40">
+						<p class="lg:text-2xl xl:text-3xl font-bold uppercase bold whitespace-nowrap"><?php esc_html_e( 'Chasseral', 'chasseral' ); ?></p>
+					</div>
+					<div class="mega-menu--menus">
+						<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'main',
+								'container'      => false,
+								'menu_class'     => 'mega-menu-top flex flex-col 2xl:hidden',
+								'items_wrap'     => '<ul id="%1$s" class="%2$s menu-top-level">%3$s</ul>',
+								'fallback_cb'    => '__return_false',
+							),
+						);
+						?>
+					</div>
+				</div>
+
 				<div class="mega-links col-auto flex flex-col justify-center px-0 md:px-5 lg:px-10 xl:px-24">
 					<p class="mega-menu-title uppercase font-bold mb-5 hidden lg:block"><?php esc_html_e( 'Willkommen auf dem Chasseral', 'chasseral' ); ?></p>
 					<p class="mega-menu-description mb-10 hidden lg:block"><?php esc_html_e( 'Erleben Sie die Vielfalt des Jura.', 'chasseral' ); ?></p>
@@ -63,17 +82,6 @@
 					do_action( 'mega_menu_link', 'szl', 'mega-menu' );
 					do_action( 'mega_menu_link', 'hotel_restaurant', 'mega-menu' );
 					do_action( 'mega_menu_link', 'top_of_jura', 'mega-menu' );
-					?>
-					<?php
-					wp_nav_menu(
-						array(
-							'theme_location' => 'main',
-							'container'      => false,
-							'menu_class'     => 'mega-menu-bottom flex flex-col lg:hidden',
-							'items_wrap'     => '<ul id="%1$s" class="%2$s menu-top-level">%3$s</ul>',
-							'fallback_cb'    => '__return_false',
-						),
-					);
 					?>
 				</div>
 			</div>
