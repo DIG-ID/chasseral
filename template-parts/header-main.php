@@ -75,9 +75,9 @@
 					</div>
 				</div>
 
-				<div class="mega-links col-auto flex flex-col justify-start 2xl:justify-center px-0 lg:px-10 xl:px-24">
-					<p class="mega-menu-title uppercase font-bold mb-5 hidden lg:block"><?php esc_html_e( 'Willkommen auf dem Chasseral', 'chasseral' ); ?></p>
-					<p class="mega-menu-description mb-10 hidden lg:block"><?php esc_html_e( 'Erleben Sie die Vielfalt des Jura.', 'chasseral' ); ?></p>
+				<div class="mega-links col-auto flex flex-col justify-center px-0 lg:px-10 xl:px-24">
+					<p class="mega-menu-title uppercase font-bold mb-5 hidden xl:block"><?php esc_html_e( 'Willkommen auf dem Chasseral', 'chasseral' ); ?></p>
+					<p class="mega-menu-description mb-10 hidden xl:block"><?php esc_html_e( 'Erleben Sie die Vielfalt des Jura.', 'chasseral' ); ?></p>
 					<?php
 					do_action( 'mega_menu_link', 'szl', 'mega-menu' );
 					do_action( 'mega_menu_link', 'hotel_restaurant', 'mega-menu' );
