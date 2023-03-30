@@ -4,7 +4,7 @@
 			<div class="w-1/2 md:border-r border-solid border-black flex">
 				<?php
 				has_custom_logo() ? the_custom_logo() : '';
-				get_template_part( 'template-parts/navigation', 'widget' );
+				get_template_part( 'template-parts/modules/widget', 'navigation' );
 				?>
 			</div>
 			<?php
@@ -28,7 +28,7 @@
 			</div>
 		</div>
 
-		<div class="mega-menu-navigation absolute top-75 left-0 h-0 overflow-hidden w-full flex justify-center items-center bg-bg-color border-t border-solid border-black">
+		<div class="mega-menu-navigation absolute top-75 left-0 h-0 overflow-scroll w-full flex justify-center items-center bg-bg-color border-t border-solid border-black">
 			<div class="mega-menu-content w-full h-full grid grid-cols-1 lg:grid-cols-2">
 				<div class="col-auto flex-col justify-center border-r border-solid border-black px-20 hidden lg:flex">
 					<div class="see-webcam w-full items-center gap-5 mb-8 hidden xl:flex">
@@ -53,7 +53,7 @@
 						endif;
 						?>
 					</div>
-					<?php do_action( 'service_status_widget' ); ?>
+					<?php do_action( 'service_status_widget', false, false ); ?>
 					<?php do_action( 'notification' ); ?>
 				</div>
 				<div class="mega-links col-auto flex flex-col justify-center px-0 md:px-5 lg:px-10 xl:px-24">
@@ -80,3 +80,5 @@
 		</div>
 	</nav>
 </header>
+<?php get_template_part( 'template-parts/modules/widget', 'mobile' ); ?>
+<?php get_template_part( 'template-parts/modules/services-status', 'popup' ); ?>

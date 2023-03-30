@@ -7,7 +7,6 @@
         &:last-of-type
           @apply absolute rotate-90
 
-
 .navigation-widget
   .service-status
     @apply w-full 
@@ -22,6 +21,58 @@
     color: #000
     svg
       stroke: #000
+
+#widget-popup
+  @apply p-10 md:p-20
+  .see-webcam
+    @apply flex-col items-start justify-start md:flex-row
+    .btn-general
+      @apply justify-center
+  .service-status
+    .service-status-day
+      @apply flex md:grid justify-between
+      .service-wrapper
+        .service-name
+          @apply text-xs sm:text-sm
+        .service-status-signal
+          &-icon
+          &-text
+            @apply hidden md:inline
+
+@keyframes translateinfinite
+  100%
+    transform: translateX( calc(-130px * 3) )
+
+
+@keyframes translateYinfinite
+  100%
+    transform: translateY( 0 )
+
+.mobile-widget
+ .service-status
+  .service-status-day
+    @apply mb-0 pb-0 flex border-b-0 items-stretch relative justify-between
+    .highway-barrier
+      @apply overflow-hidden relative h-[36px] border-r border-solid border-black grow
+      .highway-lane
+        @apply flex justify-center items-center overflow-hidden h-full
+        width: calc( 120px * 4 )
+        
+        .service-wrapper
+          @apply w-[120px] min-w-[120px] flex-1 justify-center
+          animation: translateinfinite 20s linear infinite
+          .service-name
+            @apply whitespace-nowrap
+          .service-status-signal
+            &-text
+              @apply hidden
+
+    .services-status-text
+      @apply block whitespace-nowrap border-r px-2 py-2
+
+    .service-status-toggle-wrapper
+      @apply w-[75px] max-w-[75px] min-w-[75px] flex items-center justify-center
+
 
 @media (max-width: 1600px)
   .mega-menu-content

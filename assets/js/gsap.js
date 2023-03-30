@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       /* menu open/close */
       const toggleBtn = document.querySelector('.mega-menu-toggle');
-      const widgetToggler = document.querySelector('.service-status-toggle');
+
       let togglerTl = gsap.timeline({
         defaults: {
           duration: 0.6,
@@ -60,16 +60,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       togglerTl.paused(true);
 
-      widgetToggler.addEventListener( 'click', (e) => {
-        document.body.classList.toggle('mega-menu-open');
-        if (togglerTl.paused()) {
-          togglerTl.play();
-        } else if (togglerTl.reversed()) {
-          togglerTl.restart().timeScale(1);
-        } else {
-          togglerTl.timeScale(2).reverse();
-        }
-      });
 
       toggleBtn.addEventListener( 'click', (e) => {
         document.body.classList.toggle('mega-menu-open');

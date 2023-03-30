@@ -11,10 +11,14 @@ class ChasseralThemeServicesStatusWidget {
 	private $services_names;
 	private $current_day;
 	private $size;
+	private $mob;
 
-	public function __construct( $size = false ) {
+	public function __construct( $size, $mob ) {
 		if ( $size ) :
 			$this->size = true;
+		endif;
+		if ( $mob ) :
+			$this->mob = true;
 		endif;
 		$this->data = get_field( 'service_status', 'services-status' );
 		$this->change_order();
@@ -142,7 +146,7 @@ class ChasseralThemeServicesStatusWidget {
 		$service_name_road          = $this->services_names['roads'];
 		$service_name_restaurant    = $this->services_names['restaurant'];
 		$service_name_hotel         = $this->services_names['hotel'];
-		$open_widget_btn            = '<button id="services-status-toggle" class="service-status-toggle flex items-center justify-center"><span></span><span></span></button>';
+		$open_widget_btn            = '<button id="services-status-toggle" class="service-status-toggle flex items-center justify-center" data-fancybox data-src="#widget-popup"><span></span><span></span></button>';
 		$only_text                  = '<p class="services-status-text hidden fonts-sans font-semibold text-sm uppercase">' . esc_html__( 'Betriebsstatus', 'chasseral' ) . '</p>';
 
 		if ( $this->size ) :
@@ -158,6 +162,29 @@ class ChasseralThemeServicesStatusWidget {
 			$output .= $service_wrapper_open . $service_name_wrapper_open . $service_name_restaurant . $service_name_wrapper_close . $restaurant_status . $service_wrapper_close;
 			$output .= $service_wrapper_open . $service_name_wrapper_open . $service_name_hotel . $service_name_wrapper_close . $hotel_status . $service_wrapper_close;
 			$output .= $open_widget_btn;
+			$output .= $item_wrapper_close;
+			$output .= $widget_wrapper_close;
+		elseif ( $this->mob ) :
+			$one_day           = $this->get_current_day();
+			$road_status       = $this->get_service_status( $one_day['road_status'] );
+			$restaurant_status = $this->get_service_status( $one_day['restaurant_status'] );
+			$hotel_status      = $this->get_service_status( $one_day['hotel_status'] );
+
+			$output .= $widget_wrapper_open;
+			$output .= $item_wrapper_open;
+			$output .= $only_text;
+			$output .= '<span class="highway-barrier"><span class="services-list highway-lane">';
+			$output .= $service_wrapper_open . $service_name_wrapper_open . $service_name_road . $service_name_wrapper_close . $road_status . $service_wrapper_close;
+			$output .= $service_wrapper_open . $service_name_wrapper_open . $service_name_restaurant . $service_name_wrapper_close . $restaurant_status . $service_wrapper_close;
+			$output .= $service_wrapper_open . $service_name_wrapper_open . $service_name_hotel . $service_name_wrapper_close . $hotel_status . $service_wrapper_close;
+			$output .= $service_wrapper_open . $service_name_wrapper_open . $service_name_road . $service_name_wrapper_close . $road_status . $service_wrapper_close;
+			$output .= $service_wrapper_open . $service_name_wrapper_open . $service_name_restaurant . $service_name_wrapper_close . $restaurant_status . $service_wrapper_close;
+			$output .= $service_wrapper_open . $service_name_wrapper_open . $service_name_hotel . $service_name_wrapper_close . $hotel_status . $service_wrapper_close;
+			$output .= $service_wrapper_open . $service_name_wrapper_open . $service_name_road . $service_name_wrapper_close . $road_status . $service_wrapper_close;
+			$output .= $service_wrapper_open . $service_name_wrapper_open . $service_name_restaurant . $service_name_wrapper_close . $restaurant_status . $service_wrapper_close;
+			$output .= $service_wrapper_open . $service_name_wrapper_open . $service_name_hotel . $service_name_wrapper_close . $hotel_status . $service_wrapper_close;
+			$output .= '</span></span>';
+			$output .= '<span class="service-status-toggle-wrapper">' . $open_widget_btn . '</span>';
 			$output .= $item_wrapper_close;
 			$output .= $widget_wrapper_close;
 		else :
@@ -193,8 +220,8 @@ class ChasseralThemeServicesStatusWidget {
 /**
  * The services status widget action.
  */
-function chasseral_theme_service_status_widget( $size ) {
-	$ssw = new ChasseralThemeServicesStatusWidget( $size );
+function chasseral_theme_service_status_widget( $size = false, $mob = false ) {
+	$ssw = new ChasseralThemeServicesStatusWidget( $size, $mob );
 	$ssw->widget_render();
 }
-add_action( 'service_status_widget', 'chasseral_theme_service_status_widget', 10, 1 );
+add_action( 'service_status_widget', 'chasseral_theme_service_status_widget', 10, 2 );
