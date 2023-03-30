@@ -11,7 +11,7 @@
 		?>
 		</div>
 		<div class="p-8 lg:pt-20 lg:pb-20 container max-w-7xl mx-auto">
-			<div class="mb-8 lg:mb-20 w-full">
+			<div class="mb-8 lg:mb-20 w-full md:w-3/4 lg:w-full xl:w-3/4">
 				<h2 class="title-big"><?php the_title(); ?></h2>
 			</div>
 			<div class="grid lg:grid-cols-2 lg:gap-20 xl:gap-40 md:mr-[3%] lg:mr-[5%] xl:mr-[20%]">
