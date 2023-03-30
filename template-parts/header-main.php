@@ -57,7 +57,7 @@
 					<?php do_action( 'notification' ); ?>
 				</div>
 				<div class="mega-menu--wrapper 2xl:hidden">
-					<div class="site-root-title hidden lg:flex items-center h-[75px] border-b border-solid border-black overflow-hidden px-5 md:px-10 lg:px-20 xl:px-40">
+					<div class="site-root-title">
 						<p class="lg:text-2xl xl:text-3xl font-bold uppercase bold whitespace-nowrap"><?php esc_html_e( 'Chasseral', 'chasseral' ); ?></p>
 					</div>
 					<div class="mega-menu--menus">

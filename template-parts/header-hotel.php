@@ -31,7 +31,7 @@
 		<div class="mega-menu-navigation">
 			<div class="mega-menu-content">
 				<div class="mega-menu--wrapper">
-					<div class="site-root-title hidden lg:flex items-center h-[75px] border-b border-solid border-black overflow-hidden px-5 md:px-10 lg:px-20 xl:px-40">
+					<div class="site-root-title">
 						<p class="text-3xl font-bold uppercase bold whitespace-nowrap"><?php esc_html_e( 'Hotel & Restaurant', 'chasseral' ); ?></p>
 					</div>
 					<div class="mega-menu--menus">
