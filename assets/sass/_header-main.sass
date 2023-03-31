@@ -33,7 +33,7 @@
 
 
   .navigation-main-content
-    @apply w-full h-[75px] flex items-stretch justify-between overflow-hidden
+    @apply w-full h-[75px] flex items-stretch justify-between
     .main-menu-top-level
       @apply hidden 2xl:flex items-center justify-center grow
       .menu-item
@@ -87,13 +87,19 @@
 .admin-bar
   #header-main
     @apply top-[32px]
+  #breadcrumbs
+    @apply top-[107px]
 
 @media (max-width: 782px)
   .admin-bar
     #header-main
       @apply top-[46px]
+    #breadcrumbs
+      @apply top-[121px]
 
 @media (max-width: 600px)
   .admin-bar
     #header-main
       @apply top-0
+    #breadcrumbs
+      @apply top-[75px]
