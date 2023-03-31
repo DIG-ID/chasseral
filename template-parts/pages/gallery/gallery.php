@@ -18,7 +18,7 @@ endif;
 	if ( $gallery ) :
 		echo '<div class="swiper '. $template_class . '-swiper"><span></span><div class="swiper-wrapper">';
 		foreach ( $gallery as $image ) :
-			$img_url = $image['url'];
+			$img_url = $image['sizes']['gallery-full'];
 			echo '<div class="swiper-slide">';
 			echo '<a href="' . esc_url( $img_url ) . '" data-fancybox="gallery-' . $template_class . '" data-caption="' . esc_html( $image['caption'] ) . '" ><img class="w-full h-full xl:h-auto object-cover max-h-[250px] sm:max-h-[350px] md:max-h-[500px] lg:max-h-[600px] xl:max-h-[700px]" src="' . esc_url( $img_url ) . '"></a>';
 			echo '</div>';

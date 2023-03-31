@@ -29,6 +29,8 @@ function chasseral_theme_setup() {
 
 	set_post_thumbnail_size( 500, 350, 'center', 'center' );
 
+	add_image_size( 'gallery-full', 1024, false );
+
 	add_image_size( 'mega-link-thumbnail', 1000, 500, array( 'center', 'center' ) );
 
 	add_image_size( 'sub-page-thumbnail', 700, 700, array( 'center', 'center' ) );
