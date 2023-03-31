@@ -1,4 +1,4 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'overflow-hidden border-t border-solid border-black py-20' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'overflow-hidden py-20' ); ?>>
 	<div class="container mx-auto px-8 grid grid-cols-1 lg:grid-cols-12">
 		<div class="post-content-wrapper col-span-1 lg:col-span-10">
 			<h1 class="title-big !mb-8"><?php the_title(); ?></h1>

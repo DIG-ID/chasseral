@@ -1,4 +1,4 @@
-<section class="section-our-vision grid lg:grid-cols-2 border-t border-solid border-black xl:h-[1000px] overflow-hidden">
+<section class="section-our-vision grid lg:grid-cols-2 xl:h-[1000px] overflow-hidden">
 	<div class="cols-span-1 border-r border-solid border-black order-2 lg:order-1">
 		<?php
 		$vision_image = get_field( 'our_vision_image' );

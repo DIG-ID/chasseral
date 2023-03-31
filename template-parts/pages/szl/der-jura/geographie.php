@@ -1,4 +1,4 @@
-<section class="section-geographie grid lg:grid-cols-2 border-t border-solid border-black xl:h-[700px] overflow-hidden">
+<section class="section-geographie grid lg:grid-cols-2 xl:h-[700px] overflow-hidden">
 	<div class="cols-span-1 border-r border-solid border-black order-2 lg:order-1">
 		<?php
 		$geographie_image = get_field( 'geographie_image' );

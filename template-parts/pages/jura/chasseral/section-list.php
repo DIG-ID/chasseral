@@ -1,4 +1,4 @@
-<section class="chasseral-list-section p-0 border-t border-solid border-block">
+<section class="chasseral-list-section p-0">
 	<?php
 	if ( have_rows( 'section_chasseral' ) ) :
 		while ( have_rows( 'section_chasseral' ) ) :

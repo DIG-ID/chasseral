@@ -1,4 +1,4 @@
-<section class="section-blog border-t border-solid border-black overflow-hidden">
+<section class="section-blog overflow-hidden">
 	<div class="container mx-auto px-8 py-8 md:py-16 xl:py-32">
 		<h1 class="section-title text-3xl font-bold mb-16"><?php esc_html_e( 'Blog', 'chasseral' ) ?></h1>
 		<div class="button-group filters-button-group mb-10">

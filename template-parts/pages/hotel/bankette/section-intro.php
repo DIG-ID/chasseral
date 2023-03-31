@@ -1,4 +1,4 @@
-<section class="section-bankette__intro p-0 border-t border-solid border-black">
+<section class="section-bankette__intro p-0">
 	<div class="chasseral__row grid grid-cols-1 lg:grid-cols-2">
 		<div class="col-span-1 chasseral__col border-r border-solid">
 			<?php

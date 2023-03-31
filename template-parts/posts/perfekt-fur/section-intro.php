@@ -1,4 +1,4 @@
-<section id="single-perfekt-fur-intro" class="section-perfekt-fur__intro grid grid-cols-1 border-t border-solid border-black">
+<section id="single-perfekt-fur-intro" class="section-perfekt-fur__intro grid grid-cols-1">
 	<div class="w-full chasseral__col border-b border-solid border-black">
 		<?php
 		if ( has_post_thumbnail() && get_field( 'header_image_position' ) === 'Top' ) :

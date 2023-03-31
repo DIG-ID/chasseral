@@ -1,4 +1,4 @@
-<section class="section-zimmer__intro pt-8 pb-16 lg:py-16 xl:pt-20 xl:pb-40 border-t border-solid border-black">
+<section class="section-zimmer__intro pt-8 pb-16 lg:py-16 xl:pt-20 xl:pb-40">
 	<div class="container grid grid-cols-1 lg:grid-cols-3 p-8 lg:px-16 xl:p-0 lg:gap-16 mx-auto">
 		<div class="col-span-1">
 			<h2 class="title-big"><?php the_title(); ?></h2>
