@@ -8,6 +8,15 @@ document.addEventListener("DOMContentLoaded", () => {
   //wait until images, links, fonts, stylesheets, and js is loaded
   window.addEventListener("load", () => {
 
+    const megaMenu = document.querySelector('.mega-menu-navigation');
+    const navHeight = 75; // Change this to match the actual height of your navigation bar
+
+    function setElementHeight() {
+      const height = window.innerHeight - navHeight;
+      megaMenu.style.setProperty('--element-height', `${height}px`);
+    }
+    setElementHeight();
+    window.addEventListener('resize', setElementHeight);
 
     let $getheader = $("#header-main");
 
@@ -22,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       });
       togglerTl.to('.main-menu-top-level', {y:' 100%', opacity: 0, ease: 'back.in'});
-      togglerTl.to('.mega-menu-navigation', {height: 'calc(var(--vh, 1vh) * 100 - 75px) ', opacity:1}, '<0.4');
+      togglerTl.to('.mega-menu-navigation', {height: 'var(--element-height)', opacity:1}, '<0.4');
       togglerTl.from('.site-root-title', {y: '-50px', opacity: 0}, '<0.15');
       togglerTl.from('.mega-menu-content .mega-menu--menus .mega-menu-top .menu-item', {y: '-50px', opacity: 0, stagger: 0.10}, '<0.15');
       togglerTl.from('.mega-menu-content .mega-menu--menus .mega-menu-bottom .menu-item', {y: '-50px', opacity: 0, stagger: 0.10}, '<0.15');
@@ -54,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       togglerTl.to('.main-menu-top-level', {y:' 100%', opacity: 0, ease: 'back.in'});
-      togglerTl.to('.mega-menu-navigation', {height: 'calc(var(--vh, 1vh) * 100 - 75px) ', opacity:1}, '<0.4');
+      togglerTl.to('.mega-menu-navigation', {height: 'var(--element-height)', opacity:1}, '<0.4');
       togglerTl.from('.site-root-title', {y: '-50px', opacity: 0}, '<0.15');
       togglerTl.from('.mega-menu-content .mega-menu--menus .mega-menu-top .menu-item', {y: '-50px', opacity: 0, stagger: 0.10}, '<0.15');
       togglerTl.from('.mega-menu-content .see-webcam, .mega-menu-content .service-status, .mega-menu-content .notification', {y: '-50px', opacity: 0, stagger: 0.10}, '<0.15');
