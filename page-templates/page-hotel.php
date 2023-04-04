@@ -5,6 +5,7 @@
 
 get_header( 'hotel' );
 	do_action( 'before_main_content' );
+	do_action( 'breadcrumbs' );
 		get_template_part( 'template-parts/pages/hotel/hotel-restaurant/section', 'intro' );
 		get_template_part( 'template-parts/pages/hotel/hotel-restaurant/section', 'blocks' );
 		get_template_part( 'template-parts/pages/hotel/hotel-restaurant/section', 'your-stay' );

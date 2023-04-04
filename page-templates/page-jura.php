@@ -5,6 +5,7 @@
 
 get_header( 'jura' );
 	do_action( 'before_main_content' );
+	do_action( 'breadcrumbs' );
 		get_template_part( 'template-parts/pages/jura/top-of-jura/section', 'intro' );
 		get_template_part( 'template-parts/pages/jura/top-of-jura/section', 'der-chasseral' );
 		get_template_part( 'template-parts/modules/activities' );
