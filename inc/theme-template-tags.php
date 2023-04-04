@@ -98,7 +98,6 @@ function chasseral_theme_mega_menu_link( $slug, $type ) {
 
 			if ( get_field( 'use_custom_name', $root_id ) ) :
 				$link_title_custom = get_field( 'custom_name', $root_id );
-				console_log($link_title_custom);
 			else :
 				$link_title_custom = $root->post_title;
 			endif;
@@ -112,8 +111,6 @@ function chasseral_theme_mega_menu_link( $slug, $type ) {
 				$link_img = '<img src="' . $link_img . '" alt="' . get_the_post_thumbnail_caption( $root_id ) . '">';
 			endif;
 		endif;
-
-
 
 		if ( 'mega-menu' === $type ) :
 			$link_render  = $link_open;

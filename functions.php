@@ -436,3 +436,58 @@ function console_log( $output, $with_script_tags = true ) {
 	endif;
 	echo $js_code;
 }
+
+/**
+ * Conditionally Override Yoast SEO Breadcrumb Trail
+ * https://plugins.svn.wordpress.org/wordpress-seo/trunk/frontend/class-breadcrumbs.php
+ * -----------------------------------------------------------------------------------
+ * Further amended by Kent House to set custom landing page for 'project' custom post type
+ * and landing page for normal posts to a manually created 'blog' page 
+*/
+
+function chasseral_theme_override_yoast_breadcrumb_trail( $links ) {
+	global $post;
+
+	switch ( $post->post_type ) :
+		case 'agenda':
+			$breadcrumb[] = array(
+				'url'  => get_permalink( get_field( 'archives_pages_agenda', 'options' ) ),
+				'text' => __( 'Agenda', 'chasseral' ),
+			);
+			array_splice( $links, 1, -2, $breadcrumb );
+			break;
+		case 'events':
+			$breadcrumb[] = array(
+				'url'  => get_permalink( get_field( 'archives_pages_events', 'options' ) ),
+				'text' => __( 'Events', 'chasseral' ),
+			);
+			array_splice( $links, 1, -2, $breadcrumb );
+			break;
+		case 'der_jura':
+			$breadcrumb[] = array(
+				'url'  => get_permalink( get_field( 'archives_pages_der_jura', 'options' ) ),
+				'text' => __( 'der Jura', 'chasseral' ),
+			);
+			array_splice( $links, 1, -2, $breadcrumb );
+			break;
+		case 'perfekt_fur':
+			$breadcrumb[] = array(
+				'url'  => get_permalink( get_field( 'archives_pages_perfekt_fur', 'options' ) ),
+				'text' => __( 'Perfekt fur', 'chasseral' ),
+			);
+			array_splice( $links, 1, -2, $breadcrumb );
+			break;
+		case 'zimmer':
+			$breadcrumb[] = array(
+				'url'  => get_permalink( get_field( 'archives_pages_zimmer', 'options' ) ),
+				'text' => __( 'Zimmer', 'chasseral' ),
+			);
+			array_splice( $links, 1, -2, $breadcrumb );
+			break;
+	endswitch;
+
+	return $links;
+}
+
+
+add_filter( 'wpseo_breadcrumb_links', 'chasseral_theme_override_yoast_breadcrumb_trail' );
