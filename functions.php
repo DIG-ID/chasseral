@@ -444,7 +444,6 @@ function console_log( $output, $with_script_tags = true ) {
  * Further amended by Kent House to set custom landing page for 'project' custom post type
  * and landing page for normal posts to a manually created 'blog' page 
 */
-
 function chasseral_theme_override_yoast_breadcrumb_trail( $links ) {
 	global $post;
 
@@ -489,5 +488,13 @@ function chasseral_theme_override_yoast_breadcrumb_trail( $links ) {
 	return $links;
 }
 
-
 add_filter( 'wpseo_breadcrumb_links', 'chasseral_theme_override_yoast_breadcrumb_trail' );
+
+/**
+* Enables the HTTP Strict Transport Security (HSTS) header in WordPress.
+*/
+function chasseral_theme_enable_strict_transport_security_hsts_header_wordpress() {
+	header( 'Strict-Transport-Security: max-age=31536000' );
+}
+
+add_action( 'send_headers', 'chasseral_theme_enable_strict_transport_security_hsts_header_wordpress' );
