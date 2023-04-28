@@ -43,4 +43,4 @@
 		<?php do_action( 'service_status_widget' ); ?>
 		<?php do_action( 'notification' ); ?>
 	</div>
-</div>pz
+</div>
