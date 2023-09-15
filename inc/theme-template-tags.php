@@ -328,7 +328,7 @@ add_action( 'breadcrumbs', 'chasseral_theme_breadcrumbs' );
 function chasseral_theme_notification() {
 	if ( get_field( 'show_notification', 'services-status' ) ) :
 		?>
-		<div class="notification flex items-strech border border-solid border-black mt-10">
+		<div class="notification flex items-strech border border-solid border-black mb-10">
 			<div class="notification-icon border-r border-solid border-black flex justify-center items-center px-8">
 				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none"><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.714" d="M16 11.376v6.926M16 26.383a1.154 1.154 0 1 0 0-2.309 1.154 1.154 0 0 0 0 2.309Z"/><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.714" d="M18.055 2.256a2.308 2.308 0 0 0-4.11 0L1.247 27.652A2.309 2.309 0 0 0 3.302 31h25.396a2.31 2.31 0 0 0 2.055-3.348L18.055 2.256Z"/></svg>
 			</div>
