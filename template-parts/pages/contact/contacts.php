@@ -28,6 +28,7 @@
 
 		</div>
 		<div class="schedule-wrapper">
+			<?php do_action( 'notification' ); ?>
 			<h2 class="title-normal !mb-10"><?php the_field( 'schedule_title' ); ?></h2>
 			<?php
 			if ( have_rows( 'schedule_opening_hours' ) ) :
@@ -59,7 +60,7 @@
 				echo '</ul>';
 			endif;
 			?>
-			<?php do_action( 'notification' ); ?>
+			
 		</div>
 	</div>
 </section>
