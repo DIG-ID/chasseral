@@ -32,9 +32,10 @@ class ChasseralThemeServicesStatusWidget {
 	 */
 	private function setup_defaults() {
 		$this->status = array(
-			'open'      => '<p class="service-status-signal text-sm flex items-center ml-3"><span class="service-status-signal-icon block rounded-full w-[15px] h-[15px] bg-[#1FDD00] mr-1"></span><span class="service-status-signal-text">(' . esc_html__( 'Offen', 'chasseral' ) . ')</span></p>',
-			'closed'    => '<p class="service-status-signal text-sm flex items-center ml-3"><span class="service-status-signal-icon block rounded-full w-[15px] h-[15px] bg-[#FF0000] mr-1"></span><span class="service-status-signal-text">(' . esc_html__( 'Geschlossen', 'chasseral' ) . ')</span></p>',
-			'undefined' => '<p class="service-status-signal text-sm flex items-center ml-3"><span class="service-status-signal-icon block rounded-full w-[15px] h-[15px] bg-[#B9B9B9] mr-1"></span><span class="service-status-signal-text">(' . esc_html__( 'Unbestimmt', 'chasseral' ) . ')</span></p>',
+			'open'      => '<p class="service-status-signal text-xs flex items-center ml-3"><span class="service-status-signal-icon block rounded-full w-[15px] h-[15px] bg-[#1FDD00] mr-1"></span><span class="service-status-signal-text">(' . esc_html__( 'Offen', 'chasseral' ) . ')</span></p>',
+			'closed'    => '<p class="service-status-signal text-xs flex items-center ml-3"><span class="service-status-signal-icon block rounded-full w-[15px] h-[15px] bg-[#FF0000] mr-1"></span><span class="service-status-signal-text">(' . esc_html__( 'Geschlossen', 'chasseral' ) . ')</span></p>',
+			'undefined' => '<p class="service-status-signal text-xs flex items-center ml-3"><span class="service-status-signal-icon block rounded-full w-[15px] h-[15px] bg-[#B9B9B9] mr-1"></span><span class="service-status-signal-text">(' . esc_html__( 'Unbestimmt', 'chasseral' ) . ')</span></p>',
+			'ownrisk'  => '<p class="service-status-signal text-xs flex items-center ml-3"><span class="service-status-signal-icon block rounded-full w-[15px] h-[15px] bg-[#dfc743] mr-1"></span><span class="service-status-signal-text">(' . esc_html__( 'Auf eigene Gefahr', 'chasseral' ) . ')</span></p>',
 		);
 		$this->day_names = array(
 			'monday'    => esc_html__( 'Montag', 'chasseral' ),
@@ -53,7 +54,7 @@ class ChasseralThemeServicesStatusWidget {
 	}
 
 	/**
-	 * Add da names to be able to translate them later.
+	 * Add day names to be able to translate them later.
 	 */
 	private function add_day_name_translations() {
 		foreach ( $this->data as $day => $status ) {
@@ -79,6 +80,9 @@ class ChasseralThemeServicesStatusWidget {
 				case 'undefined':
 					$current_status = $this->status['undefined'];
 					break;
+				case 'ownrisk':
+					$current_status = $this->status['ownrisk'];
+					break;
 			endswitch;
 			return $current_status;
 		endif;
@@ -99,33 +103,11 @@ class ChasseralThemeServicesStatusWidget {
 	}
 
 	/**
-	 *  Checks todas date to pull data from that date only.
+	 *  Checks today date to pull data from that date only.
 	 */
 	private function get_current_day() {
-		$current_day = date( 'l' );
-		switch ( $current_day ) :
-			case 'Monday':
-				$this->current_day = $this->data['monday'];
-				break;
-			case 'Tuesday':
-				$this->current_day = $this->data['tuesday'];
-				break;
-			case 'Wednesday':
-				$this->current_day = $this->data['wednesday'];
-				break;
-			case 'Thursday':
-				$this->current_day = $this->data['thursday'];
-				break;
-			case 'Friday':
-				$this->current_day = $this->data['friday'];
-				break;
-			case 'Saturday':
-				$this->current_day = $this->data['saturday'];
-				break;
-			case 'Sunday':
-				$this->current_day = $this->data['sunday'];
-				break;
-		endswitch;
+		$current_day       = gmdate( 'l' );
+		$this->current_day = isset( $this->data[ strtolower( $current_day ) ] ) ? $this->data[ strtolower( $current_day ) ] : null;
 		return $this->current_day;
 	}
 
