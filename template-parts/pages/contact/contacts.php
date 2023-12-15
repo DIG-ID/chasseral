@@ -30,7 +30,7 @@
 				<p class="mb-10"><?php the_field( 'holidays_description' ); ?></p>
 				<?php
 				if ( have_rows( 'holidays_list' ) ) :
-					echo '<ul class="holidays-list mb-20">';
+					echo '<ul class="holidays-list">';
 					while ( have_rows( 'holidays_list' ) ) :
 						the_row();
 						echo '<li class="grid grid-cols-2 xl:grid-cols-3 border-b border-solid border-black pb-1 mb-7">';
