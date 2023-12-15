@@ -1,5 +1,5 @@
 <section id="contacts-schedule" class="section-contacts-schedule border-t border-solid border-black py-16 lg:py-20 xl:py-36 overflow-hidden">
-	<div class="container mx-auto px-8 grid grid-cols-1 xl:grid-cols-2">
+	<div class="container mx-auto px-8 grid grid-cols-1 xl:grid-cols-2 gap-8">
 		<div class="contacts-wrapper mb-16 xl:mb-0">
 			<h2 class="text-2xl lg:text-3xl font-bold mb-10"><?php esc_html_e( 'Kontakt', 'chasseral' ); ?></h2>
 			<ul class="contacts-content">
@@ -25,7 +25,23 @@
 					</div>
 				</li>
 			</ul>
-
+			<section class="holidays-schedule xl:pr-16 mt-16">
+				<h2 class="title-normal !mb-10"><?php the_field( 'holidays_title' ); ?></h2>
+				<p class="mb-10"><?php the_field( 'holidays_description' ); ?></p>
+				<?php
+				if ( have_rows( 'holidays_list' ) ) :
+					echo '<ul class="holidays-list mb-20">';
+					while ( have_rows( 'holidays_list' ) ) :
+						the_row();
+						echo '<li class="grid grid-cols-2 xl:grid-cols-3 border-b border-solid border-black pb-1 mb-7">';
+						echo '<p class="day text-sm lg:text-lg font-bold">' . get_sub_field( 'season' ) . '</p>';
+						echo '<p class="hours hours-1 text-sm lg:text-lg">' . get_sub_field( 'date' ) . '</p>';
+						echo '</li>';
+					endwhile;
+					echo '</ul>';
+				endif;
+				?>
+			</section>
 		</div>
 		<div class="schedule-wrapper">
 			<?php do_action( 'notification' ); ?>
