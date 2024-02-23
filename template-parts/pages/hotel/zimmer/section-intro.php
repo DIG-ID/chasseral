@@ -8,9 +8,8 @@
 					<?php echo wp_kses_post( get_the_content() ); ?>
 				</div>
 				<div class="row-span-1">
-					<a data-fancybox data-src="#open" href="javascript:;" class="btn-general btn-general--hotel is-checked block"><?php esc_html_e( 'Jetzt buchen', 'chasseral' ); ?></a>
+					<a href="https://u86ev3bgmql.preview.infomaniak.website/" target="_blank" class="btn-general btn-general--hotel is-checked block"><?php esc_html_e( 'Jetzt buchen', 'chasseral' ); ?></a>
 				</div>
-				<?php get_template_part( 'template-parts/modules/booking', 'popup' ); ?>
 		</div>
 	</div>
 </section>
